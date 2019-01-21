@@ -1,0 +1,50 @@
+.social {
+	color: #b7b7b7;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	@include adaptive (1175) {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	&__left {
+		margin-right: 12.5px;
+		@include adaptive (1175) {
+			margin-right: 5px;
+		}
+	}
+	&__wrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 0px 7.5px;
+		@include adaptive (1175) {
+			margin: 0px 3px;
+		}
+		svg {
+			width: 20px;
+			height: 19px;
+
+			opacity: 0.3;
+		}
+		&:hover {
+			& svg {
+				opacity: 1;
+			}
+		}
+	}
+}

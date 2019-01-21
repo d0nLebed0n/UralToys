@@ -1,0 +1,171 @@
+.offers-block {
+	$parent: &;
+	&__wrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+
+		margin: 0px -8px;
+
+		@include adaptive (975) {
+			flex-direction: column;
+		}
+	}
+	&__left {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+
+		padding: 30px 40px;
+		@include adaptive (1375) {
+			flex-grow: 1;
+
+			padding: 15px;
+		}
+		@include phone {
+			padding: 6px;
+		}
+	}
+	&__wrapper {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+
+		background-color: #f5f5f5;
+	}
+	&__timer {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		border: 1px solid #f5f5f5;
+
+		padding: 19px 24px;
+		@include phone {
+			padding: 10px 15px;
+		}
+	}
+	&__desc {
+		color: #f26522;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 18px;
+		@include adaptive (1375) {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@include phone {
+			display: none;
+		}
+	}
+	&__item {
+		width: calc(50% - 16px);
+
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+
+		background-color: #f5f5f5;
+
+		margin: 0px 8px;
+		&_inner {
+			flex-direction: column;
+
+			background: white;
+
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+		@include adaptive (975) {
+			width: 100%;
+
+			margin: 8px;
+		}
+
+
+	}
+	&__image {
+		width: 216px;
+		height: 216px;
+
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+
+		@include adaptive (1175) {
+			width: 170px;
+			height: 170px;
+		}
+		@include phone {
+			width: 140px;
+			height: 140px;
+		}
+		& img {
+
+			object-fit: contain;
+			display: block;
+		}
+	}
+	&__name {
+		font-size: 18px;
+		line-height: 18px;
+
+		margin-bottom: 13px;
+
+		@include adaptive (1375) {
+			font-size: 16px;
+			line-height: 16px;
+
+			margin-bottom: 7px;
+		}
+		@include phone {
+			font-size: 14px;
+			line-height: 14px;
+
+			margin-bottom: 5px;
+		}
+	}
+	&__text {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 16px;
+		@include adaptive (1375) {
+			font-size: 12px;
+			line-height: 14px;
+		}
+		@include phone {
+			font-size: 11px;
+		}
+	}
+	&__date {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 16px;
+		color: #b7b7b7;
+
+		margin-top: auto;
+		@include phone {
+			font-size: 11px;
+			line-height: 14px;
+		}
+	}
+	&__link {
+		display: block;
+
+		margin-top: 16px;
+		@include phone {
+			margin: 5px 0;
+		}
+	}
+}

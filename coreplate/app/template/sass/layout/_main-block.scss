@@ -1,0 +1,27 @@
+.main-block {
+	margin-top: 15px;
+
+	&__wrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+
+		overflow: hidden;
+
+		@include adaptive (775) {
+			flex-direction: column-reverse;
+		}
+		@include phone {
+			overflow: visible;
+		}
+	}
+	&__body {
+		max-width: 1057px;
+
+		overflow-x: hidden;
+		overflow-y: hidden;
+		&_inner {
+			flex-grow: 1;
+		}
+	}
+}

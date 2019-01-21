@@ -1,0 +1,278 @@
+.footer {
+	background-color: #252525;
+	&__wrap {
+		padding: 29px 0px 16px;
+		@include phone {
+			padding: 10px 0;
+		}
+	}
+	&__top {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: flex-start;
+		@include phone {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__left,
+	&__right {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+	}
+	&__social {
+		& span {
+			color: #ffffff;
+		}
+
+		& svg {
+			fill: #f26522;
+			opacity: 1;
+			&:hover {
+				fill: white;
+			}
+		}
+	}
+	&__text {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+
+		margin-bottom: 26px;
+
+		@include adaptive (1375) {
+			font-size: 12px;
+			line-height: 16px;
+
+			margin-bottom: 15px;
+		}
+		&_orange {
+			color: #f26522;
+			font-weight: 500;
+			letter-spacing: 0.7px;
+			line-height: 20px;
+			text-transform: uppercase;
+		}
+	}
+	&__info {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: flex-start;
+
+		justify-content: space-between;
+
+		margin-bottom: 72px;
+		@include adaptive (1375) {
+			margin-bottom: 30px;
+		}
+		@include adaptive (635) {
+			flex-direction: column;
+			align-items: flex-end;
+
+			margin-bottom: 15px;
+
+		}
+		@include phone {
+			align-items: center;
+		}
+	}
+	&__copy {
+		color: #707070;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 30px;
+
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+
+		margin-top: 47px;
+		@include adaptive (1175) {
+			font-size: 12px;
+			line-height: 25px;
+
+			margin-top: 20px;
+		}
+		@include phone {
+			flex-direction: column;
+		}
+		& a {
+			color: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+		}
+	}
+	&__policy {
+		text-decoration: underline;
+
+		margin-left: 107px;
+
+		@include adaptive (1175) {
+			margin-left: 40px;
+		}
+		@include phone {
+			margin-left: 10px;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__dialweb {
+		margin-left: auto;
+		& a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__contacts {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+
+		& a {
+			color: #f26522;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 24px;
+			letter-spacing: 0.8px;
+
+			margin-bottom: 11px;
+			@include adaptive (1175) {
+				font-size: 12px;
+				line-height: 20px;
+
+				margin-bottom: 5px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__left {
+		margin-right: 111px;
+		@include adaptive (1375) {
+			margin-right: 50px;
+		}
+		@include adaptive (635) {
+			flex-shrink: 0;
+
+			margin-right: 15px;
+		}
+
+
+	}
+	&__right {
+		width: 100%;
+		max-width: 449px;
+
+		margin-left: auto;
+		@include adaptive (1175) {
+			max-width: 340px;
+
+
+		}
+		@include adaptive (635) {
+			width: auto;
+		}
+		@include phone {
+			max-width: none;
+
+			margin-right: auto;
+		}
+	}
+	&__svg {
+		width: 28px;
+		height: 25px;
+
+		fill:white;
+
+		position: absolute;
+		left: 0;
+		top: 45%;
+
+		transform: translateY(-50%);
+
+	}
+	&__column {
+		margin-right: 72px;
+		@include adaptive (1175) {
+			margin-right: 30px;
+		}
+	}
+	&__logo {
+		margin-bottom: 50px;
+		@include adaptive (1175) {
+			margin-bottom: 20px;
+		}
+	}
+	&__center {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: flex-start;
+
+		@include adaptive (975) {
+			display: none;
+		}
+	}
+	&__buttons {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__button {
+		margin-bottom: 10px;
+	}
+	&__list {
+		list-style-type: none;
+
+		padding: 0;
+		margin: 0;
+	}
+	&__item {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+
+		padding-left: 35px;
+
+		@include adaptive (1175) {
+			font-size: 12px;
+			line-height: 18px;
+		}
+		&:hover {
+			svg {
+				fill: #f26522;
+			}
+			a {
+				color: #f26522;
+			}
+		}
+		&_main {
+			font-weight: 700;
+			text-transform: uppercase;
+
+			margin-bottom: 12px;
+		}
+		& a {
+			color: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+
+			transition: .3s;
+		}
+	}
+}

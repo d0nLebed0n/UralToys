@@ -1,0 +1,106 @@
+.text {
+	&-label {
+		&-select {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+
+			@include adaptive (635) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+		}
+		&-search {
+			&:hover {
+				svg {
+					fill: #f26522;
+				}
+				input {
+					color: #f26522;
+				}
+			}
+		}
+	}
+	&-input {
+		&-subscription {
+			color: #ffffff;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 30px;
+
+			background-color: #464646;
+			border: none;
+			flex-grow: 1;
+
+			padding: 0px 10px;
+			@include placeholder {
+				color: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+
+			}
+
+		}
+		&-search {
+			min-width: 216px;
+			color: #000000;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 24px;
+
+
+
+			border: none;
+			background: transparent;
+
+			padding: 0;
+			margin: 0;
+
+			transition: .3s;
+
+			@include adaptive (1175) {
+				min-width: 180px;
+				font-size: 12px;
+				line-height: 20px;
+			}
+
+			@include adaptive (975) {
+				min-width: 150px;
+				font-size: 11px;
+				line-height: 15px;
+			}
+			@include placeholder {
+				font-size: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+				color: currentColor;
+			}
+		}
+		&-select {
+			color: #b7b7b7;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 24px;
+
+			border: none;
+			background: transparent;
+
+			cursor: pointer;
+
+			@include adaptive (975) {
+				font-size: 12px;
+				line-height: 18px;
+			}
+
+			@include placeholder {
+				font-size: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+				color: currentColor;
+			}
+		}
+	}
+}

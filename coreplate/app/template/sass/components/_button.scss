@@ -1,0 +1,295 @@
+.text-button {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+
+	transition: .3s;
+
+	&:hover {
+		text-decoration: underline;
+	}
+	&_orange {
+		color: #f26522;
+	}
+
+}
+
+.classic-button {
+	min-width: 133px;
+	color: #f26522;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: center;
+
+	display: inline-block;
+
+	background: transparent;
+	border: 1px solid #f26522;
+
+	padding: 0px 29px;
+
+	transition: .3s;
+	&_svg {
+		width: 100%;
+
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+
+		padding: 0px 24px;
+		@include adaptive (1175) {
+			padding: 0px 16px;
+		}
+		& span {
+			&:first-child {
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				margin-right: 21px;
+				@include adaptive (1175) {
+					margin-right: 10px;
+				}
+			}
+		}
+		& svg {
+			width: 18px;
+			height: 18px;
+
+			fill: #f26522;
+		}
+	}
+	&:hover {
+		background: white;
+	}
+}
+
+.bordered-button {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: center;
+
+	border: 1px solid transparent;
+	background: transparent;
+
+	padding: 4px;
+
+	cursor: pointer;
+	transition: .3s;
+	&:hover {
+		color:#f26522;
+	}
+	&_bottom {
+		border-bottom-color: #f26522;
+	}
+}
+
+.custom-button {
+	color: #f26522;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: none;
+	background: transparent;
+
+	cursor: pointer;
+
+	transition: .3s;
+	@include adaptive (1175) {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	&:hover {
+		color: black;
+		& svg {
+			fill: black;
+		}
+	}
+	& span {
+		&:first-child {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&_fav {
+		color: black;
+		&:hover,
+		&.isAdded {
+			color: #f26522;
+			& svg {
+				fill: none;
+				stroke: #f26522;
+			}
+		}
+		& svg {
+			width: 16px;
+			height: 16px;
+
+			fill: none;
+			stroke: black;
+
+			margin-right: 9px;
+			@include adaptive (1175) {
+				width: 15px;
+				height: 15px;
+
+				margin-right: 5px;
+			}
+		}
+	}
+	&_cart {
+		& svg {
+			width: 23px;
+			height: 19px;
+
+			fill:  #f26522;
+
+			margin-right: 12px;
+			@include adaptive (1175) {
+				width: 19px;
+				height: 15px;
+
+				margin-right: 5px;
+			}
+		}
+	}
+	&_compare {
+		color: black;
+		&:hover {
+			color: #f26522;
+			fill: #f26522;
+		}
+		& svg {
+			width: 19px;
+			height: 18px;
+
+			margin-right: 6px;
+			@include adaptive (1175) {
+				width: 16px;
+				height: 16px;
+
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+.slider-buttons {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: flex-start;
+
+	position: relative!important;
+	& .slider-button {
+		width: auto;
+		height: auto;
+
+		background: transparent;
+
+		opacity: 1;
+
+		margin: 22px 21.5px 14px 21.5px;
+
+		@include adaptive (1175) {
+			margin: 10px;
+		}
+
+		&.swiper-pagination-bullet-active {
+			color: black;
+		}
+	}
+}
+
+.slider__controls {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin: 10px 0;
+
+	cursor: pointer;
+	& svg {
+		width: 15px;
+		height: 22px;
+	}
+}
+
+
+.classic-checkbox {
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & input:checked + span {
+	   background-color: #f26522;
+	   &::after {
+		   width: 8px;
+	   }
+	   &::before {
+		  width: 6px;
+	   }
+  }
+  & input + span {
+	  width: 12px;
+	  height: 12px;
+
+	  background-color: transparent;
+	  border: 1px solid #b1b1b1;
+	  border-radius: 0;
+
+	  display: block;
+	  flex-shrink: 0;
+
+	  margin-right: 7px;
+	  transition: .3s;
+  }
+  & input + span::before,
+  & input + span::after {
+	  content: '';
+	  width: 0;
+	  height: 1px;
+
+	  background-color: white;
+
+	  display: block;
+	  position: absolute;
+
+	  border-radius: 5px;
+
+	  transition: 0.6s;
+  }
+  & input + span::before {
+	  top: 50%;
+  	  left: 3px;
+
+	  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+	  transform: translate(-50%, -50%) rotate(45deg);
+  }
+  & input + span::after {
+	  top: 35%;
+	  right: 3px;
+
+	  -webkit-transform: translate(50%, -50%) rotate(-45deg);
+	  transform: translate(50%, -50%) rotate(-45deg);
+  }
+}

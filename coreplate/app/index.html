@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f26522">
+	<meta name="HandheldFriendly" content="True"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="preload" href="/template/fonts/MuseoSansCyrl-500.woff2" as="font" crossorigin>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/template/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="header__wrap">
+					<div class="header__logo">
+						<img src="/template/img/logo.png" alt="Логотип Svetoria">
+					</div>
+					<div class="header__actions">
+						<div class="header__social">
+							<div class="header__socials social">
+								<span class="social__left mobile-drop mobile-drop_level1">
+									Мы в соц. сетях:
+								</span>
+								<div class="social__wrap">
+									<a href="#" class="social__item">
+										<svg>
+											<use xlink:href="/template/img/icons.svg#odn"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg>
+											<use xlink:href="/template/img/icons.svg#vk"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg >
+											<use xlink:href="/template/img/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="header__cabinet">
+								<a href="#" class="header__login">
+									<span>
+										<svg>
+											<use xlink:href="/template/img/icons.svg#user"></use>
+										</svg>
+									</span>
+									<span class="header__name mobile-drop mobile-drop_level2">
+										<span>Здравствуйте, </span>
+										<span class="user-name"> Михаил</span>
+									</span>
+								</a>
+								<a href="#" class="header__logout">
+									<span>Выйти</span>
+								</a>
+							</div>
+							<div class="header__phone">
+								<a href="tel:+78009591429">
+									<span>
+										<svg>
+											<use xlink:href="/template/img/icons.svg#phone"></use>
+										</svg>
+									</span>
+									<span class="mobile-drop mobile-drop_level2">
+										8 (800) 959-14-29
+									</span>
+								</a>
+								<span class="header__announce mobile-drop mobile-drop_level1">
+									Звонок <span style="text-transform: uppercase">бесплатный</span>
+								</span>
+							</div>
+						</div>
+						<div class="header__personal">
+							<div class="header__city region-select">
+								<form action="">
+									<label for="" class="text-label-select">
+										<span>Ваш город: </span>
+										<select class="text-input-select" value='1'>
+											<option value="1">Москва</option>
+											<option value="2">Москва</option>
+										</select>
+										<input type="submit" class="visually-hidden">
+									</label>
+								</form>
+							</div>
+							<div class="header__info mobile-drop mobile-drop_level1">
+								<span>
+									<svg>
+										<use xlink:href="/template/img/icons.svg#msg"></use>
+									</svg>
+								</span>
+								<span>
+									Перезвоним за 30 секунд
+								</span>
+							</div>
+							<div class="header__callback jsCallback" data-target=".jsCallbackPopup">
+								<span>
+									<svg>
+										<use xlink:href="/template/img/icons.svg#gramm"></use>
+									</svg>
+								</span>
+								<span class="mobile-drop mobile-drop_level2">
+									Обратная связь
+								</span>
+							</div>
+							<div class="header__basket">
+								<a href="#">
+									<span>
+										<svg>
+											<use xlink:href="/template/img/icons.svg#cart"></use>
+										</svg>
+									</span>
+									<span class="cart">
+										<span class="cart__count">
+											3
+										</span>
+										<span class="mobile-drop mobile-drop_level3">
+											товара
+										</span>
+										<span class="cart__price mobile-drop mobile-drop_level3">
+											1456 руб.
+										</span>
+									</span>
+								</a>
+								<a href="#" class="text-button text-button_orange mobile-drop mobile-drop_level3">
+									Оформить заказ
+								</a>
+							</div>
+							<div class="header__links actions">
+								<a href="#" class="actions__link">
+									<svg>
+										<use xlink:href="/template/img/icons.svg#compare"></use>
+									</svg>
+								</a>
+								<a href="#" class="actions__link">
+									<svg>
+										<use xlink:href="/template/img/icons.svg#eye"></use>
+									</svg>
+								</a>
+								<a href="#" class="actions__link">
+									<svg class="actions__star">
+										<use xlink:href="/template/img/icons.svg#star"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__subwrap">
+			<button type="button" class="header__mobile jsOpenMenu">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="header__side jsMenu">
+				<div class="header__center">
+					<div class="container">
+						<div class="header__wrap header__wrap_sb">
+							<nav class="header__navigation navigation">
+								<ul class="navigation__list">
+									<li class="navigation__item"><a href="#" class="navigation__link">Распродажа</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Акции</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Установка</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Оплата и доставка</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Бренды</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Помощь</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">О компании</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
+									<li class="navigation__item"><a href="#" class="navigation__link">Контакты </a></li>
+								</ul>
+							</nav>
+							<div class="header__search">
+								<form action="">
+									<label for="" class="text-label-search">
+										<span>
+											<svg>
+												<use xlink:href="/template/img/icons.svg#search"></use>
+											</svg>
+										</span>
+										<input type="search" class="text-input-search" placeholder="Поиск товаров, разделов, статей">
+									</label>
+									<input type="submit" class="visually-hidden">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom catalog-nav">
+					<div class="container">
+						<ul class="catalog-nav__list">
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Люстры</a>
+							</li>
+							<li class="catalog-nav__item catalog-nav__item_parent">
+								<a href="#" class="catalog-nav__link">Светильники</a>
+								<ul class="catalog-nav__sublist">
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Подвесные</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Потолочные</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Настенные</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Настенно-потолочные</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Лофт светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Гипсовые светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Накладные светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Встраиваемые</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Лофт светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Гипсовые светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Накладные светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Встраиваемые</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Точечные светильники</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Трековые и шинные</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Мебельные</a>
+									</li>
+									<li class="catalog-nav__subitem">
+										<a href="#" class="catalog-nav__sublink">Для растений</a>
+									</li>
+								</ul>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Бра</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Споты</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Настольные лампы</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Торшеры</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Уличное освещение</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Лампочки</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Электротовары</a>
+							</li>
+							<li class="catalog-nav__item">
+								<a href="#" class="catalog-nav__link">Прочее</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="index-slider">
+			<div class="container">
+				<div class="index-slider__wrap swiper-container">
+					<div class="swiper-pagination"></div>
+					<div class="index-slider__wrapper swiper-wrapper">
+						<div class="index-slider__item swiper-slide">
+							<div class="index-slider__subwrap">
+								<div class="index-slider__left">
+									<div class="index-slider__name" data-swiper-parallax="-300">
+										Летняя коллекия <br> светильников
+									</div>
+									<a href="#" class="index-slider__link classic-button" data-swiper-parallax="-600">Подробнее</a>
+								</div>
+								<div class="index-slider__right" data-swiper-parallax="-1500" style="background-image: url('/template/img/tmp/index-slider.png')">
+									<div class="index-slider__timer">
+										<span class="index-slider__info">До конца  акции осталось</span>
+										<div class="index-slider__block">
+											<script src="//megatimer.ru/get/ec8d77145e02da0792a67c0122ff2d67.js"></script>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="index-slider__item swiper-slide">
+							<div class="index-slider__subwrap">
+								<div class="index-slider__left">
+									<div class="index-slider__name" data-swiper-parallax="-300">
+										Летняя коллекия <br> светильников
+									</div>
+									<a href="#" class="index-slider__link classic-button" data-swiper-parallax="-600">Подробнее</a>
+								</div>
+								<div class="index-slider__right" data-swiper-parallax="-1500" style="background-image: url('/template/img/tmp/index-slider.png')">
+									<div class="index-slider__timer">
+										<span class="index-slider__info">До конца  акции осталось</span>
+										<div class="index-slider__block">
+											<script src="//megatimer.ru/get/ec8d77145e02da0792a67c0122ff2d67.js"></script>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="index-slider__item swiper-slide">
+							<div class="index-slider__subwrap">
+								<div class="index-slider__left">
+									<div class="index-slider__name" data-swiper-parallax="-300">
+										Летняя коллекия <br> светильников
+									</div>
+									<a href="#" class="index-slider__link classic-button" data-swiper-parallax="-600">Подробнее</a>
+								</div>
+								<div class="index-slider__right" data-swiper-parallax="-1500" style="background-image: url('/template/img/tmp/index-slider.png')">
+									<div class="index-slider__timer">
+										<span class="index-slider__info">До конца  акции осталось</span>
+										<div class="index-slider__block">
+											<script src="//megatimer.ru/get/ec8d77145e02da0792a67c0122ff2d67.js"></script>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-block">
+			<div class="container">
+				<div class="main-block__wrap">
+					<div class="main-block__aside aside">
+						<div class="aside__catalog aside-navigation">
+							 <ul class="aside-navigation__list">
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link aside-navigation__link_orange">Каталог</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link aside-navigation__link_orange">Распродажа</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Люстры</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Светильники</a>
+									</li>
+							 		<li class="aside-navigation__item aside-navigation__item_parent">
+										<a href="#" class="aside-navigation__link">Бра</a>
+										<ul class="aside-navigation__sublist">
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">С 1 плафоном</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">С 2 плафонами</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">С 3 плафонами</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">Гибкие бра</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">Подсветка для зеркал</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">Подсветка для картин</a>
+											</li>
+										</ul>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Споты</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Настольные лампы</a>
+									</li>
+							 		<li class="aside-navigation__item aside-navigation__item_parent">
+										<a href="#" class="aside-navigation__link">Торшеры</a>
+										<ul class="aside-navigation__sublist">
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">С 1 плафоном</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">С 2 плафонами</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">С 3 плафонами</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">Гибкие бра</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">Подсветка для зеркал</a>
+											</li>
+											<li class="aside-navigation__subitem">
+												<a href="#" class="aside-navigation__sublink">Подсветка для картин</a>
+											</li>
+										</ul>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Уличное освещение</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Лампочки</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Электротовары</a>
+									</li>
+							 		<li class="aside-navigation__item">
+										<a href="#" class="aside-navigation__link">Прочее</a>
+									</li>
+							 	</ul>
+						</div>
+						<a href="#" class="aside__calc">
+							<span class="aside__calc_inner">
+								<span>Калькулятор </span>
+								<span>Мощности освещения</span>
+							</span>
+						</a>
+						<div class="aside__viewed small-items-block">
+							<div class="small-items-block__title">Вы смотрели</div>
+							<div class="small-items-block__wrap">
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="small-items-block__link text-button text-button_orange">Все просмотренные товары</a>
+						</div>
+						<div class="aside__latest small-items-block">
+							<div class="small-items-block__title">Поступления</div>
+							<div class="small-items-block__wrap">
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+								<div class="small-items-block__item">
+									<div class="small-items-block__left">
+										<img src="/template/img/smallitem.jpg" alt="Светильнич">
+									</div>
+									<div class="small-items-block__right">
+										<div class="small-items-block__top">
+											<div class="small-items-block__before">380 р.</div>
+											<div class="small-items-block__current">345 р.</div>
+										</div>
+										<div class="small-items-block__text">Светильник встраиваемый поворотный A1506.01</div>
+										<div class="small-items-block__cart text-button text-button_orange">В корзину</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="small-items-block__link text-button text-button_orange">Все просмотренные товары</a>
+						</div>
+						<div class="aside__news small-second-block">
+							<div class="small-second-block__title">Новости</div>
+							<div class="small-second-block__item">
+								<div class="small-second-block__image">
+									<img src="/template/img/newsitem.jpg" alt="Новости">
+								</div>
+								<a class="a small-second-block__name" href="#">Тонкие светодиодные ленты Microled</a>
+								<div class="small-second-block__date">
+									<span>15</span>
+									<span class="small-second-block__separator">08</span>
+									<span>2018</span>
+								</div>
+							</div>
+							<a href="#" class="small-second-block__link text-button text-button_orange">Все новости</a>
+						</div>
+					</div>
+					<div class="main-block__body">
+						<div class="main-block__catalog main-catalog">
+							<div class="main-catalog__wrap swiper-container">
+								<div class="main-catalog__wrapper swiper-wrapper">
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Люстры   </span>
+											<span class="main-catalog__image" style='background-image: url("/template/img/tmp/catalog1.jpg")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title"> Споты   </span>
+											<span class="main-catalog__image" style='background-image: url("/template/img/tmp/catalog4.jpg")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Светильники </span>
+											<span class="main-catalog__image" style='background-image: url("/template/img/tmp/catalog2.jpg")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Торшеры   </span>
+											<span class="main-catalog__image" style='background-image: url("/template/img/tmp/catalog5.jpg")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Бра</span>
+											<span class="main-catalog__image" style='background-image: url("/template/img/tmp/catalog3.jpg")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Настольные лампы </span>
+											<span class="main-catalog__image" style='background-image: url("/template/img/tmp/catalog6.jpg")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Уличное освещение</span>
+											<span class="main-catalog__image" style='background-image: url("")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Лампочки</span>
+											<span class="main-catalog__image" style='background-image: url("")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Электротовары</span>
+											<span class="main-catalog__image" style='background-image: url("")'></span>
+										</a>
+									</div>
+									<div class="main-catalog__item swiper-slide">
+										<a href="#" class="main-catalog__subwrap">
+											<span class="main-catalog__title">Прочее</span>
+											<span class="main-catalog__image" style='background-image: url("")'></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-block__items catalog-slider">
+							<div class="swiper-pagination slider-buttons slider-buttons_catalog"></div>
+							<div class="catalog-slider__wrap swiper-container">
+								<div class="catalog-slider__wrapper swiper-wrapper">
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-slider__item swiper-slide card-item">
+										<div class="card-item__hover">
+											<div class="card-item__wrapper">
+												<div class="card-item__image"><img src="/template/img/tmp/card.jpg" alt=""></div>
+												<a href="#" class="card-item__name">Бра Идиллия 10258.02.05.01</a>
+												<div class="card-item__info"><a href="#" class="card-item__brand card-item__brand_separator">Chiaro</a><a href="#" class="card-item__from">Бельгия</a></div>
+												<div class="card-item__prices">
+													<span>Цена:</span>
+													<span class="card-item__before">380 р.</span>
+													<div class="card-item__current">369 р.</div>
+												</div>
+												<div class="card-item__stock">В наличии</div>
+												<button type="button" class="card-item__cart custom-button custom-button_cart">
+													<span>
+														<svg>
+															<use xlink:href="/template/img/icons.svg#cart"></use>
+														</svg>
+													</span>
+													<span>В корзину</span>
+												</button>
+												<a href="#" class="card-item__buy">
+													Купить в 1 клик
+												</a>
+												<div class="card-item__actions">
+													<button type="button" class="card-item__compare custom-button custom-button_compare">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#compare"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+													<button type="button" class="card-item__fav custom-button custom-button_fav">
+														<span>
+															<svg>
+																<use xlink:href="/template/img/icons.svg#star"></use>
+															</svg>
+														</span>
+														<span>Сравнить</span>
+													</button>
+												</div>
+												<a href="#" class="card-item__view">Быстрый просмотр</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="main-block__brands brands-slider">
+							<div class="brands-slider__title custom-title">Бренды</div>
+							<div class="brands-slider__wrap">
+
+								<div class="brands-slider__block swiper-container">
+									<div class="brands-slider__wrapper swiper-wrapper">
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand1.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">Arte Lamp</span>
+										</a>
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand2.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">Chiaro</span>
+										</a>
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand3.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">DUEWI</span>
+										</a>
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand4.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">Eglo</span>
+										</a>
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand5.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">Chiaro</span>
+										</a>
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand6.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">DUEWI</span>
+										</a>
+										<a href="#" class="brands-slider__item swiper-slide">
+											<span class="brands-slider__image">
+												<img src="/template/img/tmp/brand1.png" alt="Бренд">
+											</span>
+											<span class="brands-slider__name">Arte Lamp</span>
+										</a>
+									</div>
+								</div>
+								<div class="slider__controls slider-controls_brands">
+									<div class="slider__control slider-left slider-left_brands">
+										<svg class="">
+											<use xlink:href="/template/img/icons.svg#arrow-l"></use>
+										</svg>
+									</div>
+									<div class="slider__control slider-right slider-right_brands" >
+										<svg class="">
+											<use xlink:href="/template/img/icons.svg#arrow-r"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-block__offers offers-block">
+							<div class="offers-block__title custom-title">Акции</div>
+							<div class="offers-block__wrap">
+								<a href="#" class="offers-block__item">
+									<span class="offers-block__left">
+										<span class="offers-block__name">Суперцены на уличные светильники</span>
+										<span class="offers-block__text">Большая распродажа уличных светильников в магазине SVETORIA</span>
+										<span class="offers-block__date">Действует: с <span class="offers-block__value">09.08.2018</span> по <span class="offers-block__value offers-block__value_to">03.09.2018</span> г.</span>
+									</span>
+									<span class="offers-block__image">
+										<img src="/template/img/tmp/offers.jpg" alt="Акция">
+									</span>
+								</a>
+								<a href="#" class="offers-block__item">
+									<span class="offers-block__left">
+										<span class="offers-block__name">Суперцены на уличные светильники</span>
+										<span class="offers-block__text">Большая распродажа уличных светильников в магазине SVETORIA</span>
+										<span class="offers-block__date">Действует: с <span class="offers-block__value">09.08.2018</span> по <span class="offers-block__value offers-block__value_to">03.09.2018</span> г.</span>
+									</span>
+									<span class="offers-block__image">
+										<img src="/template/img/tmp/offers.jpg" alt="Акция">
+									</span>
+								</a>
+							</div>
+							<a href="#" class="offers-block__link text-button text-button_orange">
+								Все акции
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="features-list">
+			<div class="container">
+				<div class="features-list__wrap">
+					<div class="features-list__item">
+						<div class="features-list__icon">
+							<img src="/template/img/feature1.png" alt="">
+						</div>
+						<div class="features-list__text">Более 5000 видовсветильников в наличие</div>
+					</div>
+					<div class="features-list__item">
+						<div class="features-list__icon">
+							<img src="/template/img/feature2.png" alt="">
+						</div>
+						<div class="features-list__text">Компетентные менеджеры</div>
+					</div>
+					<div class="features-list__item">
+						<div class="features-list__icon">
+							<img src="/template/img/feature3.png" alt="">
+						</div>
+						<div class="features-list__text">Эксклюзивные модели, индивидуальный подход</div>
+					</div>
+					<div class="features-list__item">
+						<div class="features-list__icon">
+							<img src="/template/img/feature4.png" alt="">
+						</div>
+						<div class="features-list__text">Накопительая система скидок</div>
+					</div>
+					<div class="features-list__item">
+						<div class="features-list__icon">
+							<img src="/template/img/feature5.png" alt="">
+						</div>
+						<div class="features-list__text">Удобная доставка, качественная установка</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="brands-navigation">
+			<div class="container">
+				<div class="brands-navigation__title custom-title">Поиск по бренду</div>
+			</div>
+			<div class="brands-navigation__wrap brands-navigation__wrap_gray">
+				<div class="container">
+					<div class="brands-navigation__lang">
+						<div class="brands-navigation__tab brands-navigation__tab_main js-core isActive">A - Z </div>
+						<div class="brands-navigation__tab brands-navigation__tab_main js-core">А - Я </div>
+					</div>
+					<div class="brands-navigation__symb">
+						<div class="brands-navigation__tabs isActive">
+							<div class="brands-navigation__tab js-tab">A</div>
+							<div class="brands-navigation__tab js-tab">B</div>
+							<div class="brands-navigation__tab js-tab">C</div>
+							<div class="brands-navigation__tab js-tab">D</div>
+							<div class="brands-navigation__tab js-tab">E</div>
+							<div class="brands-navigation__tab js-tab">F</div>
+							<div class="brands-navigation__tab js-tab">G</div>
+							<div class="brands-navigation__tab js-tab">H</div>
+							<div class="brands-navigation__tab js-tab">I</div>
+							<div class="brands-navigation__tab js-tab">J</div>
+							<div class="brands-navigation__tab js-tab">K</div>
+							<div class="brands-navigation__tab js-tab">L</div>
+							<div class="brands-navigation__tab js-tab">M</div>
+							<div class="brands-navigation__tab js-tab">N</div>
+							<div class="brands-navigation__tab js-tab">O</div>
+							<div class="brands-navigation__tab js-tab">P</div>
+							<div class="brands-navigation__tab js-tab">Q</div>
+							<div class="brands-navigation__tab js-tab">R</div>
+							<div class="brands-navigation__tab js-tab">S</div>
+							<div class="brands-navigation__tab js-tab">T</div>
+							<div class="brands-navigation__tab js-tab">U</div>
+							<div class="brands-navigation__tab js-tab">V</div>
+							<div class="brands-navigation__tab js-tab">W</div>
+							<div class="brands-navigation__tab js-tab">X</div>
+							<div class="brands-navigation__tab js-tab">Y</div>
+							<div class="brands-navigation__tab js-tab">Z</div>
+						</div>
+						<div class="brands-navigation__tabs">
+							<div class="brands-navigation__tab js-tab">А</div>
+							<div class="brands-navigation__tab js-tab">Б</div>
+							<div class="brands-navigation__tab js-tab">В</div>
+							<div class="brands-navigation__tab js-tab">Г</div>
+							<div class="brands-navigation__tab js-tab">Д</div>
+							<div class="brands-navigation__tab js-tab">Е</div>
+							<div class="brands-navigation__tab js-tab">Ё</div>
+							<div class="brands-navigation__tab js-tab">Ж</div>
+							<div class="brands-navigation__tab js-tab">З</div>
+							<div class="brands-navigation__tab js-tab">И</div>
+							<div class="brands-navigation__tab js-tab">Й</div>
+							<div class="brands-navigation__tab js-tab">К</div>
+							<div class="brands-navigation__tab js-tab">Л</div>
+							<div class="brands-navigation__tab js-tab">М</div>
+							<div class="brands-navigation__tab js-tab">Н</div>
+							<div class="brands-navigation__tab js-tab">О</div>
+							<div class="brands-navigation__tab js-tab">П</div>
+							<div class="brands-navigation__tab js-tab">Р</div>
+							<div class="brands-navigation__tab js-tab">С</div>
+							<div class="brands-navigation__tab js-tab">Т</div>
+							<div class="brands-navigation__tab js-tab">У</div>
+							<div class="brands-navigation__tab js-tab">Ф</div>
+							<div class="brands-navigation__tab js-tab">Х</div>
+							<div class="brands-navigation__tab js-tab">Ц</div>
+							<div class="brands-navigation__tab js-tab">Ч</div>
+							<div class="brands-navigation__tab js-tab">Ш</div>
+							<div class="brands-navigation__tab js-tab">Щ</div>
+							<div class="brands-navigation__tab js-tab">Ъ</div>
+							<div class="brands-navigation__tab js-tab">Ы</div>
+							<div class="brands-navigation__tab js-tab">Ь</div>
+							<div class="brands-navigation__tab js-tab">Э</div>
+							<div class="brands-navigation__tab js-tab">Ю</div>
+							<div class="brands-navigation__tab js-tab">Я</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="brands-navigation__wrap brands-navigation__wrap_orange">
+					<div class="container">
+						<div class="brands-navigation__wrapper isActive">
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">
+								</a><a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+
+
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+						</div>
+						<div class="brands-navigation__wrapper">
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">
+								</a><a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+
+
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link">Black Magic&nbsp;<span>(2)</span></a>
+								<a href="#" class="brands-navigation__link">Blade&nbsp;<span>(20)</span></a>
+								<a href="#" class="brands-navigation__link">BSD&nbsp;<span>(4)</span></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+							<div class="brands-navigation__list">
+								<a href="#" class="brands-navigation__link"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrap">
+				<div class="footer__top">
+					<div class="footer__left">
+						<div class="footer__logo"><img src="/template/img/logo-footer.png" alt="Лого Svetoria в подвале"></div>
+						<div class="footer__buttons">
+							<a href="#" class="footer__button classic-button classic-button_svg">
+								<span class="classic-button_sail">
+									<svg >
+										<use xlink:href="/template/img/icons.svg#sail"></use>
+									</svg>
+								</span>
+								<span>Распродажа</span>
+							</a>
+							<a href="#" class="footer__button classic-button classic-button_svg">
+								<span class="classic-button_offers">
+									<svg >
+										<use xlink:href="/template/img/icons.svg#coupon"></use>
+									</svg>
+								</span>
+								<span>Акции</span>
+							</a>
+							<a href="#" class="footer__button classic-button classic-button_svg">
+								<span class="classic-button_catalog">
+									<svg >
+										<use xlink:href="/template/img/icons.svg#add-collection"></use>
+									</svg>
+								</span>
+								<span>Каталог</span>
+							</a>
+						</div>
+					</div>
+					<div class="footer__center">
+						<div class="footer__column">
+							<ul class="footer__list">
+								<li class="footer__item footer__item_main">
+									<svg class="footer__svg">
+										<use xlink:href="/template/img/icons.svg#collection"></use>
+									</svg>
+									<a href="#" class="footer__link">
+										Разделы
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Распродажа
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Акции
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Установка
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Оплата и доставка
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Бренды
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Помощь
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										О компании
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Отзывы
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Контакты
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__column">
+							<ul class="footer__list">
+								<li class="footer__item footer__item_main">
+									<svg class="footer__svg">
+										<use xlink:href="/template/img/icons.svg#list"></use>
+									</svg>
+									<a href="#" class="footer__link">
+										Каталог
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Люстры
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Светильники
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Бра
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Споты
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Настольные лампы
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Торшеры
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Уличное освещение
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Лампочки
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Электротовары
+									</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">
+										Прочее
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__right">
+						<div class="footer__info">
+							<div class="footer__social social">
+								<span class="social__left">
+									Присоединяйтесь:
+								</span>
+								<div class="social__wrap">
+									<a href="#" class="social__item">
+										<svg>
+											<use xlink:href="/template/img/icons.svg#odn"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg>
+											<use xlink:href="/template/img/icons.svg#vk"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__item">
+										<svg>
+											<use xlink:href="/template/img/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="footer__contacts">
+								<a href="tel:+74842591429">8 (4842) 59-14-29</a>
+								<button type="button" class="bordered-button bordered-button_bottom">Заказать звонок</button>
+								<button type="button" class="bordered-button bordered-button_bottom">Обратная связь</button>
+							</div>
+						</div>
+						<div class="footer__subscribe">
+							<div class="footer__text">
+								<span>Хотите быть в курсе акций и новых товаров распродажи?</span> <br> <span class="footer__text_orange">Подписывайтесь!</span>
+
+							</div>
+							<div class="footer__form subscription">
+								<form action="">
+									<div class="subscription__wrap">
+										<input type="text" class="text-input-subscription" placeholder="E-mail">
+										<input type="submit" class="subscription__submit" value="Подписаться">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy">
+					<span>© Svetoria 2018</span>
+					<a href="#" target="_blank" class="footer__policy">Политика конфиденциальности</a>
+					<span class="footer__dialweb">
+						<span>Сделано</span>
+						<a href="https://dialweb.ru" target="_blank">Digital Agency Dial</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="overlay"></div>
+	<script defer src="/template/js/bundle.js" type="text/javascript"></script>
+	<!-- <script defer src="/template/libs/svg4everybody.min.js" type="text/javascript"></script>
+	<script defer src="/template/libs/picturefill.js" type="text/javascript"></script>
+	<script defer src="/template/libs/yandex-maps.js" type="text/javascript"></script>
+	<script defer src="/template/js/map.js" type="text/javascript"></script> -->
+</body>
+</html>

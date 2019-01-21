@@ -1,0 +1,37 @@
+.actions {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+
+	$parent: &;
+	&__star {
+		fill: transparent;
+		stroke: black;
+	}
+	&__link {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-left: 21px;
+		@include adaptive (1175) {
+			margin-left: 10px;
+		}
+		&:hover {
+			svg {
+				fill: #f26522;
+			}
+			#{$parent}__star {
+				fill: transparent;
+				stroke: #f26522;
+			}
+		}
+	}
+	& svg {
+		width: 20px;
+		height: 20px;
+	}
+}
