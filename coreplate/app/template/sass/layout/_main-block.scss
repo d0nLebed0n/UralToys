@@ -7,7 +7,9 @@
 		display: flex;
 
 		overflow: hidden;
-
+		&_inner {
+			overflow: visible;
+		}
 		@include adaptive (775) {
 			flex-direction: column-reverse;
 		}
@@ -21,6 +23,7 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 		&_inner {
+			overflow: visible;
 			flex-grow: 1;
 		}
 	}

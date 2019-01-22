@@ -20,6 +20,10 @@
 @import "sections/card-item";
 @import "sections/subscription";
 @import "sections/aside-filter";
+@import "sections/pagination";
+@import "sections/banner";
+@import "sections/callback-block";
+@import "sections/mobile-filter";
 
 @import "layout/header";
 @import "layout/index-slider";
@@ -32,3 +36,9 @@
 @import "layout/features-list";
 @import "layout/brands-navigation";
 @import "layout/footer";
+@import "layout/catalog-sort";
+@import "layout/catalog-section";
+@import "layout/offer-detail";
+@import "layout/card-detail";
+@import "layout/props-table";
+@import "layout/popup";

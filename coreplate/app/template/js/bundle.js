@@ -1,6 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
+// Эту зависимость закомментить в script.js
 var Swiper = require('swiper');
+////
 (function () {
     var headerMobile = function () {
         var headerBurger = document.querySelector('.jsOpenMenu');
@@ -15,6 +17,49 @@ var Swiper = require('swiper');
         };
         if (headerBurger !== null && headerNav !== null) {
             headerBurger.addEventListener('click', handleBurgerToggle);
+        }
+        ;
+    };
+    var handleTogglePopup = function (currentButton) {
+        var targetPopup;
+        if (currentButton !== null) {
+            targetPopup = document.querySelector(currentButton);
+        }
+        targetPopup.addEventListener('click', function () {
+            var dataPopup = targetPopup.getAttribute('data-target');
+            var searchPopup = document.querySelector('' + dataPopup + '');
+            if (searchPopup !== null) {
+                searchPopup.classList.toggle('isShowed');
+                document.body.classList.toggle('overflow');
+            }
+        });
+    };
+    var handleClosePopup = function (crossClassName) {
+        var crossItem = document.querySelector(crossClassName);
+        if (crossItem !== null) {
+            crossItem.addEventListener('click', function () {
+                var activePopup = document.querySelector('.popup.isShowed');
+                if (activePopup !== null) {
+                    activePopup.classList.remove('isShowed');
+                    document.body.classList.toggle('overflow');
+                }
+            });
+        }
+    };
+    var toggleFilter = function () {
+        var jsOpenFilter = document.querySelector('.jsOpenFilter');
+        var jsCloseFilter = document.querySelector('.jsCloseFilter');
+        var jsFilter = document.querySelector('.jsFilterAppend');
+        var handleFilterToggle = function () {
+            if (jsOpenFilter !== null && jsFilter !== null && jsCloseFilter !== null) {
+                jsFilter.classList.toggle('isActive');
+                document.body.classList.toggle('overflow');
+            }
+            ;
+        };
+        if (jsOpenFilter !== null && jsCloseFilter !== null) {
+            jsOpenFilter.addEventListener('click', handleFilterToggle);
+            jsCloseFilter.addEventListener('click', handleFilterToggle);
         }
         ;
     };
@@ -59,53 +104,114 @@ var Swiper = require('swiper');
         changeClasses(sideTab);
         changeClasses(brandsTab);
     };
-    var openBrandList = function (index) {
-        var brandTabs = document.querySelectorAll('.brands-navigation__list');
+    var openBrandList = function (index, multiListRow) {
+        var brandTabs = document.querySelectorAll(multiListRow);
         brandTabs.forEach(function (brand, i) {
             brand.classList.remove('isActive');
-            console.log(index);
             if (i === index && brand.parentNode.classList.contains('isActive')) {
                 brand.classList.add('isActive');
             }
             ;
         });
     };
+    var multiTabsNavigation = function (multiTabsNode, multiListRow) {
+        var tabsRow = document.querySelectorAll(multiTabsNode);
+        tabsRow.forEach(function (child, index) {
+            child.addEventListener('click', function (evt) {
+                tabsRow.forEach(function (removeClassItem) {
+                    removeClassItem.classList.remove('isActive');
+                });
+                var target = evt.target;
+                if (child === target) {
+                    child.classList.add('isActive');
+                    openBrandList(index, multiListRow);
+                }
+            });
+        });
+    };
     var brandsNavigation = function (parentClass, childClass, tabsListWrapClass) {
         var parent = document.querySelectorAll(parentClass);
         var child = document.querySelectorAll(childClass);
         var brandsList = document.querySelectorAll(tabsListWrapClass);
-        var childTab = document.querySelectorAll('.js-tab');
         parent.forEach(function (item) {
             item.addEventListener('click', function () {
                 toggleList(parent, child, brandsList);
             });
         });
-        childTab.forEach(function (child, index) {
-            child.addEventListener('click', function (evt) {
-                var target = evt.target;
-                if (child === target) {
-                    openBrandList(index);
-                    return;
+    };
+    var mobileFilter = function () {
+        var breakpoint = window.matchMedia('(max-width: 775px)');
+        var appendFilter = function (toMobile) {
+            var filter = document.querySelector('.aside-filter');
+            var mobileBlock = document.querySelector('.jsFilterAppend');
+            var filterSideBlock = document.querySelector('.aside');
+            if (filter !== null && mobileBlock !== null && toMobile === true) {
+                mobileBlock.appendChild(filter);
+            }
+            else if (toMobile === false && filterSideBlock !== null && filter !== null) {
+                filterSideBlock.insertBefore(filter, document.querySelector('.aside-navigation'));
+            }
+        };
+        var status;
+        var toMobile;
+        var handleConditionSize = function () {
+            if (breakpoint.matches === true && document.body.clientWidth <= 775 && status !== true) {
+                status = true;
+                toMobile = true;
+                appendFilter(toMobile);
+            }
+            else if (breakpoint.matches !== true && document.body.clientWidth >= 775 && document.body.clientWidth <= 1375 && status !== false) {
+                status = false;
+                toMobile = false;
+                appendFilter(toMobile);
+            }
+        };
+        window.addEventListener('resize', handleConditionSize);
+        window.addEventListener('load', handleConditionSize);
+    };
+    var counterCatalog = function () {
+        var counter = document.querySelector('.counter');
+        var counterMinus = document.querySelector('.minus');
+        var counterPlus = document.querySelector('.plus');
+        var count = document.querySelector('.count');
+        if (counter !== null && counterPlus !== null && counterMinus !== null && count !== null) {
+            counterMinus.addEventListener('click', function () {
+                var totalCount = parseInt(count.value);
+                if (totalCount > 1) {
+                    totalCount = totalCount - 1;
+                    count.value = totalCount;
                 }
             });
-        });
+            counterPlus.addEventListener('click', function () {
+                var totalCount = parseInt(count.value);
+                totalCount = totalCount + 1;
+                count.value = totalCount;
+            });
+        }
     };
     document.addEventListener('DOMContentLoaded', function () {
         headerMobile();
+        mobileFilter();
+        toggleFilter();
+        counterCatalog();
         catalogRemove('.catalog-nav__item');
         catalogRemove('.aside-navigation__item');
         catalogList('.aside-navigation__item', '.aside-navigation__sublist');
         catalogList('.aside-filter__position', '.jsSublist');
         brandsNavigation('.js-core', '.brands-navigation__tabs', '.brands-navigation__wrapper');
+        multiTabsNavigation('.js-tab', '.brands-navigation__list');
+        multiTabsNavigation('.props-table__tab', '.props-table__list');
+        handleTogglePopup('.jsCallback');
+        handleClosePopup('.jsClosePopup');
         if (document.querySelector('.index-slider__wrap') !== null) {
             new Swiper('.index-slider__wrap', {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.slider-buttons_index',
                     clickable: true,
-                    renderBullet: function (slider__control) {
-                        return '<div class="' + slider__control + '"> <span class="slider__number"></span></div>';
+                    renderBullet: function (index, slider__control) {
+                        return '<div class="' + slider__control + ' slider-orange-button "> <span class="slider__number"></span></div>';
                     },
                 },
                 autoplay: {
@@ -125,8 +231,8 @@ var Swiper = require('swiper');
                 pagination: {
                     el: '.slider-buttons_main-catalog',
                     clickable: true,
-                    renderBullet: function (slider__control) {
-                        return '<div class="' + slider__control + '"> <span class="slider__number"></span></div>';
+                    renderBullet: function (index, slider__control) {
+                        return '<div class="' + slider__control + ' slider-orange-button "> <span class="slider__number"></span></div>';
                     },
                 },
                 speed: 600,
@@ -201,6 +307,28 @@ var Swiper = require('swiper');
                         slidesPerView: 2,
                     }
                 }
+            });
+        }
+        if (document.querySelector('.card-detail__min') !== null) {
+            var gallery = new Swiper('.card-detail__min', {
+                spaceBetween: 13,
+                slidesPerView: 4,
+                breakpoints: {
+                    1175: {
+                        slidesPerView: 3,
+                    },
+                    635: {
+                        slidesPerView: 2,
+                    },
+                }
+            });
+        }
+        if (document.querySelector('.card-detail__big') !== null) {
+            new Swiper('.card-detail__big', {
+                spaceBetween: 0,
+                thumbs: {
+                    swiper: gallery,
+                },
             });
         }
     });

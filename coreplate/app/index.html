@@ -295,7 +295,7 @@
 		<div class="index-slider">
 			<div class="container">
 				<div class="index-slider__wrap swiper-container">
-					<div class="swiper-pagination"></div>
+					<div class="swiper-pagination slider-buttons_index"></div>
 					<div class="index-slider__wrapper swiper-wrapper">
 						<div class="index-slider__item swiper-slide">
 							<div class="index-slider__subwrap">
@@ -605,6 +605,7 @@
 					</div>
 					<div class="main-block__body">
 						<div class="main-block__catalog main-catalog">
+							<div class="swiper-pagination slider-buttons_main-catalog"></div>
 							<div class="main-catalog__wrap swiper-container">
 								<div class="main-catalog__wrapper swiper-wrapper">
 									<div class="main-catalog__item swiper-slide">
@@ -2601,11 +2602,52 @@
 			</div>
 		</div>
 	</footer>
+	<div class="popup jsCallbackPopup">
+		<div class="popup__overlay">
+			<div class="popup__body">
+				<form action="">
+					<div class="popup__wrapper">
+						<div class="popup__cross jsClosePopup">
+							<svg>
+								<path d="M9.41,8l6.3-6.29A1,1,0,1,0,14.29.29L8,6.58,1.71.29A1,1,0,0,0,.29,1.71L6.58,8,.29,14.29a1,1,0,0,0,0,1.42A1,1,0,0,0,1,16a1,1,0,0,0,.71-.3L8,9.41l6.29,6.29A1,1,0,0,0,15,16a1,1,0,0,0,.71-.3,1,1,0,0,0,0-1.41Z"></path>
+							</svg>
+						</div>
+						<div class="popup__subwrap">
+							<div class="popup__title custom-title">Перезвоним за 30 секунд</div>
+							<label class="popup__label text-label-popup">
+								<input type="text" class="popup__input text-input-popup" placeholder="Имя">
+								<span>Ваше имя</span>
+							</label>
+							<label class="popup__label text-label-popup">
+								<input type="text" class="popup__input text-input-popup" placeholder="+7 (      )     -   -">
+								<span>Телефон</span>
+							</label>
+							<div class="agreement">
+								<label class="agreement__checkbox agreement-checkbox">
+									<input type="checkbox" name="agreement" class="agreement-checkbox__box visually-hidden" value="" requered="">
+									<span class="agreement-checkbox__span"></span>
+									<span class="agreement-checkbox__text">
+										Согласие на обработку персональных данных
+									</span>
+								</label>
+							</div>
+							<input type="submit" value="Отправить" class="popup__submit orange-button">
+
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 	<div class="overlay"></div>
+	<!-- Этот вывод скрипта закомментить -->
 	<script defer src="/template/js/bundle.js" type="text/javascript"></script>
+
+	<!-- Эти раскомментить -->
 	<!-- <script defer src="/template/libs/svg4everybody.min.js" type="text/javascript"></script>
 	<script defer src="/template/libs/picturefill.js" type="text/javascript"></script>
-	<script defer src="/template/libs/yandex-maps.js" type="text/javascript"></script>
-	<script defer src="/template/js/map.js" type="text/javascript"></script> -->
+	<script defer src="/template/libs/swiper.min.js" type="text/javascript"></script>
+	<script defer src="/template/libs/script.js" type="text/javascript"></script>
+ -->
 </body>
 </html>

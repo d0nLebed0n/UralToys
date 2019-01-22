@@ -87,9 +87,18 @@
 			width: 18px;
 			height: 18px;
 
+			fill: #b7b7b7;
+
 			margin-right: 11px;
+			&:hover {
+				fill: #f26522;
+			}
 			@include adaptive (1175) {
 				margin-right: 7px;
+			}
+			@include adaptive (775) {
+				margin-right: 0;
+				margin-left: 7px;
 			}
 		}
 		& a span {
@@ -104,6 +113,13 @@
 			@include adaptive (975) {
 				font-size: 11px;
 
+			}
+			@include adaptive (775) {
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 		}
 
@@ -372,6 +388,11 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	&__socials {
+		@include adaptive (775) {
+			margin-right: 10px;
+		}
+	}
 	&__actions {
 		flex-direction: column;
 		flex-grow: 1;
@@ -388,6 +409,9 @@
 		padding: 8px 34px 8px 15px;
 		@include adaptive (1175) {
 			padding: 6px 10px;
+		}
+		@include adaptive (775) {
+			justify-content: flex-end;
 		}
 	}
 

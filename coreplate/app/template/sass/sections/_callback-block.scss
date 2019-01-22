@@ -1,0 +1,37 @@
+.callback-block {
+	box-shadow: 1px 1px 7px 1px rgba(40, 35, 31, 0.11);
+	background-color: #ffffff;
+
+	margin-right: auto;
+	padding: 28px 24px 21px 24px;
+	margin-top: 16px;
+	@include adaptive (1375) {
+		padding: 13px 10px;
+	}
+	&__input {
+		min-width: 217px;
+		@include adaptive (975) {
+			min-width: auto;
+		}
+	}
+	&__subwrap {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: stretch;
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 18px;
+
+		margin-bottom: 15px;
+
+		@include adaptive (1375) {
+			font-size: 15px;
+			line-height: 16px;
+
+			margin-bottom: 8px;
+		}
+	}
+}

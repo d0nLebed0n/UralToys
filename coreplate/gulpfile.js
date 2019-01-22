@@ -4,10 +4,11 @@ var browserSync = require('browser-sync');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
+// Комментим эти строки //
 var ts = require('gulp-typescript');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-
+////////////////////////////////////
 gulp.task('sass', function() {
     gulp.src('app/template/sass/**/*.scss')
         .pipe(plumber())
@@ -17,6 +18,8 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('app/template/css'))
         .pipe(browserSync.reload({stream: true}))
 });
+
+// Комментим эти строки //
 
 gulp.task('typescript', function() {
     var tsProject = ts.createProject('tsconfig.json', { noImplicitAny: true });
@@ -32,6 +35,7 @@ gulp.task('browserify', function() {
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('./app/template/js'));
 });
+//////////////////////////////
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -44,8 +48,10 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', ['browserify', 'browser-sync', 'sass'], function() {
     gulp.watch('app/template/sass/**/*.scss', ['sass']);
-    gulp.watch('app/template/ts/**/*.ts', ['typescript']);
-	gulp.watch('app/template/js/**/*.js', ['browserify']);
+    // Комментим эти строки //
+     gulp.watch('app/template/ts/**/*.ts', ['typescript']);
+	   gulp.watch('app/template/js/**/*.js', ['browserify']);
+     //////////////////////////////
     gulp.watch('app/template/js/**/*.js', browserSync.reload);
     gulp.watch('app/*.html', browserSync.reload);
 });

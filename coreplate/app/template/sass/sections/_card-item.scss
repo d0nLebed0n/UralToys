@@ -28,6 +28,32 @@
 			box-shadow: 1px 1px 7px 1px rgba(40, 35, 31, 0.4);
 		}
 	}
+	&_modified {
+		@include adaptive (1175) {
+			height: 416px!important
+		}
+		@include phone {
+				height: 332px !important;
+		}
+		& #{$parent}__image {
+			@include adaptive (1375) {
+				width: 100%;
+			}
+		}
+		& #{$parent}__wrapper {
+			@include adaptive (1375) {
+				padding: 8px 4px;
+			}
+		}
+		& #{$parent}__actions {
+			@include adaptive (1175) {
+				width: 100%;
+
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
 	&__hover {
 		width: 100%;
 		max-height: 391px;
