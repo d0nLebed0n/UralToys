@@ -57,3 +57,242 @@
   &::-moz-placeholder          { @content; }
   &:-ms-input-placeholder      { @content; }
 }
+
+@mixin classicBurger {
+	@keyframes menu-animation {
+		0% {
+			opacity: 0;
+			transform: scale(0.04)
+			translateY(300%);
+		}
+		40% {
+			transform: scale(0.04)
+			translateY(0);
+			transition: ease-out;
+		}
+		40% {
+			transform: scale(0.04)
+			translateY(0);
+		}
+		60% {
+			opacity: 1;
+			transform: scale(0.02)
+			translateY(0px);
+		}
+		61% {
+			transform: scale(0.04);
+		}
+		99.9% {
+			height: 0;
+			padding-bottom: 100%;
+			border-radius: 100%;
+		}
+		100% {
+			transform: scale(2);
+			height: 100%;
+			padding-bottom: 0;
+			border-radius: 0;
+		}
+	}
+	width: $burgerW;
+	height: $burgerH;
+	display: block;
+	background-color: transparent;
+	opacity: 0.6;
+	z-index: 2;
+	border: none;
+	outline: none;
+	transition: opacity 0.2s ease-out;
+	margin-left: 15px;
+	z-index: 12;
+	&:before {
+		content: "";
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: auto;
+		background: linear-gradient(
+				to bottom,
+				$burgerColor, $burgerColor 20%,
+				transparent 20%, transparent 40%,
+				$burgerColor 40%, $burgerColor 60%,
+				transparent 60%, transparent 80%,
+				$burgerColor 80%, $burgerColor 100%
+		);
+		transition: opacity 0.2s ease-out,
+		width 0.2s 0.2s ease-out;
+		margin: auto;
+	}
+	&:after {
+		opacity: 0;
+		content: '×';
+		color: $activeBurgerColor;
+		position: absolute;
+		top: 8px;
+		left: -4px;
+		font-size: 76px;
+		line-height: 0;
+		transition: opacity 0.4s ease-out;
+	}
+	&:active {
+		transform: translateY(2px);
+	}
+	&:hover {
+		opacity: 1;
+	}
+	.isOpened & {
+		opacity: 1;
+		&:before {
+			opacity: 0;
+			width: 0;
+		}
+		&:after {
+			opacity: 1;
+			transform: translate3d(0,0,0)
+			rotate(360deg);
+			transition: transform 0.4s 1s ease-out,
+			opacity 0.4s 1s ease-out;
+		}
+	}
+}
+@mixin classicNavigation {
+	@include adaptive($navigationParam) {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: -100%;
+		left: 0;
+		transform: translate3d(0,0,0);
+		backface-visibility: hidden;
+		overflow: hidden;
+		z-index: 11;
+		&:before {
+			content: '';
+			width: 100%;
+			height: 0;
+			background: rgb(230, 215, 189);
+			border-radius: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transform: scale(0.04) translateY(9999px);
+			overflow: hidden;
+			padding-bottom: 100%;
+			margin: auto;
+		}
+		.isOpened & {
+			top: 0;
+			&:before {
+				animation: menu-animation 0.8s ease-out forwards;
+			}
+		}
+	}
+	&__list {
+		@include adaptive($navigationParam) {
+			color: white;
+			flex-direction: column;
+			align-items: center;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%,-50%,0);
+			backface-visibility: hidden;
+			perspective: 1000;
+		}
+		@include phone {
+			width: 100%;
+		}
+	}
+	&__item {
+		@include adaptive($navigationParam) {
+			color: $itemColor;
+			font-size: 18px;
+			line-height: 32px;
+			padding: 6px 20px;
+			opacity: 0;
+			text-align: center;
+			transform: translate3d(0,36px,0);
+			&:before {
+				content: '';
+				height: 100%;
+				width: 0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: auto;
+				background-color: $hoverItemColor;
+				overflow: hidden;
+				transition: width 0.14s ease-out;
+				z-index: 2;
+				pointer-events: none;
+			}
+			&:after {
+				content: attr(data-text);
+				color: transparent;
+				font-size: inherit;
+				font-weight: inherit;
+				letter-spacing: inherit;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				overflow: hidden;
+				transform: translate(-24px, 6px);
+				transition: transform 0.1s ease-out,
+				opacity 0.1s ease-out;
+				z-index: 4;
+				pointer-events: none;
+			}
+			&:hover {
+				&:before {
+					left: 0;
+					right: auto;
+					width: 100%;
+				}
+				&:after {
+					color: $hoverAfterColor;
+					opacity: 1;
+					padding: 0px 20px;
+					transform: translate(0px, 6px);
+					transition: transform 0.2s 0.14s ease-out,
+					opacity 0.2s 0.14s ease-out;
+				}
+			}
+			.isOpened & {
+				opacity: 1;
+				transform: translate3d(0,0,0);
+				transition: transform 0.2s ease-out,
+				opacity 0.2s ease-out;
+				@for $i from 1 to 10 {
+					&:nth-child(#{$i}) { transition-delay: $i * 0.1s + 0.65s; }
+				}
+			}
+		}
+		&:hover,
+		&.isActive {
+			color: $activeItemColor;
+		}
+	}
+	&__link {
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		letter-spacing: inherit;
+
+		transition: .3s;
+		cursor: pointer;
+		@include adaptive($navigationParam) {
+			opacity: inherit;
+			transform: inherit;
+			transition: inherit;
+			transition-delay: inherit;
+		}
+	}
+}
