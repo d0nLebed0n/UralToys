@@ -51,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  font-family: "MuseoSansCyrl", "Arial", sans-serif;
+  font-family: "PTSans", "Circle", "Arial", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
@@ -59,7 +59,21 @@ body {
   overflow-x: hidden;
 }
 
-body.overflow {
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #f8971d;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+body.js-overFlowed {
   overflow: hidden;
 }
 
@@ -96,9 +110,11 @@ label {
 
 input[type=submit],
 input[type=text],
+input[type=search],
 textarea,
 button[type=button] {
   -webkit-appearance: none;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -133,7 +149,7 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1407px;
+  max-width: 1876px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -148,12 +164,16 @@ a {
   max-width: 1758px;
 }
 
+.container_min {
+  max-width: 1287px;
+}
+
 .container_full {
   max-width: 1950px;
   padding: 0;
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1800px) {
   .mobile-drop_level1 {
     display: none !important;
   }

@@ -14,35 +14,46 @@ html, body {
 
 body {
 	display: flex;
- 	 flex-direction: column;
+	flex-direction: column;
 	min-width: 320px;
-	font-family: "MuseoSansCyrl", "Arial", sans-serif;
+	font-family: "PTSans", "Circle", "Arial", sans-serif;
 	font-weight: 500;
 	font-style: normal;
 	font-size: 18px;
 	color: black;
 	overflow-x: hidden;
-}
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #f8971d;
+		border-radius: 20px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #ddd;
+		border-radius: 20px;
+	}
 
-body.overflow {
+}
+body.js-overFlowed {
 	overflow: hidden;
 }
 
 header {
-  flex-shrink: 0; /* IE fix */
+	flex-shrink: 0; /* IE fix */
 }
 
 main {
-  flex-shrink: 0; /* IE fix */
+	flex-shrink: 0; /* IE fix */
 }
 
 body > div {
-  flex-shrink: 0; /* IE fix */
+	flex-shrink: 0; /* IE fix */
 }
 
 footer {
-  flex-shrink: 0; /* IE fix */
-  margin-top: auto;
+	flex-shrink: 0; /* IE fix */
+	margin-top: auto;
 }
 
 img {
@@ -57,9 +68,13 @@ label {
 
 input[type=submit],
 input[type=text],
+input[type=search],
 textarea,
 button[type=button] {
 	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 	cursor: pointer;
 }
 
@@ -98,7 +113,7 @@ a {
 
 .container {
 	width: 100%;
-	max-width: 1407px;
+	max-width: 1876px;
 	padding: 0 15px;
 	margin: 0 auto;
 	@include phone {
@@ -106,6 +121,9 @@ a {
 	}
 	&_big {
 		max-width: 1758px;
+	}
+	&_min {
+		max-width: 1287px;
 	}
 	&_full {
 		max-width: 1950px;
@@ -116,7 +134,7 @@ a {
 .mobile-drop {
 
 	&_level1 {
-		@include adaptive (975) {
+		@include adaptive (1800) {
 			display: none!important;
 		}
 	}

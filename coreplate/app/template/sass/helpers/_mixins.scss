@@ -296,3 +296,41 @@
 		}
 	}
 }
+
+//  grid ie mixin
+$☠__ms-col-gap: null;
+$☠__ms-row-gap: null;
+$☠__ms-col-count: null;
+$☠__ms-row-count: null;
+@mixin grid-column($start: auto, $span: 1){
+	//  grid-column-gap using left margin
+	@if $☠__ms-col-gap and not $☠__ms-col-count and $start != 1 {
+		margin-left: $☠__ms-col-gap;
+		@supports (grid-column-gap: 1px){ margin-left: 0; }
+	}
+	-ms-grid-column: if($☠__ms-col-count, $start + $start - 1, $start);
+	-ms-grid-column-span: if($☠__ms-col-count, $span + $span - 1, $span);
+	grid-column: #{$start}/#{$start + $span};
+	@content;
+}
+//
+//  grid-row mixin
+//
+@mixin grid-row($start: auto, $span: 1){
+	//  grid-row-gap using top margin
+	@if $☠__ms-row-gap and not $☠__ms-row-count and $start != 1 {
+		margin-top: $☠__ms-row-gap;
+		@supports (grid-row-gap: 1px){ margin-top: 0; }
+	}
+	-ms-grid-row: if($☠__ms-row-count, $start + $start - 1, $start);
+	-ms-grid-row-span: if($☠__ms-row-count, $span + $span - 1, $span);
+	grid-row: #{$start}/#{$start + $span};
+	@content;
+}
+
+@mixin grid-area($area){
+	$area: map-get($grid-areas, $area);
+	@include grid-column(nth($area, 1), nth($area, 2));
+	@include grid-row(nth($area, 3), nth($area, 4));
+	@content;
+}
