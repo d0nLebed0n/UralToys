@@ -1,33 +1,40 @@
 {
-  "devDependencies": {
-    "@types/node": "^10.12.18",
-    "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
-    "gulp-typescript": "^5.0.0-alpha.3",
-    "swiper": "^4.4.1",
-    "typescript": "^3.1.3",
-    "browserify": "^3.36.0",
-    "vinyl-source-stream": "~0.1.1",
-    "eslint": "5.7.0",
-    "eslint-config-htmlacademy": "0.5.2",
-    "tslint": "^5.12.0"
-  },
-  "author": "aSthma",
-  "scripts": {
-    "start": "gulp",
-    "test": "eslint js/"
-  },
-  "version": "1.0.0",
-  "main": "gulpfile.js",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@types/swiper": "^4.2.4",
-    "npm": "^6.5.0",
-    "swiper": "^4.4.6"
-  }
+	"devDependencies": {
+		"@types/node": "^10.12.18",
+		"browser-sync": "^2.24.4",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^5.0.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-rename": "^1.2.3",
+		"gulp-sass": "^4.0.1",
+		"gulp-data": "^1.2.0",
+		"gulp-typescript": "^5.0.0-alpha.3",
+		"swiper": "^4.4.1",
+		"typescript": "^3.1.3",
+		"browserify": "^3.36.0",
+		"vinyl-source-stream": "~0.1.1",
+		"eslint": "5.7.0",
+		"eslint-config-htmlacademy": "0.5.2",
+		"tslint": "^5.12.0",
+		"panini": "^1.6.3",
+		"gulp-html-prettify": "^0.0.1"
+	},
+	"keywords": [
+		"pug"
+	],
+	"author": "aSthma",
+	"scripts": {
+		"start": "gulp",
+		"test": "eslint js/"
+	},
+	"version": "1.0.0",
+	"main": "gulpfile.js",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@types/swiper": "^4.2.4",
+		"npm": "^6.5.0",
+		"swiper": "^4.4.6",
+		"file-exists": "^5.0.1"
+	}
 }

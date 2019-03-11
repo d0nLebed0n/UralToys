@@ -4,11 +4,8 @@ var browserSync = require('browser-sync');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
-// Комментим эти строки //
-var ts = require('gulp-typescript');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-////////////////////////////////////
+var panini = require('panini');
+var prettify = require('gulp-html-prettify');
 gulp.task('sass', function() {
 	gulp.src('app/template/sass/**/*.scss')
 		.pipe(plumber())
@@ -19,25 +16,23 @@ gulp.task('sass', function() {
 		.pipe(browserSync.reload({stream: true}))
 });
 
-// Комментим эти строки //
-
-gulp.task('typescript', function() {
-	var tsProject = ts.createProject('tsconfig.json', { noImplicitAny: true });
-	var tsResult = gulp.src("app/template/ts/**/*.ts")
-		.pipe(tsProject());
-
-	return tsResult.js.pipe(gulp.dest('app/template/js'));
+gulp.task('observe-html', function () {
+	return gulp.src('app/template/panini/pages/**/*.html')
+		.pipe(panini({
+			root:'app/template/panini/pages/',
+			layouts: 'app/template/panini/layout/',
+			partials: 'app/template/panini/sections/',
+			helpers: 'app/template/panini/components/',
+			data: 'app/template/panini/base/',
+		}))
+		.pipe(prettify({indent_char: ' ', indent_size: 2}))
+		.pipe(gulp.dest('./app/'))
+		.pipe(browserSync.stream())
 });
-
-gulp.task('browserify', function() {
-	return browserify('./app/template/js/script.js')
-		.bundle()
-		.pipe(source('bundle.js'))
-		.pipe(gulp.dest('./app/template/js'));
-
-});
-//////////////////////////////
-
+gulp.task('observe-html:reset', function (done) {
+	panini.refresh();
+	done();
+})
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
@@ -46,14 +41,45 @@ gulp.task('browser-sync', function() {
 		notify: false
 	});
 });
+gulp.task('img', function () {
+	return gulp.src('app/template/img/*')
+		.pipe(gulp.dest('build/template/img/'))
+});
+gulp.task('fonts', function () {
+	return gulp.src('app/template/fonts/*')
+		.pipe(gulp.dest('build/template/fonts/'))
+});
+gulp.task('libs', function () {
+	return gulp.src('app/template/libs/**')
+		.pipe(gulp.dest('build/template/libs/'))
+});
+gulp.task('css', function () {
+	return gulp.src('app/template/css/*')
+		.pipe(gulp.dest('build/template/css/'))
+});
+gulp.task('js', function () {
+	return gulp.src('app/template/js/*.js')
+		.pipe(gulp.dest('build/template/js/'))
+});
+gulp.task('pages', function () {
+	return gulp.src('app/*.html')
+		.pipe(gulp.dest('build/'))
+});
 
-gulp.task('watch', ['browserify', 'browser-sync', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'observe-html'], function() {
 	gulp.watch('app/template/sass/**/*.scss', ['sass']);
-	// Комментим эти строки //
-	gulp.watch('app/template/ts/**/*.ts', ['typescript', 'browserify']);
-	//////////////////////////////
+	gulp.watch('app/template/panini/pages/*.html', ['observe-html']);
+	gulp.watch('app/template/panini/**/*', ['observe-html:reset', 'observe-html']);
 	gulp.watch('app/template/js/**/*.js', browserSync.reload);
 	gulp.watch('app/*.html', browserSync.reload);
 });
-
+gulp.task('build', [
+	'sass',
+	'pages',
+	'img',
+	'fonts',
+	'libs',
+	'css',
+	'js'
+]);
 gulp.task('default', ['watch']);
