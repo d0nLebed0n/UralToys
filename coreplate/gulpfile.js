@@ -1,12 +1,15 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-var rename = require('gulp-rename');
-var plumber = require('gulp-plumber');
-var autoprefixer = require('gulp-autoprefixer');
-var panini = require('panini');
-var prettify = require('gulp-html-prettify');
-gulp.task('sass', function() {
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync');
+const rename = require('gulp-rename');
+const plumber = require('gulp-plumber');
+const autoprefixer = require('gulp-autoprefixer');
+const panini = require('panini');
+const prettify = require('gulp-html-prettify');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+gulp.task('sass', () => {
 	gulp.src('app/template/sass/**/*.scss')
 		.pipe(plumber())
 		.pipe(sass({outputStyle: 'expanded'}))
@@ -16,7 +19,7 @@ gulp.task('sass', function() {
 		.pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('observe-html', function () {
+gulp.task('observe-html', () => {
 	return gulp.src('app/template/panini/pages/**/*.html')
 		.pipe(panini({
 			root:'app/template/panini/pages/',
@@ -33,7 +36,7 @@ gulp.task('observe-html:reset', function (done) {
 	panini.refresh();
 	done();
 })
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
 	browserSync({
 		server: {
 			baseDir: 'app'
@@ -41,32 +44,40 @@ gulp.task('browser-sync', function() {
 		notify: false
 	});
 });
-gulp.task('img', function () {
+gulp.task('img', () => {
 	return gulp.src('app/template/img/*')
 		.pipe(gulp.dest('build/template/img/'))
 });
-gulp.task('fonts', function () {
+gulp.task('fonts', () => {
 	return gulp.src('app/template/fonts/*')
 		.pipe(gulp.dest('build/template/fonts/'))
 });
-gulp.task('libs', function () {
+gulp.task('libs', () => {
 	return gulp.src('app/template/libs/**')
 		.pipe(gulp.dest('build/template/libs/'))
 });
-gulp.task('css', function () {
+gulp.task('css', () => {
 	return gulp.src('app/template/css/*')
 		.pipe(gulp.dest('build/template/css/'))
 });
-gulp.task('js', function () {
-	return gulp.src('app/template/js/*.js')
-		.pipe(gulp.dest('build/template/js/'))
-});
-gulp.task('pages', function () {
+
+gulp.task('js', () =>
+  gulp.src('app/**/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(concat('/template/js/bundle.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('build/'))
+);
+
+gulp.task('pages', () => {
 	return gulp.src('app/*.html')
 		.pipe(gulp.dest('build/'))
 });
 
-gulp.task('watch', ['browser-sync', 'sass', 'observe-html'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'observe-html', 'js'], () => {
 	gulp.watch('app/template/sass/**/*.scss', ['sass']);
 	gulp.watch('app/template/panini/pages/*.html', ['observe-html']);
 	gulp.watch('app/template/panini/**/*', ['observe-html:reset', 'observe-html']);
