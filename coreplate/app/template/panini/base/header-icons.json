@@ -1,0 +1,26 @@
+{
+	"items": [
+		{
+			"top-title": "Petrova",
+      "subtitle": "Anastasiya",
+      "svgId": "user",
+      "modifier": "manager"
+		},
+		{
+      "top-title": "Избранное",
+      "subtitle": "Нет товаров",
+      "svgId": "heart",
+      "modifier": "fav"
+		},
+    {
+      "top-title": "Сумма",
+      "subtitle": "70 000 \u20BD;",
+      "svgId": "cart",
+      "modifier": "basket"
+    }
+	]
+}
+
+
+
+

@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"href": "/about.html",
+      "title": "О компании"
+		},
+		{
+      "href": "/work.html",
+      "title": "Условия работы"
+		},
+    {
+      "href": "/delivery.html",
+      "title": "Доставка"
+    },
+    {
+      "href": "/contacts.html",
+      "title": "Контакты"
+    }
+	]
+}
+
+
+
+
