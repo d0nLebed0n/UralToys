@@ -165,6 +165,14 @@ a {
   }
 }
 
+.common-blue-button {
+  line-height: 18px;
+  color: white;
+  border: none;
+  background: #2799CE;
+  padding: 11px 21px;
+}
+
 .breadcrumbs {
   margin-top: 34px;
   overflow: hidden;
@@ -213,4 +221,44 @@ a {
 
 .breadcrumbs__link:hover {
   color: #f26522;
+}
+
+.header__top {
+  background: #C9C9C9;
+}
+
+.header__normal {
+  line-height: 18px;
+  margin: 0;
+}
+
+.header__bold {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+}
+
+.header__city-title {
+  margin: 0;
+}
+
+.header__city-title svg {
+  width: 10px;
+  height: 15px;
+}
+
+.header__city-selected {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.header__city-selected svg {
+  width: 9px;
+  height: 13px;
+  margin-left: 8px;
 }

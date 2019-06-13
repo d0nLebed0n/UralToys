@@ -32,8 +32,8 @@
          </ul>
          <div class="header__top-phones">
            <span class="header__phones-name">Т</span>
-           <a href="tel:+79122637575" class="header__phones-item">+7 (912) 263-75-75</a>
-           <a href="tel:+78002502271" class="header__phones-item"> 8 800 250 22 71</a>
+           <a href="tel:+79122637575" class="header__phones-item header__bold">+7 (912) 263-75-75</a>
+           <a href="tel:+78002502271" class="header__phones-item header__bold"> 8 800 250 22 71</a>
          </div>
          <button type="button" data-target="js-openCallbackPopup" class="header__top-callback js-callback common-blue-button">
            Вопрос руководителю
@@ -215,11 +215,50 @@
                   <a href="#" class="navigation__link">Каталог </a>
                   <div class="navigation__hidden-list">
                     <div class="navigation__grid">
+                      {{#repeat 5}}
                       <div class="navigation__hidden-item">
                         <a href="#" class="navigation__hidden-title">
-
+                          {{#create-svg}}tricycle{{/create-svg}}
+                          <span>Транспорт</span>
+                        </a>
+                        <ul class="navigation__hidden-sublist">
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                          </li>
+                        </ul>
+                        <a href="#" class="navigation__hidden-all">
+                          <span> Все 9 категорий</span>
                         </a>
                       </div>
+                      <div class="navigation__hidden-item">
+                        <a href="#" class="navigation__hidden-title">
+                          {{#create-svg}}airplane{{/create-svg}}
+                          <span>Летний ассортимент</span>
+                        </a>
+                        <ul class="navigation__hidden-sublist">
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                          </li>
+                          <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                          </li>
+                        </ul>
+                        <a href="#" class="navigation__hidden-all">
+                          <span> Все 9 категорий</span>
+                        </a>
+                      </div>
+                      {{/repeat}}
                     </div>
                   </div>
                 </li>
