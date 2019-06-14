@@ -1,0 +1,23 @@
+.search {
+  &__submit {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D6E2E8;
+    border-radius: 1px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    & svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &__input {
+    border: none;
+    background: #EDF1F3;
+    border-radius: 1px;
+  }
+}

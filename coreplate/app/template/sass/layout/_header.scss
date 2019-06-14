@@ -1,7 +1,36 @@
 .header {
   &__top {
     background: #C9C9C9;
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-grow: 0.17;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-city {
+      display: flex;
+    }
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-manager {
+      display: flex;
+      align-items: center;
+    }
+    &-callback {
+      //margin-left: auto;
+    }
+    &-phones {
+      display: flex;
+      align-items: center;
+    }
   }
+
   &__normal {
     line-height: 18px;
     margin: 0;
@@ -12,8 +41,17 @@
     line-height: 20px;
     margin: 0;
   }
+  &__phones {
+    &-name {
+      color: #2799CE;
+      font-weight: 700;
+      margin-right: 16px;
+    }
+  }
   &__city {
     &-title {
+      display: flex;
+      align-items: center;
       margin: 0;
       & svg {
         width: 10px;
@@ -35,5 +73,8 @@
     }
   }
   &__manager {
+    &-name {
+      margin-right: 14px;
+    }
   }
 }
