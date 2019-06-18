@@ -1,0 +1,118 @@
+.navigation {
+  $parent: &;
+  &__hidden {
+    &-all {
+      text-transform: none;
+      display: block;
+      line-height: 140%;
+      margin-top: 22px;
+    }
+    &-sublist {
+      font-weight: 400;
+      line-height: 200%;
+      list-style-type: none;
+      text-transform: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-title {
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      margin: 0px 0px 20px;
+      &:hover {
+        color: $blue;
+      }
+      & svg {
+        width: 31px;
+        height: 25px;
+        margin: 0px 20px 0 0;
+      }
+    }
+    &-list {
+      left: 0;
+      top: 114px;
+      right: 0;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      overflow: hidden;
+      padding: 37px 0;
+      &::before {
+        content: '';
+        width: 100vw;
+        height: 1px;
+        background: $theme-grey;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::after {
+        content: '';
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        -webkit-transform: translatex(-50%);
+        -moz-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+        -o-transform: translatex(-50%);
+        transform: translatex(-50%);
+        background: #FFFFFF;
+        box-shadow: 0px 5px 10px rgba(37, 41, 43, 0.05);
+        z-index: -1;
+      }
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 58px;
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+  }
+  &__item {
+    &_parent {
+      font-weight: 700;
+      text-transform: uppercase;
+      &:hover #{$parent}__hidden-list {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        transition: all 0.3s ease-in-out;
+        z-index: 10;
+        pointer-events: all;
+      }
+    }
+  }
+  &__link {
+    font-size: 16px;
+    font-weight: inherit;
+    line-height: 22px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    &:hover {
+      color: $blue;
+    }
+  }
+}

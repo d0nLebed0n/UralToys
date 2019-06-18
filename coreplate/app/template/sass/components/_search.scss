@@ -1,4 +1,8 @@
 .search {
+  & form {
+    display: flex;
+    align-items: stretch;
+  }
   &__submit {
     width: 35px;
     height: 35px;
@@ -10,14 +14,31 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    &:hover {
+      background: $blue;
+    }
+    &:active {
+      background: #3CB3EA;
+    }
     & svg {
       width: 15px;
       height: 15px;
     }
   }
+  &__label {
+    flex-grow: 1;
+  }
   &__input {
+    width: 100%;
+    height: 100%;
     border: none;
     background: #EDF1F3;
     border-radius: 1px;
+    padding: 6px 20px;
   }
 }

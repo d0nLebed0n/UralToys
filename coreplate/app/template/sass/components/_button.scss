@@ -4,4 +4,15 @@
   border: none;
   background: $blue;
   padding: 11px 21px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  &:hover {
+    background: $purple;
+  }
+  &:active {
+    background: #9F96CB;
+  }
 }
