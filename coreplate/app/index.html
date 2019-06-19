@@ -25,6 +25,15 @@
     <div class="header__top">
       <div class="container">
         <div class="header__top-wrap">
+          <div class="header__top-mobile header-mobile">
+            <button type="button" class="header-mobile__burger js-openMobile">
+              <span></span><span></span><span></span>
+            </button>
+            <div class="header-mobile__wrapper js-mobileWrapper">
+              <div class="header-mobile__subwrap js-detachElements"></div>
+            </div>
+            <div class="header-mobile__overlay js-mobileOverlay"></div>
+          </div>
           <div class="header__top-city">
             <p class="header__city-title">
               <svg>
@@ -646,6 +655,7 @@
     </div>
   </header>
 
+  <script defer="defer" src="/template/js/utils.js"></script>
 </body>
 
 </html>

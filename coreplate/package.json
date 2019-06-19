@@ -9,19 +9,19 @@
 	"devDependencies": {
 		"@types/node": "^10.12.18",
 		"browser-sync": "^2.24.4",
+		"browserify": "^3.36.0",
+		"eslint": "5.13.0",
+		"eslint-config-htmlacademy": "0.5.2",
 		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "^5.0.0",
+		"gulp-data": "^1.2.0",
+		"gulp-html-prettify": "^0.0.1",
 		"gulp-plumber": "^1.2.0",
 		"gulp-rename": "^1.2.3",
 		"gulp-sass": "^4.0.1",
-		"gulp-data": "^1.2.0",
-		"swiper": "^4.4.1",
-		"browserify": "^3.36.0",
-		"vinyl-source-stream": "~0.1.1",
-		"eslint": "5.13.0",
-		"eslint-config-htmlacademy": "0.5.2",
 		"panini": "^1.6.3",
-		"gulp-html-prettify": "^0.0.1"
+		"swiper": "^4.4.1",
+		"vinyl-source-stream": "~0.1.1"
 	},
 	"engines": {
 		"node": "10"

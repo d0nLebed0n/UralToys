@@ -9,6 +9,9 @@
   }
   &__logo {
     margin-right: 187px;
+    @include adaptive(1680) {
+      margin-right: 97px;
+    }
   }
   &__icon {
 
@@ -198,6 +201,9 @@
     }
     &-callback {
       margin-left: 36px;
+      @include adaptive(1680) {
+        margin-left: 20px;
+      }
     }
     &-phones {
       display: flex;

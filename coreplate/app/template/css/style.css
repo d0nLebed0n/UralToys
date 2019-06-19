@@ -433,6 +433,39 @@ a {
   height: 10px;
 }
 
+.header-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .header-mobile {
+    display: block;
+  }
+}
+
+.header-mobile__burger {
+  width: 20px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.header-mobile__burger:hover span:nth-child(2) {
+  width: 50%;
+}
+
+.header-mobile__burger span {
+  width: 20px;
+  height: 2px;
+  background: #000;
+  display: block;
+  transition: 0.3s;
+}
+
 .header__navigation {
   flex-grow: 0.66;
 }
@@ -443,6 +476,12 @@ a {
 
 .header__logo {
   margin-right: 187px;
+}
+
+@media screen and (max-width: 1680px) {
+  .header__logo {
+    margin-right: 97px;
+  }
 }
 
 .header__icon-count {
@@ -643,6 +682,12 @@ a {
 
 .header__top-callback {
   margin-left: 36px;
+}
+
+@media screen and (max-width: 1680px) {
+  .header__top-callback {
+    margin-left: 20px;
+  }
 }
 
 .header__top-phones {
