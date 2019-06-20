@@ -21,6 +21,9 @@ body {
 	font-size: 14px;
 	color: black;
 	overflow-x: hidden;
+  @include adaptive(1144) {
+    font-size: 13px;
+  }
 	&::-webkit-scrollbar {
 		width: 10px;
 	}
@@ -104,6 +107,12 @@ a {
 	max-width: 1810px;
 	padding: 0 15px;
 	margin: 0 auto;
+  @include adaptive(1366) {
+    max-width: 1270px;
+  }
+  @include adaptive(1100) {
+    max-width: 1030px;
+  }
 	@include phone {
 		padding: 0px 8px;
 	}

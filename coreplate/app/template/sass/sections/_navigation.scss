@@ -2,10 +2,21 @@
   $parent: &;
   &__hidden {
     &-all {
-      text-transform: none;
-      display: block;
       line-height: 140%;
       margin-top: 22px;
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      & svg {
+        width: 9px;
+        height: 15px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        margin-left: 9px;
+      }
     }
     &-sublist {
       font-weight: 400;
@@ -88,10 +99,115 @@
     padding: 0;
 
   }
+  &__additional {
+    @include adaptive(1366) {
+      width: 531px;
+      background: white;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 25px);
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      overflow: hidden;
+      padding: 8px 18px;
+      &:hover {
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        transition: all 0.3s ease-in-out;
+        z-index: 10;
+        pointer-events: all;
+      }
+      &-link {
+        font-size: 16px;
+        line-height: 140%;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        @include adaptive(1144) {
+          font-size: 14px;
+        }
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
   &__item {
+    &_svg {
+      display: flex;
+      align-items: center;
+      &:hover {
+        & #{$parent}__link svg {
+          fill: $blue
+        }
+      }
+      & #{$parent}__link svg {
+        width: 9px;
+        height: 13px;
+        @include adaptive(1144) {
+          width: 8px;
+          height: 11px;
+        }
+      }
+    }
+    &_mobile {
+      display: none;
+      @include adaptive(1366) {
+        display: block;
+        position: relative;
+        &:hover {
+          & #{$parent}__additional {
+            opacity: 1;
+            overflow: visible;
+            visibility: visible;
+            transition: all 0.3s ease-in-out;
+            z-index: 10;
+            pointer-events: all;
+          }
+          &::before {
+            pointer-events: all;
+          }
+        }
+        &::before {
+          content: '';
+          width: 100px;
+          height: 28px;
+          position: absolute;
+          pointer-events: none;
+          right: 0;
+          top: 100%;
+        }
+      }
+
+    }
     &_parent {
       font-weight: 700;
       text-transform: uppercase;
+      & #{$parent}__link {
+        position: relative;
+        &::before {
+          content: '';
+          width: 100px;
+          height: 28px;
+          position: absolute;
+          pointer-events: none;
+          right: 0;
+          top: 100%;
+          @include adaptive(1144) {
+            height: 37px;
+          }
+        }
+      }
+
       &:hover #{$parent}__hidden-list {
         opacity: 1;
         overflow: visible;
@@ -99,6 +215,11 @@
         transition: all 0.3s ease-in-out;
         z-index: 10;
         pointer-events: all;
+      }
+      &:hover {
+        & #{$parent}__link::before {
+          pointer-events: all;
+        }
       }
     }
   }
@@ -111,6 +232,12 @@
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    @include adaptive(1144) {
+      font-size: 14px;
+    }
+    &-name {
+      font-weight: 700;
+    }
     &:hover {
       color: $blue;
     }

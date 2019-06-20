@@ -7,7 +7,30 @@
              <span></span><span></span><span></span>
            </button>
            <div class="header-mobile__wrapper js-mobileWrapper">
-            <div class="header-mobile__subwrap js-detachElements"></div>
+             <button type="button" class="header-mobile__close js-closeMenu">
+              {{#create-svg}}cross2{{/create-svg}}
+             </button>
+            <div class="header-mobile__subwrap">
+              <div class="header-mobile__detach js-detachElements">
+
+              </div>
+              <div class="header-mobile__manager">
+                <p class="header-mobile__text">Менеджер по Вашему региону</p>
+                <h2 class="header-mobile__name">Анна Кобякова</h2>
+                <p class="header-mobile__prop">
+                  <span class="header-mobile__text">Телефон:</span><span class="header-mobile__value">+7 (343) 270-22-02 (доб.207)</span>
+                </p>
+                <p class="header-mobile__prop">
+                  <span class="header-mobile__text">Мобильный:</span><span class="header-mobile__value">+7 (912) 263-75-75</span>
+                </p>
+                <p class="header-mobile__prop">
+                  <span class="header-mobile__text">ICQ:</span><span class="header-mobile__value">ICQ:  441-647-273</span>
+                </p>
+                <p class="header-mobile__prop">
+                  <span class="header-mobile__text">E-mail:</span><span class="header-mobile__value">anna_k@ural-toys.ru</span>
+                </p>
+              </div>
+            </div>
            </div>
            <div class="header-mobile__overlay js-mobileOverlay"></div>
          </div>
@@ -221,13 +244,20 @@
           </div>
           <div class="header__middle-bottom">
             <nav class="navigation header__navigation">
-              <ul class="navigation__list">
-                <li class="navigation__item navigation__item_parent">
-                  <a href="#" class="navigation__link">Каталог </a>
+              <ul class="navigation__list js-mainMenu">
+                <li class="navigation__item navigation__item_parent navigation__item_svg">
+                  <a href="#" class="navigation__link" data-show="true">
+                    <span class="navigation__link-name">
+                      Каталог
+                    </span>
+                    {{#create-svg}}arrow-btn{{/create-svg}}
+
+                  </a>
                   <div class="navigation__hidden-list">
                     <div class="navigation__grid">
                       {{#repeat 5}}
                       <div class="navigation__hidden-item">
+                        <span class="navigation__hidden-open js-openCategory"></span>
                         <a href="#" class="navigation__hidden-title">
                           {{#create-svg}}tricycle{{/create-svg}}
                           <span>Транспорт</span>
@@ -246,9 +276,11 @@
                         </ul>
                         <a href="#" class="navigation__hidden-all">
                           <span> Все 9 категорий</span>
+                          {{#create-svg}}arrow-btn{{/create-svg}}
                         </a>
                       </div>
                       <div class="navigation__hidden-item">
+                        <span class="navigation__hidden-open js-openCategory"></span>
                         <a href="#" class="navigation__hidden-title">
                           {{#create-svg}}airplane{{/create-svg}}
                           <span>Летний ассортимент</span>
@@ -267,18 +299,46 @@
                         </ul>
                         <a href="#" class="navigation__hidden-all">
                           <span> Все 9 категорий</span>
+                          {{#create-svg}}arrow-btn{{/create-svg}}
                         </a>
                       </div>
                       {{/repeat}}
                     </div>
                   </div>
                 </li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Новинки</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Хиты продаж</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Товары по акции</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Бренд</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Фикс-цена</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Прайс-лист</a></li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" data-show="false">Новинки</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" data-show="false">Хиты продаж</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" data-show="false">Товары по акции</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" data-show="true">Бренд</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" data-show="true">Фикс-цена</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link" data-show="true">Прайс-лист</a>
+                </li>
+                <li class="navigation__item navigation__item_mobile navigation__item_svg">
+                  <a href="#" class="navigation__link" data-show="false">
+                    <span class="navigation__link-name">
+                     Еще <span>5</span>
+                    </span>
+                    {{#create-svg}}arrow-btn{{/create-svg}}
+                  </a>
+                  <ul class="navigation__additional">
+                    <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Новинки</a></li>
+                    <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Хиты продаж</a></li>
+                    <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Бренд</a></li>
+                    <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Фикс-цена</a></li>
+                    <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Прайс-лист</a></li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </div>

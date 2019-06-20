@@ -2,15 +2,40 @@
   $parent: &;
 
   &__navigation {
-    flex-grow: 0.66;
+    flex-grow: 0.768;
+    @include adaptive(1680) {
+      flex-grow: 1;
+    }
   }
   &__search {
-    flex-grow: 0.7788;
+    flex-grow: 0.773;
+    @include adaptive(1366) {
+      flex-grow: 0.86;
+      margin-right: 50px;
+    }
+    @include adaptive(1144) {
+      flex-grow: 1;
+      margin-right: 65px;
+    }
+    @include adaptive(1100) {
+      margin-right: 68px;
+    }
+    @include adaptive(1000) {
+      margin-right: 15px;
+    }
   }
   &__logo {
     margin-right: 187px;
     @include adaptive(1680) {
       margin-right: 97px;
+    }
+    @include adaptive(1144) {
+      width: 90px;
+      height: 80px;
+      margin-right: 60px;
+    }
+    @include adaptive(1000) {
+      margin-right: 20px;
     }
   }
   &__icon {
@@ -64,7 +89,24 @@
       }
     }
     &_cart {
+      left: -2px;
+      @include adaptive(1880) {
+        left: auto;
+      }
+      @include adaptive(1366) {
+        left: -11px;
+      }
+      @include adaptive(1144) {
+        left: auto;
+      }
       #{$parent}__item-visible {
+        @include adaptive(1144) {
+          border-left: 1px solid $theme-grey;
+          padding-left: 37px;
+        }
+        @include adaptive(1000) {
+          padding-left: 15px;
+        }
         &:hover svg {
           fill: $blue;
         }
@@ -73,8 +115,65 @@
         background: $red;
       }
     }
+    &_manager {
+      right: -3px;
+      @include adaptive(1880) {
+        right: auto;
+      }
+      @include adaptive(1366) {
+        display: flex;
+        align-items: center;
+        & #{$parent}__item-visible {
+          @include adaptive(1144) {
+            padding-right: 37px;
+          }
+          @include adaptive(1000) {
+            padding-right: 15px;
+          }
+        }
+        & #{$parent}__item-top,
+        & #{$parent}__item-bottom {
+          display: none;
+        }
+        & #{$parent}__item-icon {
+
+          margin-right: 0;
+        }
+      }
+    }
     &_fav {
+      & #{$parent}__item-icon {
+        margin-right: 15px;
+      }
+      @include adaptive(1880) {
+        right: auto;
+      }
+      @include adaptive(1366) {
+        display: flex;
+        align-items: center;
+        & #{$parent}__item-top,
+        & #{$parent}__item-bottom {
+          display: none;
+        }
+        & #{$parent}__icon-count {
+          top: -5px;
+        }
+        & #{$parent}__item-icon {
+
+          margin-right: 0;
+        }
+      }
+      @include adaptive(1144) {
+        display: none;
+      }
       #{$parent}__item-visible {
+        @include adaptive(1366) {
+          border-right: 1px solid $theme-grey;
+          border-left: 1px solid $theme-grey;
+          position: relative;
+          left: -7px;
+          padding: 5px 24px;
+        }
         &:hover svg {
           stroke: $blue;
         }
@@ -96,11 +195,14 @@
     &-top {
       color: $grey;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 18px;
     }
     &-bottom {
       font-size: 14px;
       line-height: 131.99%;
+      &_bold {
+        font-weight: 700;
+      }
     }
     &-visible {
       cursor: pointer;
@@ -141,11 +243,15 @@
   }
   &__middle {
     padding: 12px 0;
+    @include adaptive(1100) {
+      padding: 9px 0;
+    }
     &-right {
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex-grow: 1;
+
     }
     &-wrap {
       display: flex;
@@ -154,12 +260,24 @@
     &-top {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 21px;
+      margin-bottom: 23px;
+      @include adaptive(1144) {
+        justify-content: flex-start;
+      }
+      @include adaptive(1100) {
+        margin-bottom: 9px;
+      }
     }
     &-bottom {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      @include adaptive(1366) {
+        padding-right: 5px;
+      }
+      @include adaptive(1144) {
+        padding-right: 0;
+      }
     }
   }
   &__top {
@@ -170,6 +288,32 @@
       -ms-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
+      @include adaptive(1440) {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 180%;
+        position: relative;
+        &:hover {
+          &::before {
+            width: 40px;
+          }
+        }
+        &::before {
+          content: '';
+          width: 0px;
+          height: 2px;
+          background: $theme2-grey;
+          position: absolute;
+          top: 50%;
+          left: -87px;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+      }
       &:hover {
         color: $blue;
       }
@@ -181,14 +325,25 @@
     &-list {
       display: flex;
       align-items: center;
-      flex-grow: 0.17;
+      flex-grow: 0.2;
       justify-content: space-between;
       list-style-type: none;
       margin: 0;
       padding: 0;
+      @include adaptive(1880) {
+        margin: 0;
+      }
+      @include adaptive(1440) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &-city {
       display: flex;
+      margin-right: -35px;
+      @include adaptive(1880) {
+        margin-right: 0;
+      }
     }
     &-wrap {
       display: flex;
@@ -198,16 +353,38 @@
     &-manager {
       display: flex;
       align-items: center;
+      @include adaptive(1366) {
+        left: -7px;
+        position: relative;
+      }
+      @include adaptive(1144) {
+        left: -10px;
+      }
+      @include adaptive(1000) {
+        left: auto;
+      }
     }
     &-callback {
-      margin-left: 36px;
+      margin-left: 11px;
       @include adaptive(1680) {
         margin-left: 20px;
+      }
+      @include adaptive(1366) {
+        margin-left: 14px;
+      }
+      @include adaptive(1100) {
+        margin-left: 36px;
+      }
+      @include adaptive(1000) {
+        margin-left: 15px;
       }
     }
     &-phones {
       display: flex;
       align-items: center;
+      @include adaptive(875) {
+        display: none;
+      }
     }
   }
 
@@ -220,10 +397,16 @@
     font-weight: 700;
     line-height: 20px;
     margin: 0;
+    @include adaptive(1144) {
+      font-size: 14px;
+    }
   }
   &__phones {
     &-item {
       margin-right: 24px;
+      @include adaptive(1144) {
+        margin-right: 16px;
+      }
       &:hover {
         text-decoration: underline;
       }
@@ -232,11 +415,17 @@
       color: #2799CE;
       font-weight: 700;
       margin-right: 16px;
+      @include adaptive(1144) {
+        margin-right: 14px;
+      }
     }
   }
   &__city {
     &-name {
       margin-right: 14px;
+      @include adaptive(1144) {
+        margin-right: 9px;
+      }
     }
     &-title {
       display: flex;
@@ -259,12 +448,18 @@
         width: 9px;
         height: 13px;
         margin-left: 8px;
+        @include adaptive(1144) {
+          margin-left: 4px;
+        }
       }
     }
   }
   &__manager {
     &-name {
       margin-right: 14px;
+      @include adaptive(1144) {
+        margin-right: 9px;
+      }
     }
   }
   &__hidden {

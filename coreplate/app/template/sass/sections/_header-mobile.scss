@@ -3,6 +3,106 @@
   @include adaptive(1440) {
     display: block;
   }
+  &__text {
+    @include adaptive(1440) {
+      line-height: 140%;
+      color: $grey;
+      margin-right: 5px;
+      margin: 0;
+    }
+  }
+  &__name {
+    @include adaptive(1440) {
+      font-size: 18px;
+      line-height: 140%;
+      margin: 0 0 13px;
+    }
+  }
+  &__manager {
+    @include adaptive(1440) {
+      margin-top: 80px;
+    }
+  }
+  &__close {
+    @include adaptive(1440) {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      position: absolute;
+      top: 64px;
+      left: 64px;
+      &:hover {
+        & svg {
+          fill: $blue
+        }
+      }
+      & svg {
+        width: 16px;
+        height: 16px;
+
+      }
+    }
+  }
+  &__wrapper {
+    transition:0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &__wrapper {
+    @include adaptive(1440) {
+      width: 568px;
+      height: 100%;
+      max-height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -568px;
+      background: white;
+      -webkit-transition-property: left;
+      -moz-transition-property: left;
+      -ms-transition-property: left;
+      -o-transition-property: left;
+      transition-property: left;
+      z-index: 12;
+      padding-left: 82px;
+      &.js-isActive {
+        left: 0;
+      }
+    }
+  }
+  &__subwrap {
+    @include adaptive(1440) {
+      height: 100%;
+      max-height: 100%;
+      overflow: auto;
+      border-left: 2px solid $theme2-grey;
+      padding: 157px 0px 0px 85px;
+
+    }
+    @include adaptive(1144) {
+      padding: 64px 0px 0px 85px;
+    }
+  }
+  &__overlay {
+    width:100%;
+    height: 100%;
+    background: #000000;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    -webkit-transition-property: right;
+    -moz-transition-property: right;
+    -ms-transition-property: right;
+    -o-transition-property: right;
+    transition-property: right;
+    z-index: 10;
+    opacity: 0;
+    &.js-isActive {
+      right: 0;
+      opacity: 0.3;
+    }
+  }
   &__burger {
     width: 20px;
     height: 16px;
@@ -12,6 +112,19 @@
     background: transparent;
     border: none;
     padding: 0;
+    margin-right: 107px;
+    @include adaptive(1366) {
+      margin-right: 101px;
+    }
+    @include adaptive(1144) {
+      margin-right: 86px;
+    }
+    @include adaptive(1100) {
+      margin-right: 85px;
+    }
+    @include adaptive(1000) {
+      margin-right: 10px;
+    }
     &:hover {
       & span {
         &:nth-child(2) {
