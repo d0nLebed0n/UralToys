@@ -1,0 +1,59 @@
+{{#ifequal type 'column'}}
+<div class="container">
+  <div class="template-top">
+    <div class="template-top__left">
+      <h2 class="template-top__title section-title {{this.className}}__title">
+        {{this.name}}
+      </h2>
+      <div class="template-top__tabs">
+        <a href="#" class="template-top__tabs-item template-top__tabs-item_active">
+          <span>За сутки</span>
+        </a>
+        <a href="#" class="template-top__tabs-item"><span>За неделю</span></a>
+      </div>
+    </div>
+    <div class="template-top__right">
+      <a href="#" class="template-top__all">
+        {{this.allText}} (<span>30</span>)
+      </a>
+      <div class="template-top__controls">
+        <button type="button" class="template-top__controls-item {{this.className}}__controls-item_left">
+          {{#create-svg}}arrow-left{{/create-svg}}
+        </button>
+        <button type="button" class="template-top__controls-item {{this.className}}__controls-item_right">
+          {{#create-svg}}arrow-right{{/create-svg}}
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{{/ifequal}}
+
+{{#ifequal type 'single'}}
+<div class="container">
+  <div class="template-top">
+    <div class="template-top__left">
+      <h2 class="template-top__title section-title {{this.className}}__title">
+        {{this.name}}
+      </h2>
+    </div>
+    <div class="template-top__right">
+      <a href="#" class="template-top__all">
+        {{this.allText}} (<span>30</span>)
+      </a>
+      <div class="template-top__controls">
+        <button type="button" class="template-top__controls-item {{this.className}}__controls-item_left">
+          {{#create-svg}}arrow-left{{/create-svg}}
+        </button>
+        <button type="button" class="template-top__controls-item {{this.className}}__controls-item_right">
+          {{#create-svg}}arrow-right{{/create-svg}}
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{{/ifequal}}

@@ -1,0 +1,28 @@
+.section-title {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  margin: 80px 0px 48px;
+  @include adaptive(1244) {
+    margin: 64px 0px 32px;
+  }
+  @include adaptive(875) {
+    margin: 48px 0px 32px;
+  }
+}
+
+
+.white-title {
+  color: white;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 125%;
+  margin: 0;
+}
+
+.white-text {
+  color: white;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 26px 0;
+}

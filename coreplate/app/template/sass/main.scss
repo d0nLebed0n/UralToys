@@ -7,6 +7,8 @@
 @import "components/button";
 @import "components/input";
 @import "components/search";
+@import "components/selectric";
+@import "components/with-gradient";
 
 @import "sections/content";
 @import "sections/navigation";
@@ -15,7 +17,16 @@
 @import "sections/pagination";
 @import "sections/header-items";
 @import "sections/header-mobile";
+@import "sections/card";
 
 
 @import "layout/header";
 @import "layout/footer";
+@import "layout/index-slider";
+@import "layout/catalog-grid";
+@import "layout/main-form";
+@import "layout/template-top";
+@import "layout/items-slider";
+@import "layout/single-column-slider";
+@import "layout/callback-form";
+@import "layout/banner-block";

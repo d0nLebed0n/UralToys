@@ -15,11 +15,17 @@
 		<link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="/template/css/style.css">
 		<link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+    {{#ifpage 'index'}}
+    <link rel="stylesheet" type="text/css" href="/template/css/nouislider.css">
+    {{/ifpage}}
 		<link rel="preload" href="/template/fonts/PTSans-400.woff2" as="font" crossorigin="">
 		<link rel="preload" href="/template/fonts/Circle-400.woff2" as="font" crossorigin="">
 	</head>
 	<body>
     {{> header}}
+    <main class="main">
+      {{> body}}
+    </main>
     {{> scripts}}
 	</body>
 </html>

@@ -27,7 +27,6 @@
 
 
   mobileMenu.prototype.hideUnusedElems = function (props) {
-    console.log(props);
     var listLinks = props;
     listLinks.forEach(function (item) {
       console.log(item.getAttribute('data-show'));
@@ -64,7 +63,6 @@
     })
   };
   document.addEventListener('DOMContentLoaded', function () {
-
     var newMenu = new mobileMenu();
     newMenu.getCaseOfCurrentPoint();
   });

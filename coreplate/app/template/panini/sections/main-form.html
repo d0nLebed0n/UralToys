@@ -1,0 +1,80 @@
+<section class="main-form with-gradient" style="background-image: url('/template/img/main-form.png');">
+  <div class="container">
+    <div class="main-form__wrap">
+      <div class="main-form__left">
+        <h2 class="main-form__title white-title">
+          Быстрый подбор
+        </h2>
+        <p class="main-form__subtitle white-text">
+          Воспользуйтесь быстрым подбором товаров по необходимым вам <br> параметрам
+        </p>
+      </div>
+      <div class="main-form__right">
+        <form action="/" method="post">
+          <div class="main-form__right-wrap">
+            <div class="main-form__right-col">
+              <div class="text-select main-form__item main-form__select">
+                <select class="js-isSelectric">
+                  <option selected>Выбрать категорию</option>
+                  <option>Мягкие игрушки</option>
+                </select>
+              </div>
+              <div class="main-form__range">
+                <div class="main-form__range-row">
+                  <div class="main-form__cell">
+                    <span class="main-form__cell-from">От</span>
+                    <input type="text" id="input-min" class="main-form__input white-input">
+                    <span class="jsMinPrice visually-hidden">0</span>
+                  </div>
+                  <div class="main-form__cell">
+                    <span class="main-form__cell-from">До</span>
+                    <input type="text" id="input-max" class="main-form__input white-input">
+                    <span class="jsMaxPrice visually-hidden">50000</span>
+                    <span class="main-form__col-span">руб.</span>
+                  </div>
+                </div>
+                <div class="main-form__range-item" id="form-range">
+
+                </div>
+              </div>
+            </div>
+            <div class="main-form__right-col">
+              <div class="text-input text-select main-form__item main-form__select">
+                <select class="js-isSelectric">
+                  <option selected>Выбрать бренд</option>
+                  <option>Мягкие игрушки</option>
+                </select>
+              </div>
+              <div class="main-form__box">
+                <div class="main-form__box-title">
+                  Страна производства
+                </div>
+                <div class="main-form__box-row">
+                  <label class="main-form__checkbox checkbox">
+                    <input type="checkbox" class="checkbox__box visually-hidden">
+                    <span class="checkbox__span"></span>
+                    <span class="checkbox__text">Россия</span>
+                  </label>
+                  <label class="main-form__checkbox checkbox">
+                    <input type="checkbox" class="checkbox__box visually-hidden">
+                    <span class="checkbox__span"></span>
+                    <span class="checkbox__text">Китай</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="main-form__right-col main-form__right-col_submit">
+              <button type="submit" class="main-form__submit common-red-button">
+                Подобрать
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js" defer="defer"></script>
+  <script src="/template/libs/jquery.selectric.min.js" defer="defer"></script>
+  <script src="/template/js/main-form.js" defer="defer"></script>
+  <script src="/template/libs/nouislider.min.js"></script>
+</section>

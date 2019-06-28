@@ -16,6 +16,7 @@ body {
 	flex-direction: column;
 	min-width: 320px;
 	font-family: "SourceSansPro", "Arial", sans-serif;
+  background: #EDF1F3;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 14px;
@@ -71,8 +72,7 @@ label {
 input[type=submit],
 input[type=text],
 input[type=search],
-textarea,
-button[type=button] {
+textarea {
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -114,8 +114,17 @@ a {
     max-width: 1030px;
   }
 	@include phone {
-		padding: 0px 8px;
+		padding: 0px 15px;
+    &_mobile {
+      padding: 0;
+    }
 	}
+  @include adaptive(360) {
+    padding: 0px 20px;
+    &_mobile {
+      padding: 0;
+    }
+  }
 	&_big {
 		max-width: 1758px;
 	}

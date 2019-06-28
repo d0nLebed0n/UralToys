@@ -1,0 +1,31 @@
+<div class="card {{this.swiper}}">
+  <div class="card__image-wrap">
+    <img src="{{this.url}}" alt="">
+  </div>
+  <a href="#" class="card__name">
+    {{this.name}}
+  </a>
+  <div class="card__prices">
+    <span class="card__prices-current">
+      2 010.96 ₽
+    </span>
+    <span class="card__prices-old">
+      3 300.20 ₽
+    </span>
+  </div>
+  <div class="card__actions">
+    <form action="/" method="post">
+      <div class="card__actions-wrap">
+        <div class="count">
+          <button type="button" class="count__item count__item_plus"></button>
+          <input type="text" class="count__input visually-hidden">
+          <span class="count__value">10</span>
+          <button type="button" class="count__item count__item_minus"></button>
+        </div>
+        <button type="button" class="card__actions-add">
+          {{#create-svg}}cart{{/create-svg}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

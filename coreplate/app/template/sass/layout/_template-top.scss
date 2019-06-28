@@ -1,0 +1,88 @@
+.template-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0px 48px;
+  &__left {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__right {
+    display: flex;
+    align-items: flex-end;
+
+  }
+  &__title {
+    margin: 0;
+  }
+  &__all {
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-flex;
+    margin-right: 42px;
+    line-height: 23px;
+  }
+  &__tabs {
+    margin-left: 42px;
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      &:last-of-type{
+        &::after {
+          display: none;
+        }
+      }
+      & span {
+        line-height: 140%;
+        border-bottom: 2px solid transparent;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+      &::after {
+        content: '';
+        height: 13px;
+        border: 1px solid #000000;
+        position: relative;
+        display: block;
+        margin: 0px 20px 0px 23px;
+      }
+      &:hover {
+        & span {
+          border-color: #000;
+        }
+      }
+      &_active {
+        & span {
+          border-bottom-color: black;
+        }
+      }
+    }
+  }
+  &__controls {
+    &-item {
+      height: 25px;
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      &:first-child {
+        margin-right: 7px;
+      }
+      &:hover {
+        & svg {
+          stroke: $blue;
+          fill: $blue;
+        }
+      }
+      & svg {
+        width: 25px;
+        height: 25px;
+        stroke: black;
+        fill: black;
+      }
+    }
+  }
+}

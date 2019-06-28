@@ -1,0 +1,107 @@
+.banner-block {
+  margin-top: 69px;
+  &__wrap {
+    display: flex;
+  }
+  &__form {
+    max-width: 1330px;
+    width: 100%;
+    margin-right: 20px;
+  }
+  &__text {
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 140%;
+      color: white;
+      margin: 0;
+    }
+    &-subtitle {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin: 0;
+      margin-top: 5px;
+    }
+  }
+  &__plaster {
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: rgba(123, 113, 170, 0.7);
+    position: absolute;
+    left: 0px;
+    bottom: 49px;
+    padding: 5px 15px 5px 32px;
+    margin: 0;
+  }
+  &__interactive {
+    width: 84px;
+    height: 84px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    background: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 76px 0px 0px 85px;
+    &::before,
+    &::after {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+    &::after {
+      content: '';
+      width: 112px;
+      height: 112px;
+      border: 1px solid #FFFFFF;
+      opacity: 0.2;
+      z-index: -3;
+    }
+    &::before {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(180deg, #E67528 0%, #7B71AA 100%);
+      position: absolute;
+      opacity: 0.5;
+      z-index: -2;
+    }
+  }
+  &__item {
+    flex-grow: 1;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 31px 32px;
+    z-index: 2;
+    & a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &_orange {
+      background: $orange;
+      background-position: bottom right;
+      background-repeat: no-repeat;
+    }
+  }
+}

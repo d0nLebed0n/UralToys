@@ -1,0 +1,59 @@
+.card {
+  background: white;
+  padding: 9px 24px 24px;
+  &__name {
+    line-height: 140%;
+    display: inline-flex;
+    margin: 18px 0px 11px;
+  }
+  &__image {
+    width: 144px;
+    height: 144px;
+    display: block;
+    object-fit: contain;
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__prices {
+    &-current {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 140%;
+      color: $red;
+    }
+    &-old {
+      font-size: 12px;
+      line-height: 140%;
+      text-decoration-line: line-through;
+      color: $grey;
+      margin-left: 10px;
+    }
+  }
+  &__actions {
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 12px 0px 0;
+    }
+    &-add {
+      background: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      &:hover {
+        & svg {
+          fill: $purple
+        }
+      }
+      & svg {
+        width: 20px;
+        height: 20px;
+        fill: $blue;
+      }
+    }
+  }
+}

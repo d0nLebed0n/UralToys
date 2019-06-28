@@ -1,0 +1,43 @@
+.callback-form {
+  padding: 50px 75px 82px;
+  $parent: &;
+  &__body {
+    &-wrap {
+      max-width: 954px;
+    }
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 140%;
+    color: white;
+    margin: 0px 0px 25px;
+  }
+  &__label {
+    display: flex;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 22.5px;
+    &:last-child{
+      margin-bottom: 0;
+      margin-top: 48.5px;
+    }
+    & #{$parent}__checkbox {
+      max-width: 430px;
+      margin: 0;
+    }
+    & #{$parent}__row-label {
+      width: 50%;
+      max-width: 430px;
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+  &__submit {
+    min-width: 190px;
+    margin-left: 95px;
+  }
+}

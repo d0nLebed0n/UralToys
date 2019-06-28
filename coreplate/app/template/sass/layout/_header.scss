@@ -1,6 +1,7 @@
 .header {
   $parent: &;
-
+  background: white;
+  margin: 0 0 24px;
   &__navigation {
     flex-grow: 0.768;
     @include adaptive(1680) {
