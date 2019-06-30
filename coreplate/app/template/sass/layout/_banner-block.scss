@@ -1,7 +1,13 @@
 .banner-block {
   margin-top: 69px;
+  @include adaptive(1100) {
+    margin-top: 47px;
+  }
   &__wrap {
     display: flex;
+    @include adaptive(635) {
+      flex-direction: column;
+    }
   }
   &__form {
     max-width: 1330px;
@@ -52,6 +58,12 @@
     align-items: center;
     justify-content: center;
     margin: 76px 0px 0px 85px;
+    @include adaptive(1366) {
+      margin: 71px 0px 0px 58px;
+    }
+    @include adaptive(1100) {
+      margin: 73px 0px 0px 35px;
+    }
     &::before,
     &::after {
       -webkit-border-radius: 50%;
@@ -91,6 +103,23 @@
     position: relative;
     padding: 31px 32px;
     z-index: 2;
+    flex-shrink: 0;
+    @include adaptive(1800) {
+      flex-basis: 390px;
+    }
+    @include adaptive(1440) {
+      flex-basis: 400px;
+    }
+    @include adaptive(1100) {
+      flex-basis: 320px;
+      padding: 31px 23px;
+    }
+    @include adaptive(1000) {
+      flex-basis: 290px;
+    }
+    @include adaptive(775) {
+      display: none;
+    }
     & a {
       position: absolute;
       top: 0;

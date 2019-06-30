@@ -1,0 +1,112 @@
+.about {
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 47px;
+    @include adaptive(875) {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    max-width: 1330px;
+    width: 100%;
+    position: relative;
+    margin-right: 20px;
+    @include adaptive(1440) {
+      max-width: 820px;
+    }
+
+    &-content {
+      font-size: 16px;
+      line-height: 140%;
+      padding-right: 50px;
+      @include adaptive(875) {
+        font-size: 14px;
+        padding-right: 0;
+      }
+      & p {
+        margin: 23px 0;
+      }
+    }
+    &-more {
+      display: none;
+    }
+    &-icon {
+      position: absolute;
+      top: 65px;
+      right: 150px;
+      @include adaptive(1440) {
+        top: 61px;
+        right: 32px;
+      }
+      @include adaptive(875) {
+        top: 190px;
+        right: -144px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+      & svg {
+        width: 351px;
+        height: 79px;
+      }
+    }
+  }
+  &__features {
+    flex-grow: 1;
+    @include adaptive(1366) {
+      padding-left: 31px;
+    }
+    @include adaptive(875) {
+      padding-left: 0;
+    }
+    &-small {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 140%;
+    }
+    &-title {
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 100%;
+      text-transform: uppercase;
+      margin: 0px 0px 24px;
+      @include adaptive(1000) {
+        font-size: 64px;
+        margin: 0px 0px 20px;
+      }
+      &_purple {
+        color: $purple;
+      }
+      &_orange {
+        color: $orange;
+      }
+      &_blue {
+        color: $blue;
+      }
+      &_red {
+        color: $red;
+      }
+
+    }
+    &-item {
+      width: 50%;
+      margin-bottom: 37px;
+      @include adaptive(1000) {
+        margin-bottom: 31px;
+      }
+    }
+    &-wrap {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+}

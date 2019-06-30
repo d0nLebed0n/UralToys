@@ -2,6 +2,12 @@
   position: relative;
   z-index: 2;
   padding: 66px 0px 40px;
+  @include adaptive(1440) {
+    padding: 66px 0px 21px;
+  }
+  @include adaptive(1244) {
+    padding: 64px 0;
+  }
   &::before {
     content: '';
     background-image: linear-gradient(261.04deg, #2799CE 1.3%, #7B71AA 100%);

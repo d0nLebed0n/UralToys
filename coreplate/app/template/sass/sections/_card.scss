@@ -1,23 +1,35 @@
 .card {
+  height: auto !important;
   background: white;
   padding: 9px 24px 24px;
+  @include adaptive(875) {
+    padding: 6px 12px 20px;
+  }
   &__name {
     line-height: 140%;
     display: inline-flex;
     margin: 18px 0px 11px;
   }
   &__image {
-    width: 144px;
-    height: 144px;
+
     display: block;
     object-fit: contain;
     &-wrap {
+      width: 144px;
+      height: 144px;
       display: flex;
       align-items: center;
       justify-content: center;
+      @include adaptive(775) {
+        margin: 0px auto;
+      }
     }
   }
   &__prices {
+    @include adaptive(875) {
+      display: flex;
+      flex-direction: column;
+    }
     &-current {
       font-weight: bold;
       font-size: 16px;
@@ -30,6 +42,9 @@
       text-decoration-line: line-through;
       color: $grey;
       margin-left: 10px;
+      @include adaptive(875) {
+        margin-left: 0;
+      }
     }
   }
   &__actions {

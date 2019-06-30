@@ -20,6 +20,9 @@
   margin-bottom: 46px;
   padding-right: 4px;
   padding-bottom: 12px;
+  @include adaptive(1440) {
+    margin-bottom: 32px;
+  }
 }
 
 .selectric .label {

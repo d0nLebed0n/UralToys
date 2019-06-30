@@ -2,6 +2,9 @@
   $parent: &;
   background: white;
   margin: 0 0 24px;
+  @include phone {
+    display: none;
+  }
   &__navigation {
     flex-grow: 0.768;
     @include adaptive(1680) {

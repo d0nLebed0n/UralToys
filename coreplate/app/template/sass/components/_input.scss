@@ -1,4 +1,5 @@
 .text {
+  $parent: &;
   &-input {
     width: 100%;
     font-size: 16px;
@@ -19,6 +20,28 @@
       fill: white;
     }
   }
+  &-select {
+    &_no-pd {
+      @include adaptive(1440) {
+        padding-bottom: 2px;
+      }
+    }
+    &.text-input {
+      border-bottom: none;
+    }
+    &_black {
+      & .selectric {
+        color: black;
+        border-bottom-color: black;
+        & #{$parent}-input__icon {
+          fill: black;
+        }
+        & .label {
+          color: #000;
+        }
+      }
+    }
+  }
 }
 .white {
   &-input {
@@ -30,6 +53,9 @@
     background: transparent;
     opacity: 0.5;
     padding: 5.5px 2px;
+    @include adaptive(1100) {
+      width: 85px;
+    }
     &:focus {
       opacity: 1;
     }

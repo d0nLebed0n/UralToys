@@ -1,5 +1,18 @@
 .callback-form {
   padding: 50px 75px 82px;
+  @include adaptive(1440) {
+    padding: 45px 50px 46px;
+    & .checkbox__text {
+      font-size: 14px;
+    }
+  }
+
+  @include adaptive(1100) {
+    padding: 45px 34px 46px;
+  }
+  @include adaptive(775) {
+    padding: 50px 20px 48px;
+  }
   $parent: &;
   &__body {
     &-wrap {
@@ -11,6 +24,16 @@
     line-height: 140%;
     color: white;
     margin: 0px 0px 25px;
+    @include adaptive(1366) {
+      margin: 0px 0px 35px;
+    }
+    @include adaptive(1100) {
+      margin: 0px 0px 30px;
+    }
+    @include adaptive(775) {
+      font-size: 28px;
+      line-height: 125%;
+    }
   }
   &__label {
     display: flex;
@@ -20,24 +43,61 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 22.5px;
+    @include adaptive(1366) {
+      margin-bottom: 29.5px;
+    }
+    @include adaptive(1100) {
+      margin-bottom: 23.5px;
+    }
+    @include adaptive(775) {
+      flex-direction: column;
+    }
+    &_mobile-col {
+      @include adaptive(1440) {
+        flex-direction: column;
+      }
+    }
     &:last-child{
       margin-bottom: 0;
       margin-top: 48.5px;
+      @include adaptive(1366) {
+        margin-top: 21.5px;
+      }
+      @include adaptive(1100) {
+        margin-top: 27.5px;
+      }
     }
     & #{$parent}__checkbox {
       max-width: 430px;
       margin: 0;
+      @include adaptive(1440) {
+        max-width: none;
+        margin-bottom: 32px;
+      }
     }
     & #{$parent}__row-label {
       width: 50%;
       max-width: 430px;
+      @include adaptive(1440) {
+        max-width: 340px;
+      }
+      @include adaptive(775) {
+        max-width: none;
+        width: 100%;
+      }
       &:last-child {
         margin-left: auto;
+        @include adaptive(775) {
+          margin-top: 20px;
+        }
       }
     }
   }
   &__submit {
     min-width: 190px;
     margin-left: 95px;
+    @include adaptive(1440) {
+      margin-left: 0;
+    }
   }
 }

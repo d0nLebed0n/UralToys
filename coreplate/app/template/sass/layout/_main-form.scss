@@ -1,7 +1,16 @@
 .main-form {
   color: white;
   margin: 80px 0px 0;
+  @include adaptive(1244) {
+    margin: 64px 0px 0;
+  }
+  @include phone {
+    display: none;
+  }
   &__range {
+    @include adaptive(1000) {
+      margin-bottom: 32px;
+    }
     &-row {
       color: white;
       text-transform: lowercase;
@@ -14,6 +23,9 @@
   }
   &__checkbox {
     margin-right: 54px;
+    @include adaptive(1440) {
+      margin-right: 25px;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -30,6 +42,9 @@
   }
   &__input {
     margin-right: 42px;
+    @include adaptive(1680) {
+      margin-right: 14px;
+    }
   }
   &__cell {
     display: flex;
@@ -38,12 +53,35 @@
       margin-right: 14px;
     }
   }
+  &__submit {
+    @include adaptive(1440) {
+      min-width: 192px;
+      font-size: 16px;
+      align-self: flex-start;
+      margin-top: 48px;
+    }
+    @include adaptive(1100) {
+      min-width: 171px;
+      font-size: 14px;
+      margin-top: 51px;
+    }
+  }
   &__wrap {
     display: flex;
     justify-content: space-between;
+    @include adaptive(875) {
+      flex-direction: column;
+    }
   }
   &__left {
     margin-right: 167px;
+    @include adaptive(1680) {
+      max-width: 314px;
+      margin-right: 211px;
+    }
+    @include adaptive(1244) {
+      margin-right: 29px;
+    }
   }
   &__right {
     flex-grow: 1;
@@ -53,14 +91,36 @@
       display: flex;
       flex-direction: column;
       padding-top: 4px;
+      @include adaptive(1440) {
+        width: calc(100% / 2);
+        max-width: 295px;
+        padding-top: 0px;
+      }
+      @include adaptive(1100) {
+        max-width: 284px;
+      }
+      @include adaptive(1000) {
+        max-width: none;
+        width: calc(100% / 1);
+      }
       &_submit {
         max-width: 190px;
         justify-content: flex-end;
+        @include adaptive(1440) {
+          max-width: none;
+          width: 100%;
+          justify-content: flex-start;
+          align-content: flex-start;
+          padding-top: 0;
+        }
       }
     }
     &-wrap {
       display: flex;
       justify-content: space-between;
+      @include adaptive(1440) {
+        flex-wrap: wrap;
+      }
     }
   }
 

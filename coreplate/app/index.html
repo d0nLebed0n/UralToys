@@ -16,9 +16,11 @@
   <link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/template/css/style.css">
   <link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+  <link rel="preload" href="/template/fonts/SourceSansPro-400.woff2" as="font" crossorigin="">
   <link rel="stylesheet" type="text/css" href="/template/css/nouislider.css">
-  <link rel="preload" href="/template/fonts/PTSans-400.woff2" as="font" crossorigin="">
-  <link rel="preload" href="/template/fonts/Circle-400.woff2" as="font" crossorigin="">
+  <script defer="defer" src="https://api-maps.yandex.ru/2.1/?apikey=3ba22bac-b430-4579-9da6-70a75b6d376f&amp;lang=ru_RU"></script>
+  <script defer="defer" src="/template/js/map.js"></script>
+
 </head>
 
 <body>
@@ -1269,7 +1271,7 @@
           <button type="button" class="catalog-grid__more js-sortCatalog">
             <span class="js-isSwitchValue">Свернуть часть категорий</span>
             <span class="catalog-grid__more-toggle toggle">
-      
+
             </span>
           </button>
         </div>
@@ -1317,7 +1319,7 @@
                   </div>
                 </div>
                 <div class="main-form__right-col">
-                  <div class="text-input text-select main-form__item main-form__select">
+                  <div class="text-input text-select text-select_no-pd main-form__item main-form__select">
                     <select class="js-isSelectric">
                       <option selected>Выбрать бренд</option>
                       <option>Мягкие игрушки</option>
@@ -3052,13 +3054,13 @@
     <section class="single-column-slider">
 
       <div class="container">
-        <div class="template-top">
+        <div class="template-top template-top_phone-col">
           <div class="template-top__left">
             <h2 class="template-top__title section-title single-column-slider__title">
                 Новые поступления в брендах
               </h2>
           </div>
-          <div class="template-top__right">
+          <div class="template-top__right template-top__right_phone-row">
             <a href="#" class="template-top__all">
                 Все новинки (<span>30</span>)
               </a>
@@ -3138,7 +3140,7 @@
                   <label class="callback-form__label">
                     <textarea rows="1" class="text-area callback-form__input text-input" placeholder="Ваш вопрос"></textarea>
                   </label>
-                  <div class="callback-form__row">
+                  <div class="callback-form__row callback-form__row_mobile-col">
                     <label class="callback-form__checkbox checkbox">
                       <input type="checkbox" class="checkbox__box visually-hidden">
                       <span class="checkbox__span"></span>
@@ -3170,8 +3172,278 @@
         </div>
       </div>
     </section>
+    <section class="about">
+      <div class="container">
+        <div class="about__wrap">
+          <div class="about__info">
+            <h2 class="about__title section-title">
+                О компании
+              </h2>
+            <div class="about__info-icon">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#about-logo"></use>
+              </svg>
+            </div>
+            <div class="about__info-content">
+              <p><b>Uraltoys</b> - динамично развивающаяся компания, основное направление деятельности которой является продажа детских игрушек оптом. Компания успешно работает с 2007 года, и за это время нам удалось занять одно из лидирующих мест на рынке
+                игрушек Уральского региона. Наш ассортимент насчитывает более 30 000 наименований качественных игрушек, товаров для детей и новорожденных, а также товаров для спорта и активного отдыха.</p>
+              <p>Мы сотрудничаем с крупнейшими российскими производителями игрушек, осуществляем прямые поставки китайских игрушек и товаров для детей. Игрушки оптом из Китая закупаются напрямую с заводов-производителей, что гарантирует самые выгодные цены.
+                Особое внимание уделяется качеству товара и постоянному обновлению и расширению ассортимента игрушек. Все товары сертифицированы, соответствуют установленным требованиям и ГОСТам и абсолютно безопасны для детей.</p>
+              <p>Имея собственные розничные магазины, мы грамотно и своевременно пополняем свой ассортимент и стараемся отвечать требованиям самых взыскательных покупателей. Выбрать и купить игрушки можно как в нашем КЭШе, так и через наш сайт www.ural-toys.ru.</p>
+              <p>Продажа игрушек для детей оптом осуществляется как по наличному, так и по безналичному расчету. В нашей компании существует выгодная система скидок.</p>
+            </div>
+            <button type="button" class="about__info-more">
+              Показать еще
+            </button>
+          </div>
+          <div class="about__features">
+            <h2 class="about__title section-title">
+                Почему с нами работать выгодно
+              </h2>
+            <div class="about__features-wrap">
+              <div class="about__features-item">
+                <h3 class="about__features-title about__features-title_purple">
+                    41
+                  </h3>
+                <span class="about__features-text">Город доставки</span>
+              </div>
+              <div class="about__features-item">
+                <h3 class="about__features-title about__features-title_orange">
+                    250
+                  </h3>
+                <span class="about__features-text">Брендов</span>
+              </div>
+              <div class="about__features-item">
+                <h3 class="about__features-title about__features-title_red">
+                    38 <span class="about__features-small">тыс +</span>
+                  </h3>
+                <span class="about__features-text">Город доставки</span>
+              </div>
+              <div class="about__features-item">
+                <h3 class="about__features-title about__features-title_blue">
+                    97 <span class="about__features-small">%</span>
+                  </h3>
+                <span class="about__features-text">Брендов</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__wrap">
+        <div class="container">
+          <h2 class="section-title contacts__title">
+              Контакты
+            </h2>
+        </div>
+        <div class="contacts__info">
+          <div class="container">
+            <div class="contacts__info-items">
+              <div class="contacts__info-item">
+                <div class="contacts__info-subitem">
+                  <div class="contacts__item-icon">
+                    <svg>
+                      <use xlink:href="/template/img/icons.svg#mark"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__item-info">
+                    <span class="contacts__item-text contacts__item-text_bold">
+                        Екатеринбург
+                      </span>
+                    <span class="contacts__item-text">
+                        г. Березовский, ул. Уральская 142 Б
+                      </span>
+                  </div>
+                </div>
+                <div class="contacts__info-subitem">
+                  <div class="contacts__item-icon">
+                    <svg>
+                      <use xlink:href="/template/img/icons.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__item-info">
+                    <span class="contacts__item-text">
+                        +7 (343) 270-22-02
+                      </span>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__info-item">
+                <div class="contacts__info-subitem">
+                  <div class="contacts__item-icon contacts__item-icon_purple">
+                    <svg>
+                      <use xlink:href="/template/img/icons.svg#manager-icon"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__item-info">
+                    <span class="contacts__item-text contacts__item-text_bold">
+                        Менеджер по вашему региону
+                      </span>
+                    <span class="contacts__item-text">
+                          Анна Кобякова
+                       </span>
+                  </div>
+                </div>
+                <div class="contacts__info-subitem contacts__info-subitem_mobile-col">
+                  <div class="contacts__item-info">
+                    <div class="contacts__item-row">
+                      <span class="contacts__item-text contacts__item-text_title">
+                          Тел:
+                        </span>
+                      <span class="contacts__item-text">
+                          +7 (343) 270 22 02 (доб. 207)
+                        </span>
+                    </div>
+                    <div class="contacts__item-row">
+                      <span class="contacts__item-text contacts__item-text_title">
+                          Мобильный:
+                        </span>
+                      <span class="contacts__item-text">
+                          +7 (912) 263 75 75
+                        </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__info-subitem contacts__info-subitem_mobile-col">
+                  <div class="contacts__item-info">
+                    <div class="contacts__item-row">
+                      <span class="contacts__item-text contacts__item-text_title">
+                          ICQ:
+                        </span>
+                      <span class="contacts__item-text">
+                            441 647 273
+                          </span>
+                    </div>
+                    <div class="contacts__item-row">
+                      <span class="contacts__item-text contacts__item-text_title">
+                          E-mail:
+                        </span>
+                      <span class="contacts__item-text">
+                            anna_k@ural-toys.ru
+                          </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <script defer="defer">
+          window.onload = function () {
+              var points = [{
+                coords: [54.515147, 36.247875],
+                name: 'Название ',
+                phone: 'Телефон',
+                email: 'Email',
+                addressStorage: 'Адрес1',
+                addressOffice: 'Адрес2'
+              }];
+
+              ymaps.ready(init(points, 'map'));
+            };
+        </script>
+        <div class="container container_full">
+          <div class="contacts__map-item" id="map"></div>
+        </div>
+      </div>
+    </section>
 
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__top">
+          <div class="footer__column">
+            <div class="footer__logo">
+              <img class="footer__logo-img" src="/template/img/logo.svg" alt="">
+            </div>
+            <p class="footer__copy">
+              © 2016 — 2019 Ural-Toys.
+              <br>Все права защищены
+            </p>
+          </div>
+          <div class="footer__column">
+            <nav class="footer__navigation">
+              <ul class="footer__column-list">
+                <li class="footer__column-item"><a href="#" class="footer__column-link">О компании</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Условия работы</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Доставка</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__column">
+            <nav class="footer__navigation">
+              <ul class="footer__column-list">
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Каталог</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Новинки</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Хиты продаж</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Товары по акции</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Бренд</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Фикс-цена</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Прайс-лист</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__column">
+            <div class="footer__select">
+              <form action="/" method="post">
+                <label class="footer__select-item text-select_black text-select">
+                  <select class="js-isSelectric">
+                    <option selected>Екатеринбург</option>
+                    <option>Выберите город</option>
+                  </select>
+                </label>
+                <input type="submit" class="visually-hidden">
+              </form>
+            </div>
+            <p class="footer__text">
+              г. Березовский, ул. Уральская 142 Б
+            </p>
+            <p class="footer__text">
+              +7 (343) 270-22-02
+            </p>
+          </div>
+          <div class="footer__column">
+            <button type="button" class="footer__callback common-blue-button">
+              Вопрос руководителю
+            </button>
+            <a href="tel:+79122637575" class="footer__phone footer__text_bold">
+                +7 (912) 263-75-75
+              </a>
+            <a href="tel:+78002502271" class="footer__phone footer__text_bold">
+                8 800 250 22 71
+              </a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__text footer__text_grey">
+            Интернет-магазин UralToys - Игрушки оптом. Екатеринбург
+          </p>
+          <a href="#" target="_blank" class="footer__policy">
+              Политика конфиденциальности
+            </a>
+          <div class="footer__popup">
+            Оставить пожелание по ассортименту
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script defer="defer" src="./template/libs/swiper.min.js"></script>
   <script defer="defer" src="./template/js/index.js"></script>
   <script defer="defer" src="/template/js/utils.js"></script>

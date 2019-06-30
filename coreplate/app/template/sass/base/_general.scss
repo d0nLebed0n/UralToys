@@ -125,6 +125,12 @@ a {
       padding: 0;
     }
   }
+  @include adaptive(320) {
+    padding: 0px 10px;
+    &_mobile {
+      padding: 0;
+    }
+  }
 	&_big {
 		max-width: 1758px;
 	}

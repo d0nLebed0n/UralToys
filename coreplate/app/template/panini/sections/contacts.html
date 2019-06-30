@@ -1,0 +1,110 @@
+<section class="contacts">
+  <div class="contacts__wrap">
+    {{> section-title className='contacts' name='Контакты'}}
+    <div class="contacts__info">
+      <div class="container">
+        <div class="contacts__info-items">
+          <div class="contacts__info-item">
+            <div class="contacts__info-subitem">
+              <div class="contacts__item-icon">
+                {{#create-svg}}mark{{/create-svg}}
+              </div>
+              <div class="contacts__item-info">
+                <span class="contacts__item-text contacts__item-text_bold">
+                  Екатеринбург
+                </span>
+                <span class="contacts__item-text">
+                  г. Березовский, ул. Уральская 142 Б
+                </span>
+              </div>
+            </div>
+            <div class="contacts__info-subitem">
+              <div class="contacts__item-icon">
+                {{#create-svg}}phone{{/create-svg}}
+              </div>
+              <div class="contacts__item-info">
+                <span class="contacts__item-text">
+                  +7 (343) 270-22-02
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__info-item">
+            <div class="contacts__info-subitem">
+              <div class="contacts__item-icon contacts__item-icon_purple">
+                {{#create-svg}}manager-icon{{/create-svg}}
+              </div>
+              <div class="contacts__item-info">
+                <span class="contacts__item-text contacts__item-text_bold">
+                  Менеджер по вашему региону
+                </span>
+                <span class="contacts__item-text">
+                    Анна Кобякова
+                 </span>
+              </div>
+            </div>
+            <div class="contacts__info-subitem contacts__info-subitem_mobile-col">
+              <div class="contacts__item-info">
+                <div class="contacts__item-row">
+                  <span class="contacts__item-text contacts__item-text_title">
+                    Тел:
+                  </span>
+                  <span class="contacts__item-text">
+                    +7 (343) 270 22 02 (доб. 207)
+                  </span>
+                </div>
+                <div class="contacts__item-row">
+                  <span class="contacts__item-text contacts__item-text_title">
+                    Мобильный:
+                  </span>
+                  <span class="contacts__item-text">
+                    +7 (912) 263 75 75
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__info-subitem contacts__info-subitem_mobile-col">
+              <div class="contacts__item-info">
+                <div class="contacts__item-row">
+                  <span class="contacts__item-text contacts__item-text_title">
+                    ICQ:
+                  </span>
+                  <span class="contacts__item-text">
+                      441 647 273
+                    </span>
+                </div>
+                <div class="contacts__item-row">
+                  <span class="contacts__item-text contacts__item-text_title">
+                    E-mail:
+                  </span>
+                  <span class="contacts__item-text">
+                      anna_k@ural-toys.ru
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contacts__map">
+    <script defer="defer">
+      window.onload = function () {
+        var points = [{
+          coords: [54.515147, 36.247875],
+          name: 'Название ',
+          phone: 'Телефон',
+          email: 'Email',
+          addressStorage: 'Адрес1',
+          addressOffice: 'Адрес2'
+        }];
+
+        ymaps.ready(init(points, 'map'));
+      };
+    </script>
+    <div class="container container_full">
+      <div class="contacts__map-item" id="map"></div>
+    </div>
+  </div>
+</section>

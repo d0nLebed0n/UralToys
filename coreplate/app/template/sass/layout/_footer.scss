@@ -1,0 +1,214 @@
+.footer {
+  position: relative;
+  padding: 48px 0;
+  $parent: &;
+  @include adaptive(550) {
+    padding: 32px 0;
+  }
+  &::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, #2799CE 0%, #7B71AA 100%);
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive(775) {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 180%;
+    margin: 0;
+    &_grey {
+      color: $grey;
+    }
+    &_bold {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+    @include adaptive(875) {
+      flex-direction: column;
+      text-align: center;
+    }
+    @include adaptive(775) {
+      margin-top: 0;
+    }
+    @include adaptive(550) {
+      & #{$parent}__text {
+        margin: 20px 0;
+      }
+    }
+  }
+  &__popup {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140%;
+    color: $blue;
+    @include adaptive(550) {
+      margin-top: 20px;
+    }
+  }
+  &__logo {
+    width: 65px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptive(775) {
+      display: none;
+    }
+  }
+  &__policy {
+    font-size: 14px;
+    line-height: 180%;
+    text-decoration-line: underline;
+    color: #000;
+    margin-left: auto;
+    margin-right: 210px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    @include adaptive(1366) {
+      margin-right: 270px;
+    }
+    @include adaptive(1000) {
+      margin: 0 auto;
+    }
+    &:hover {
+      color: $blue;
+    }
+  }
+  &__callback {
+    padding: 11px 27px;
+    margin-bottom: 8px;
+    @include adaptive(550) {
+      margin: 20px 0 32px;
+    }
+  }
+  &__phone {
+    display: inline-flex;
+    margin: 0 0 8px auto;
+    @include adaptive(550) {
+      margin: 0px auto;
+      &:last-of-type {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__copy {
+    color: $grey;
+    font-size: 14px;
+    line-height: 140%;
+    margin-top: 54px;
+    @include adaptive(775) {
+      margin: 0;
+    }
+    @include adaptive(550) {
+      & br {
+        display: none;
+      }
+    }
+
+  }
+  &__select {
+    min-width: 280px;
+    @include adaptive(1366) {
+      min-width: 254px;
+    }
+    @include adaptive(1100) {
+      min-width: 211px;
+    }
+    & .selectric {
+      margin-bottom: 18px;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    @include adaptive(550) {
+      width: 100%;
+    }
+    &:nth-child(1) {
+      margin-right: 127px;
+      @include adaptive(1366) {
+        margin-right: 102px;
+      }
+      @include adaptive(1100) {
+        margin-right: 0;
+      }
+      @include adaptive(775) {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        order: 1;
+      }
+    }
+    &:nth-child(2) {
+      @include adaptive(1366) {
+        margin-right: 53px;
+      }
+      @include adaptive(1000) {
+        margin: 0px 0px 20px;
+      }
+    }
+    &:nth-child(3) {
+      margin-right: 85px;
+      @include adaptive(1366) {
+        margin-right: 55px;
+      }
+
+      @include adaptive(1000) {
+        display: none;
+      }
+    }
+    &:nth-child(4) {
+      @include adaptive(550) {
+        display: none;
+      }
+    }
+    &:nth-child(5) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      @include adaptive(550) {
+        text-align: center;
+      }
+    }
+    &-link {
+      font-size: 14px;
+      line-height: 180%;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

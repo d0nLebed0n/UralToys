@@ -18,6 +18,12 @@
   font-size: 64px;
   line-height: 125%;
   margin: 0;
+  @include adaptive(1244) {
+    font-size: 54px;
+  }
+  @include adaptive(1000) {
+    font-size: 35px;
+  }
 }
 
 .white-text {
@@ -25,4 +31,7 @@
   font-size: 16px;
   line-height: 140%;
   margin: 26px 0;
+  @include adaptive(1244) {
+    font-size: 14px;
+  }
 }

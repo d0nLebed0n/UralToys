@@ -15,17 +15,20 @@
 		<link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="/template/css/style.css">
 		<link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+    <link rel="preload" href="/template/fonts/SourceSansPro-400.woff2" as="font" crossorigin="">
     {{#ifpage 'index'}}
     <link rel="stylesheet" type="text/css" href="/template/css/nouislider.css">
+    <script defer="defer" src="https://api-maps.yandex.ru/2.1/?apikey=3ba22bac-b430-4579-9da6-70a75b6d376f&amp;lang=ru_RU" ></script>
+    <script defer="defer" src="/template/js/map.js"></script>
     {{/ifpage}}
-		<link rel="preload" href="/template/fonts/PTSans-400.woff2" as="font" crossorigin="">
-		<link rel="preload" href="/template/fonts/Circle-400.woff2" as="font" crossorigin="">
+
 	</head>
 	<body>
     {{> header}}
     <main class="main">
       {{> body}}
     </main>
+    {{> footer}}
     {{> scripts}}
 	</body>
 </html>
