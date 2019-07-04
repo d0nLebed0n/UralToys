@@ -12,9 +12,6 @@
 })();
 
 (function () {
-  /*
-        Инициализация ренж-слайдера
-     */
   const slider = document.getElementById('form-range');
   const sliderMin = document.getElementById('input-min');
   const sliderMax = document.getElementById('input-max');
