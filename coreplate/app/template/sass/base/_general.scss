@@ -125,7 +125,7 @@ a {
       padding: 0;
     }
   }
-  @include adaptive(320) {
+  @include adaptive(635) {
     padding: 0px 10px;
     &_mobile {
       padding: 0;

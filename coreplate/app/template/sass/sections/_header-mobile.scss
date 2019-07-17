@@ -3,6 +3,12 @@
   @include adaptive(1440) {
     display: block;
   }
+  &__detach {
+    @include adaptive(875) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   &__text {
     @include adaptive(1440) {
       line-height: 140%;
@@ -21,6 +27,9 @@
   &__manager {
     @include adaptive(1440) {
       margin-top: 80px;
+    }
+    @include adaptive(875) {
+      margin-top: 43px;
     }
   }
   &__close {
@@ -44,6 +53,10 @@
         height: 16px;
 
       }
+    }
+    @include adaptive(875) {
+      top: 20px;
+      left: 1px;
     }
   }
   &__wrapper {
@@ -69,6 +82,13 @@
         left: 0;
       }
     }
+    @include adaptive(875) {
+      padding-left: 20px;
+    }
+    @include adaptive(635) {
+      width: 100%;
+      left: -100%;
+    }
   }
   &__subwrap {
     @include adaptive(1440) {
@@ -77,10 +97,28 @@
       overflow: auto;
       border-left: 2px solid $theme2-grey;
       padding: 157px 0px 0px 85px;
+      -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar,
+      & *::-webkit-scrollbar {
+        width: 5px;
+      }
 
+      &::-webkit-scrollbar-thumb,
+      & *::-webkit-scrollbar-thumb {
+        background: #7B71AA;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #ABACAC;
+        border-radius: 20px;
+      }
     }
     @include adaptive(1144) {
       padding: 64px 0px 0px 85px;
+    }
+    @include adaptive(875) {
+      padding: 50px 23px 0px 23px;
     }
   }
   &__overlay {

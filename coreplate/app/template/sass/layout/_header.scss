@@ -2,8 +2,13 @@
   $parent: &;
   background: white;
   margin: 0 0 24px;
+  @include adaptive(635) {
+    margin: 0;
+  }
   @include phone {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   &__navigation {
     flex-grow: 0.768;
@@ -27,6 +32,9 @@
     @include adaptive(1000) {
       margin-right: 15px;
     }
+    @include phone {
+      display: none;
+    }
   }
   &__logo {
     margin-right: 187px;
@@ -40,6 +48,10 @@
     }
     @include adaptive(1000) {
       margin-right: 20px;
+    }
+    @include phone {
+      width: 61px;
+      height: 42px;
     }
   }
   &__icon {
@@ -83,7 +95,16 @@
       pointer-events: none;
       overflow: hidden;
       padding: 24px 32px;
+      @include adaptive(635) {
+        top: calc(100% + 37px);
+      }
+      @include phone {
 
+        top: calc(100% + 20px);
+      }
+      @include adaptive(390) {
+        padding: 14px 20px 14px 10px;
+      }
       &:hover {
         opacity: 1;
         visibility: visible;
@@ -103,6 +124,11 @@
       @include adaptive(1144) {
         left: auto;
       }
+      @include adaptive(635) {
+        display: flex;
+        align-items: center;
+
+      }
       #{$parent}__item-visible {
         @include adaptive(1144) {
           border-left: 1px solid $theme-grey;
@@ -110,6 +136,9 @@
         }
         @include adaptive(1000) {
           padding-left: 15px;
+        }
+        @include adaptive(635) {
+          border-left: none;
         }
         &:hover svg {
           fill: $blue;
@@ -133,6 +162,9 @@
           }
           @include adaptive(1000) {
             padding-right: 15px;
+          }
+          @include adaptive(635) {
+            padding-right: 0;
           }
         }
         & #{$parent}__item-top,
@@ -216,9 +248,16 @@
       position: absolute;
       right: 0;
       background: white;
+      @include phone {
+        width: calc(100vw - 49px);
+      }
       &_size {
         &_small {
           width: 341px;
+          @include adaptive(420) {
+            width: calc(100vw - 67px);
+            right: -20px;
+          }
         }
       }
 
@@ -230,12 +269,20 @@
       z-index: 10;
       pointer-events: all;
     }
+    &-right {
+      @include adaptive(635) {
+        display: none;
+      }
+    }
     &-icon {
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       margin-right: 20px;
+      @include adaptive(635) {
+        margin-right: 0;
+      }
       & svg {
         width: 21px;
         height: 21px;
@@ -250,16 +297,30 @@
     @include adaptive(1100) {
       padding: 9px 0;
     }
+    @include phone {
+      max-width: calc(50% + 61px);
+      flex-grow: 1;
+    }
+    & .container {
+      @include phone {
+        padding: 0px 20px 0px 0;
+      }
+    }
     &-right {
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex-grow: 1;
-
+      @include phone {
+        flex-grow: 0;
+      }
     }
     &-wrap {
       display: flex;
       position: relative;
+      @include phone {
+        justify-content: space-between;
+      }
     }
     &-top {
       display: flex;
@@ -270,6 +331,9 @@
       }
       @include adaptive(1100) {
         margin-bottom: 9px;
+      }
+      @include phone {
+        margin-bottom: 0;
       }
     }
     &-bottom {
@@ -286,6 +350,19 @@
   }
   &__top {
     background: #C9C9C9;
+    @include phone {
+      background: white;
+    }
+    & .container {
+      @include phone {
+        padding: 0 0px 0px 20px;
+      }
+    }
+    &-item {
+      @include adaptive(875) {
+        width: 100%;
+      }
+    }
     &-link {
       -webkit-transition: 0.3s;
       -moz-transition: 0.3s;
@@ -318,6 +395,15 @@
           transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
       }
+      @include adaptive(875) {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 300%;
+        text-transform: none;
+        display: flex;
+        border-bottom: 1px solid $theme-grey;
+      }
       &:hover {
         color: $blue;
       }
@@ -325,6 +411,9 @@
     &-subwrap {
       display: flex;
       align-items: center;
+      @include phone {
+        display: none;
+      }
     }
     &-list {
       display: flex;
@@ -348,6 +437,9 @@
       @include adaptive(1880) {
         margin-right: 0;
       }
+      @include phone {
+        display: none;
+      }
     }
     &-wrap {
       display: flex;
@@ -366,6 +458,9 @@
       }
       @include adaptive(1000) {
         left: auto;
+      }
+      @include adaptive(635) {
+        display: none;
       }
     }
     &-callback {
@@ -517,6 +612,7 @@
     }
     &-container {
       margin-right: -17px;
+
       &::-webkit-scrollbar,
       & *::-webkit-scrollbar {
         width: 5px;

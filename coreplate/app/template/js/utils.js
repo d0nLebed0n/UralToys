@@ -52,9 +52,56 @@
       mobileMenu.prototype.togglePopup(itemsList);
     })
   };
+
+  class MobileNavigation {
+    constructor(props) {
+      console.log(props);
+      this._catalogItem = props.TAB_TOGGLE;
+      this._mobileBreakpoint = props.BREAKPOINT;
+      this._mobileList = props.TAB_PARENT;
+      this._mobileListItem = props.TAB_TARGET;
+      this._activeClass = props.ACTIVE_CLASS;
+      this._openCatalog = this._openCatalog.bind(this);
+    }
+    _openCatalog(node) {
+      node.classList.toggle(this._activeClass);
+      node.closest(this._mobileList).querySelector(this._mobileListItem).classList.toggle(this._activeClass);
+    }
+    addEventListener() {
+      if (this._mobileBreakpoint.matches === true) {
+        this._catalogItem.forEach((item) => {
+          item.addEventListener(`click`, () => {
+            this._openCatalog(item)
+          });
+        });
+      }
+    }
+
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    const NavigationEnum = {
+      MAIN_CATALOG: {
+        TAB_TOGGLE: document.querySelectorAll(`.navigation__item_svg .navigation__link svg`),
+        BREAKPOINT: window.matchMedia("(max-width: 875px)"),
+        TAB_PARENT: `.navigation__item_svg`,
+        TAB_TARGET: `.navigation__hidden-list`,
+        ACTIVE_CLASS: `js-isOpened`,
+      },
+      INNER_CATALOG: {
+        TAB_TOGGLE: document.querySelectorAll(`.js-openCategory`),
+        BREAKPOINT: window.matchMedia("(max-width: 875px)"),
+        TAB_PARENT: `.navigation__hidden-item`,
+        TAB_TARGET: `.navigation__hidden-sublist`,
+        ACTIVE_CLASS: `js-isOpened`,
+      }
+    };
     const newMenu = new mobileMenu();
     newMenu.getCaseOfCurrentPoint();
+    const mainNavigation = new MobileNavigation(NavigationEnum.MAIN_CATALOG);
+    const innerNavigation = new MobileNavigation(NavigationEnum.INNER_CATALOG);
+    mainNavigation.addEventListener();
+    innerNavigation.addEventListener();
   });
 })();
 

@@ -1,12 +1,76 @@
 .navigation {
   $parent: &;
   &__hidden {
+    &-item {
+      @include adaptive(875) {
+        width: 100%;
+        position: relative;
+        margin-right: 15px;
+      }
+    }
+    &-open {
+      @include adaptive(875) {
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        background: transparent;
+        &.js-isOpened {
+          &::after {
+            -webkit-transform: translate(-50%, -50%) rotate(0);
+            -moz-transform: translate(-50%, -50%) rotate(0);
+            -ms-transform: translate(-50%, -50%) rotate(0);
+            -o-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+          }
+        }
+        &::before,
+        &::after {
+          content: '';
+          width: 10px;
+          height: 0px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border: 1px solid #C9C9C9;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        &::after {
+          -webkit-transform: translate(-50%,-50%) rotate(90deg);
+          -moz-transform: translate(-50%,-50%) rotate(90deg);
+          -ms-transform: translate(-50%,-50%) rotate(90deg);
+          -o-transform: translate(-50%,-50%) rotate(90deg);
+          transform: translate(-50%,-50%) rotate(90deg);
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -ms-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+        }
+      }
+    }
     &-all {
       line-height: 140%;
-      margin-top: 22px;
       text-transform: none;
       display: flex;
       align-items: center;
+      margin-top: 22px;
+      @include adaptive(875) {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        overflow: hidden;
+        padding: 0;
+        margin-top: 0;
+      }
       & svg {
         width: 9px;
         height: 15px;
@@ -25,6 +89,35 @@
       text-transform: none;
       margin: 0;
       padding: 0;
+      @include adaptive(875) {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        overflow: hidden;
+        padding: 0;
+        &.js-isOpened {
+          max-height: 1000px;
+          opacity: 1;
+          overflow: visible;
+          visibility: visible;
+          transition: all 0.3s ease-in-out;
+          z-index: 10;
+          pointer-events: all;
+          & ~ #{$parent}__hidden-all {
+            max-height: 200px;
+            opacity: 1;
+            overflow: visible;
+            visibility: visible;
+            transition: all 0.3s ease-in-out;
+            z-index: 10;
+            pointer-events: all;
+            margin-top: 15px;
+            margin-bottom: 36px;
+          }
+        }
+      }
     }
     &-title {
       text-transform: none;
@@ -35,7 +128,10 @@
       -ms-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
-      margin: 0px 0px 20px;
+      margin: 0px 0px 15px;
+      @include adaptive(875) {
+        font-weight: 400;
+      }
       &:hover {
         color: $blue;
       }
@@ -56,6 +152,25 @@
       pointer-events: none;
       overflow: hidden;
       padding: 37px 0;
+      @include adaptive(875) {
+        width: 100%;
+        max-height: 0;
+        top: auto;
+        right: auto;
+        position: relative;
+        border-bottom: 1px solid $theme-grey;
+        padding: 0px 0;
+        &.js-isOpened {
+          max-height: 682px;
+          opacity: 1;
+          overflow: auto;
+          visibility: visible;
+          transition: all 0.3s ease-in-out;
+          z-index: 10;
+          pointer-events: all;
+          padding: 20px 0;
+        }
+      }
       &::before {
         content: '';
         width: 100vw;
@@ -65,6 +180,9 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        @include adaptive(875) {
+          display: none;
+        }
       }
       &::after {
         content: '';
@@ -81,6 +199,9 @@
         background: #FFFFFF;
         box-shadow: 0px 5px 10px rgba(37, 41, 43, 0.05);
         z-index: -1;
+        @include adaptive(875) {
+          display: none;
+        }
       }
     }
   }
@@ -89,6 +210,11 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 58px;
+    @include adaptive(875) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__list {
     list-style-type: none;
@@ -97,6 +223,12 @@
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    @include adaptive(875) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      order: -1;
+    }
 
   }
   &__additional {
@@ -142,10 +274,18 @@
     }
   }
   &__item {
+    @include adaptive(875) {
+      width: 100%;
+
+    }
     &_svg {
 
       display: flex;
       align-items: center;
+      @include adaptive(875) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       &:hover {
         & #{$parent}__link svg {
           fill: $blue
@@ -209,13 +349,16 @@
         }
       }
 
-      &:hover #{$parent}__hidden-list {
-        opacity: 1;
-        overflow: visible;
-        visibility: visible;
-        transition: all 0.3s ease-in-out;
-        z-index: 10;
-        pointer-events: all;
+      @media screen and (min-width:876px) {
+        &:hover #{$parent}__hidden-list {
+          opacity: 1;
+          overflow: visible;
+          visibility: visible;
+          transition: all 0.3s ease-in-out;
+          z-index: 10;
+          pointer-events: all;
+
+        }
       }
       &:hover {
         & #{$parent}__link::before {
@@ -235,6 +378,17 @@
     transition: 0.3s;
     @include adaptive(1144) {
       font-size: 14px;
+    }
+    @include adaptive(875) {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 300%;
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $theme-grey;
     }
     &-name {
       font-weight: 700;

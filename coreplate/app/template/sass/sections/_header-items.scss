@@ -19,6 +19,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include adaptive(380) {
+        display: none;
+      }
     }
     &-title {
       max-width: 136px;
