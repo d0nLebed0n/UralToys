@@ -168,7 +168,7 @@
           transition: all 0.3s ease-in-out;
           z-index: 10;
           pointer-events: all;
-          padding: 20px 0;
+          padding: 20px 2px 20px 0;
         }
       }
       &::before {
@@ -389,6 +389,36 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid $theme-grey;
+    }
+    &_new {
+      @include adaptive(635) {
+        color: $green;
+      }
+    }
+    &_sail {
+      @include adaptive(635) {
+        color: $red;
+      }
+    }
+    &_hit {
+      @include adaptive(635) {
+        color: $orange;
+      }
+    }
+    &_phone-uniq {
+      @include adaptive(635) {
+        justify-content: flex-start;
+      }
+      & svg {
+        display: none;
+        @include adaptive(635) {
+          width: 17px;
+          height: 17px;
+          display: block;
+          margin-right: 15.5px;
+        }
+      }
+
     }
     &-name {
       font-weight: 700;

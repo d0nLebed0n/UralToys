@@ -58,6 +58,12 @@
       top: 20px;
       left: 1px;
     }
+    @include phone {
+      top: -49px;
+      left: 10px;
+      background: white;
+      z-index: 12;
+    }
   }
   &__wrapper {
     transition:0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -88,6 +94,10 @@
     @include adaptive(635) {
       width: 100%;
       left: -100%;
+    }
+    @include phone {
+      top: 62px;
+      padding-left: 0;
     }
   }
   &__subwrap {
@@ -120,6 +130,10 @@
     @include adaptive(875) {
       padding: 50px 23px 0px 23px;
     }
+    @include phone {
+      border: none;
+      padding: 1px 23px 0px 23px;
+    }
   }
   &__overlay {
     width:100%;
@@ -136,6 +150,9 @@
     transition-property: right;
     z-index: 10;
     opacity: 0;
+    @include phone {
+      display: none;
+    }
     &.js-isActive {
       right: 0;
       opacity: 0.3;

@@ -1,16 +1,6 @@
 'use strict';
 
 (function () {
-  const SliderEnum = {
-    sideSlideClass: 'index-slider__item_context_outside',
-    sideSlideMinText: 'index-slider__item-title_min',
-    insideSlideClass: 'index-slider__item_context_inside',
-    swiperClass: 'swiper-slide',
-    insideSlideFront: 'index-slider__item-front',
-    plasterClassName: 'index-slider__item-plaster_blue',
-
-  };
-
   let setFlag = 0;
   let increase = 1;
 
@@ -52,7 +42,6 @@
   const indexSlider = new Swiper('.js-appendBody', {
     slidesPerView: 1,
     watchOverflow: true,
-    effect: 'flip',
     clickable: true,
     grabCursor: true,
     observer: true,
