@@ -96,8 +96,9 @@
       left: -100%;
     }
     @include phone {
-      top: 62px;
+      top: 60px;
       padding-left: 0;
+      padding-bottom: 100px;
     }
   }
   &__subwrap {

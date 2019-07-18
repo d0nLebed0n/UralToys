@@ -328,6 +328,9 @@
           top: 100%;
         }
       }
+      @include adaptive(635) {
+        display: none;
+      }
 
     }
     &_parent {

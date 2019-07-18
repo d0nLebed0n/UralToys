@@ -1299,6 +1299,12 @@ a {
   }
 }
 
+@media screen and (max-width: 635px) {
+  .navigation__item_mobile {
+    display: none;
+  }
+}
+
 .navigation__item_parent {
   font-weight: 700;
   text-transform: uppercase;
@@ -1704,8 +1710,9 @@ a {
 
 @media screen and (max-width: 479px) {
   .header-mobile__wrapper {
-    top: 62px;
+    top: 60px;
     padding-left: 0;
+    padding-bottom: 100px;
   }
 }
 
