@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Каталог</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f26522">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/template/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+  <link rel="preload" href="/template/fonts/SourceSansPro-400.woff2" as="font" crossorigin="">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-wrap">
+          <div class="header__top-mobile header-mobile">
+            <button type="button" class="header-mobile__burger js-openMobile">
+              <span></span><span></span><span></span>
+            </button>
+            <div class="header-mobile__wrapper js-mobileWrapper">
+              <button type="button" class="header-mobile__close js-closeMenu">
+                <svg>
+                  <use xlink:href="/template/img/icons.svg#cross2"></use>
+                </svg>
+              </button>
+              <div class="header-mobile__subwrap">
+                <div class="header-mobile__detach js-detachElements">
+
+                </div>
+                <div class="header-mobile__manager">
+                  <p class="header-mobile__text">Менеджер по Вашему региону</p>
+                  <h2 class="header-mobile__name">Анна Кобякова</h2>
+                  <p class="header-mobile__prop">
+                    <span class="header-mobile__text">Телефон:</span><span class="header-mobile__value">+7 (343) 270-22-02 (доб.207)</span>
+                  </p>
+                  <p class="header-mobile__prop">
+                    <span class="header-mobile__text">Мобильный:</span><span class="header-mobile__value">+7 (912) 263-75-75</span>
+                  </p>
+                  <p class="header-mobile__prop">
+                    <span class="header-mobile__text">ICQ:</span><span class="header-mobile__value">ICQ:  441-647-273</span>
+                  </p>
+                  <p class="header-mobile__prop">
+                    <span class="header-mobile__text">E-mail:</span><span class="header-mobile__value">anna_k@ural-toys.ru</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="header-mobile__overlay js-mobileOverlay"></div>
+          </div>
+          <div class="header__top-city">
+            <p class="header__city-title">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#mark"></use>
+              </svg>
+              <span class="header__city-name header__normal">
+                  Ваш город:
+                </span>
+            </p>
+            <button type="button" class="header__city-selected">
+              <span class="header__city-value header__bold js-valueCity">Тула</span>
+              <svg>
+                <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="header__top-manager">
+            <p class="header__manager-name header__normal">
+              Ваш менеджер:
+            </p>
+            <span class="header__manager-value header__bold">
+                 Александра
+               </span>
+          </div>
+
+          <ul class="header__top-list">
+            <li class="header__top-item">
+              <a href="/about.html" class="header__top-link">О компании</a>
+            </li>
+            <li class="header__top-item">
+              <a href="/work.html" class="header__top-link">Условия работы</a>
+            </li>
+            <li class="header__top-item">
+              <a href="/delivery.html" class="header__top-link">Доставка</a>
+            </li>
+            <li class="header__top-item">
+              <a href="/contacts.html" class="header__top-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="header__top-subwrap">
+            <div class="header__top-phones">
+              <span class="header__phones-name">Т</span>
+              <a href="tel:+79122637575" class="header__phones-item header__bold">+7 (912) 263-75-75</a>
+              <a href="tel:+78002502271" class="header__phones-item header__bold"> 8 800 250 22 71</a>
+            </div>
+            <button type="button" data-target="js-openCallbackPopup" class="header__top-callback js-callback common-blue-button">
+              Вопрос руководителю
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="header__middle">
+      <div class="container">
+        <div class="header__middle-wrap">
+          <div class="header__middle-logo">
+            <picture>
+              <source class="header__logo-phone" srcset="/template/img/logo-mobile.png" media="(max-width: 479px)">
+                <img class="header__logo" src="/template/img/logo.png" alt="">
+            </picture>
+
+          </div>
+          <div class="header__middle-right">
+            <div class="header__middle-top">
+              <div class="header__search search">
+                <form action="">
+                  <label class="search__label">
+                    <input type="search" class="search__input" placeholder="Поиск">
+                  </label>
+                  <span class="search__wrapper js-mobileSearch">
+                        <button type="submit" class="search__submit">
+                           <svg>
+                   <use xlink:href="/template/img/icons.svg#search"></use>
+               </svg>
+                        </button>
+                    </span>
+                </form>
+              </div>
+              <div class="header__item header__item_manager">
+                <div class="header__item-visible">
+                  <div class="header__item-icon">
+                    <svg>
+                      <use xlink:href="/template/img/icons.svg#user"></use>
+                    </svg>
+                  </div>
+                  <div class="header__item-right">
+                    <p class="header__item-top">
+                      Petrova
+                    </p>
+                    <p class="header__item-bottom">
+                      Anastasiya
+                    </p>
+                  </div>
+                </div>
+                <div class="header__item-hidden header__item-hidden_size_small">
+                  <div class="header__hidden-container">
+                    <h2 class="header__hidden-title">
+                        Ваш профиль
+                      </h2>
+                    <a href="#" class="header__hidden-profile">
+                        Anastasiya Denisova
+                      </a>
+                    <ul class="header__hidden-list">
+                      <li class="header__hidden-item"><a href="#" class="header__hidden-link">Изменить персональные данные</a>
+                      </li>
+                      <li class="header__hidden-item"><a href="#" class="header__hidden-link">Управление рассылками</a>
+                      </li>
+                      <li class="header__hidden-item"><a href="#" class="header__hidden-link">Архив заказов</a>
+                      </li>
+                    </ul>
+                    <div class="header__hidden-actions">
+                      <a href="#" class="header__hidden-button common-blue-button">
+                          Перейти в профиль
+                        </a>
+                      <a href="#" class="header__hidden-logout">
+                        <svg>
+                          <use xlink:href="/template/img/icons.svg#logout"></use>
+                        </svg>
+                        <span>Выйти</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item header__item_fav">
+                <div class="header__item-visible">
+                  <div class="header__item-icon">
+                    <svg>
+                      <use xlink:href="/template/img/icons.svg#heart"></use>
+                    </svg>
+                    <div class="header__icon-count">
+                      12
+                    </div>
+                  </div>
+                  <div class="header__item-right">
+                    <p class="header__item-top">
+                      Избранное
+                    </p>
+                    <p class="header__item-bottom">
+                      Нет товаров
+                    </p>
+                  </div>
+                </div>
+                <div class="header__item-hidden">
+                  <div class="header__hidden-container">
+                    <div class="header__hidden-scroll">
+                      <h2 class="header__hidden-title">
+                          Избранное
+                        </h2>
+                      <div class="header__hidden-items header-items">
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__hidden-actions">
+                      <a href="#" class="header__hidden-button common-blue-button">
+                          Перейти в корзину
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item header__item_cart">
+                <div class="header__item-visible">
+                  <div class="header__item-icon">
+                    <svg>
+                      <use xlink:href="/template/img/icons.svg#cart"></use>
+                    </svg>
+                    <div class="header__icon-count">
+                      12
+                    </div>
+                  </div>
+                  <div class="header__item-right">
+                    <p class="header__item-top">
+                      Сумма
+                    </p>
+                    <p class="header__item-bottom header__item-bottom_bold">
+                      70 000 <span>₽</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="header__item-hidden">
+                  <div class="header__hidden-container">
+                    <div class="header__hidden-scroll">
+                      <h2 class="header__hidden-title">
+                          Корзина
+                        </h2>
+                      <div class="header__hidden-items header-items">
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="header-items__elem js-elemItem">
+                          <div class="header-items__elem-image">
+                            <img src="/template/img/fav-basket.png" alt="" class="header-items__image">
+                          </div>
+                          <a href="#" class="header-items__elem-title">
+                              Беговел. Hot wheels. 12" надув. колеса в кор.1 шт
+                            </a>
+                          <p class="header-items__elem-price">
+                            2 010.96 ₽
+                          </p>
+                          <button type="button" class="header-items__elem-delete js-removeItem">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#cross"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__hidden-actions">
+                      <div class="header__hidden-price">
+                        <span> Итог</span>
+                        <span class="header__hidden-value">
+                            9 000.96 <span>₽</span>
+                        </span>
+                      </div>
+                      <a href="#" class="header__hidden-button common-blue-button">
+                          Перейти в корзину
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__middle-bottom">
+              <nav class="navigation header__navigation">
+                <ul class="navigation__list js-mainMenu">
+                  <li class="navigation__item navigation__item_parent navigation__item_svg">
+                    <a href="#" class="navigation__link" data-show="true">
+                      <span class="navigation__link-name">
+                          Каталог
+                        </span>
+                      <svg>
+                        <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                      </svg>
+
+                    </a>
+                    <div class="navigation__hidden-list">
+                      <div class="navigation__grid">
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#tricycle"></use>
+                            </svg>
+                            <span>Транспорт</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#airplane"></use>
+                            </svg>
+                            <span>Летний ассортимент</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#tricycle"></use>
+                            </svg>
+                            <span>Транспорт</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#airplane"></use>
+                            </svg>
+                            <span>Летний ассортимент</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#tricycle"></use>
+                            </svg>
+                            <span>Транспорт</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#airplane"></use>
+                            </svg>
+                            <span>Летний ассортимент</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#tricycle"></use>
+                            </svg>
+                            <span>Транспорт</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#airplane"></use>
+                            </svg>
+                            <span>Летний ассортимент</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#tricycle"></use>
+                            </svg>
+                            <span>Транспорт</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="navigation__hidden-item">
+                          <span class="navigation__hidden-open js-openCategory"></span>
+                          <a href="#" class="navigation__hidden-title">
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#airplane"></use>
+                            </svg>
+                            <span>Летний ассортимент</span>
+                          </a>
+                          <ul class="navigation__hidden-sublist">
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Гаражи, парковки, эстакады, станции</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Водный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Воздушный транспорт</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Автотреки</a>
+                            </li>
+                            <li class="navigation__hidden-subitem"><a href="#" class="navigation__hidden-sublink">Коллекционные модели</a>
+                            </li>
+                          </ul>
+                          <a href="#" class="navigation__hidden-all">
+                            <span> Все 9 категорий</span>
+                            <svg>
+                              <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link navigation__link_phone-uniq navigation__link_new" data-show="false">
+                      <svg>
+                        <use xlink:href="/template/img/icons.svg#new"></use>
+                      </svg>
+                      Новинки
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link navigation__link_phone-uniq navigation__link_hit" data-show="false">
+                      <svg>
+                        <use xlink:href="/template/img/icons.svg#fire"></use>
+                      </svg>
+                      Хиты продаж
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link navigation__link_phone-uniq navigation__link_sail" data-show="false">
+                      <svg>
+                        <use xlink:href="/template/img/icons.svg#percent"></use>
+                      </svg>
+                      Товары по акции
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link" data-show="true">Бренд</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link" data-show="true">Фикс-цена</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="#" class="navigation__link" data-show="true">Прайс-лист</a>
+                  </li>
+                  <li class="navigation__item navigation__item_mobile navigation__item_svg">
+                    <a href="#" class="navigation__link" data-show="false">
+                      <span class="navigation__link-name">
+                         Еще <span>5</span>
+                      </span>
+                      <svg>
+                        <use xlink:href="/template/img/icons.svg#arrow-btn"></use>
+                      </svg>
+                    </a>
+                    <ul class="navigation__additional">
+                      <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Новинки</a>
+                      </li>
+                      <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Хиты продаж</a>
+                      </li>
+                      <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Бренд</a>
+                      </li>
+                      <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Фикс-цена</a>
+                      </li>
+                      <li class="navigation__additional-item"><a href="#" class="navigation__additional-link">Прайс-лист</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="breadcrumbs__wrap" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <meta itemprop="position" content="1">
+              <a class="breadcrumbs__link" href="" title="Главная" itemprop="item">Главная</a>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <meta itemprop="position" content="3">
+              <a class="breadcrumbs__link" href="" title="Главная" itemprop="item">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item_active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <meta itemprop="position" content="3">
+              <span>Летний ассортимент</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <h1 class="inner-title">Летний ассортимент</h1>
+    </div>
+    <section class="catalog-list">
+      <div class="container">
+        <ul class="catalog-list__wrap">
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Транспорт
+                </span>
+              <span class="catalog-list__plus">
+                 + 3
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Летний ассортимент
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Велосипеды
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Спорт и отдых
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Детский транспорт
+                </span>
+              <span class="catalog-list__plus">
+                 + 57
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Игрушки для малышей
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Товары для праздника
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Деревянные игрушки
+                </span>
+              <span class="catalog-list__plus">
+                 + 57
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Игрушки на радиоуправлении
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Книги
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Развивающие, обучающие игры
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Сюжетно-ролевые игры
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Мягкая игрушка
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Канцтовары, школьные принадлежности
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Куклы и аксессуары
+                </span>
+              <span class="catalog-list__plus">
+                 + 57
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Конструкторы
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Новый Год
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Детское оружие
+                </span>
+              <span class="catalog-list__plus">
+                 + 57
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Элементы питания, фонарики, флэшки
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Музыкальные инструменты
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Наборы животных, персонажей
+                </span>
+              <span class="catalog-list__plus">
+                 + 57
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Зимний ассортимент
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#airplane"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Настольные игры, пазлы
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Игры для развлечений
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+          <li class="catalog-list__item">
+            <a href="#" class="catalog-list__link">
+              <svg>
+                <use xlink:href="/template/img/icons.svg#tricycle"></use>
+              </svg>
+              <span class="catalog-list__name">
+                  Детские товары, мебель
+                </span>
+              <span class="catalog-list__plus">
+                 
+                </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__top">
+          <div class="footer__column">
+            <div class="footer__logo">
+              <img class="footer__logo-img" src="/template/img/logo.svg" alt="">
+            </div>
+            <p class="footer__copy">
+              © 2016 — 2019 Ural-Toys.
+              <br>Все права защищены
+            </p>
+          </div>
+          <div class="footer__column">
+            <nav class="footer__navigation">
+              <ul class="footer__column-list">
+                <li class="footer__column-item"><a href="#" class="footer__column-link">О компании</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Условия работы</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Доставка</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__column">
+            <nav class="footer__navigation">
+              <ul class="footer__column-list">
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Каталог</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Новинки</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Хиты продаж</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Товары по акции</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Бренд</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Фикс-цена</a>
+                </li>
+                <li class="footer__column-item"><a href="#" class="footer__column-link">Прайс-лист</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__column">
+            <div class="footer__select">
+              <form action="/" method="post">
+                <label class="footer__select-item text-select_black text-select">
+                  <select class="js-isSelectric">
+                    <option selected>Екатеринбург</option>
+                    <option>Выберите город</option>
+                  </select>
+                </label>
+                <input type="submit" class="visually-hidden">
+              </form>
+            </div>
+            <p class="footer__text">
+              г. Березовский, ул. Уральская 142 Б
+            </p>
+            <p class="footer__text">
+              +7 (343) 270-22-02
+            </p>
+          </div>
+          <div class="footer__column">
+            <button type="button" class="footer__callback common-blue-button">
+              Вопрос руководителю
+            </button>
+            <a href="tel:+79122637575" class="footer__phone footer__text_bold">
+                +7 (912) 263-75-75
+              </a>
+            <a href="tel:+78002502271" class="footer__phone footer__text_bold">
+                8 800 250 22 71
+              </a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__text footer__text_grey">
+            Интернет-магазин UralToys - Игрушки оптом. Екатеринбург
+          </p>
+          <a href="#" target="_blank" class="footer__policy">
+              Политика конфиденциальности
+            </a>
+          <div class="footer__popup">
+            Оставить пожелание по ассортименту
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js" defer="defer"></script>
+  <script src="/template/libs/jquery.selectric.min.js" defer="defer"></script>
+  <script defer="defer" src="/template/js/utils.js"></script>
+  <script defer="defer" src="/template/js/enums.js"></script>
+
+
+  <script defer="defer" src="./template/js/breadcrumbs.js"></script>
+</body>
+
+</html>

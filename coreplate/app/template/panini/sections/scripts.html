@@ -1,10 +1,17 @@
 <script src="//code.jquery.com/jquery-3.3.1.min.js" defer="defer"></script>
 <script src="/template/libs/jquery.selectric.min.js" defer="defer"></script>
+<script defer="defer" src="/template/js/utils.js"></script>
+<script defer="defer" src="/template/js/enums.js"></script>
+
+{{#ifpage 'index'}}
 <script src="/template/js/main-form.js" defer="defer"></script>
 <script src="/template/libs/nouislider.min.js"></script>
-<script defer="defer" src="/template/js/enums.js"></script>
 <script defer="defer" src="./template/libs/swiper.min.js"></script>
 <script defer="defer" src="./template/js/index.js"></script>
-<script defer="defer" src="/template/js/utils.js"></script>
 <script defer="defer" src="/template/js/catalog-grid.js"></script>
 <script defer="defer" src="/template/js/items-slider.js"></script>
+{{/ifpage}}
+
+{{#ifpage 'catalog'}}
+<script defer="defer" src="./template/js/breadcrumbs.js"></script>
+{{/ifpage}}

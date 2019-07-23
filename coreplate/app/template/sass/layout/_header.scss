@@ -51,6 +51,12 @@
     @include adaptive(1000) {
       margin-right: 20px;
     }
+    &-phone {
+      @include phone {
+        width: 61px;
+        height: 42px;
+      }
+    }
     @include phone {
       width: 61px;
       height: 42px;

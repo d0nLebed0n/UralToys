@@ -1,0 +1,19 @@
+<section class="catalog-list">
+  <div class="container">
+    <ul class="catalog-list__wrap">
+      {{#each catalog-list.items}}
+      <li class="catalog-list__item">
+        <a href="#" class="catalog-list__link">
+          {{#create-svg}}{{this.svg}}{{/create-svg}}
+          <span class="catalog-list__name">
+            {{this.title}}
+          </span>
+          <span class="catalog-list__plus">
+           {{this.additional}}
+          </span>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

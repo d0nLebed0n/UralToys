@@ -36,3 +36,10 @@ const MobileEnum = {
   OVERLAY_CLASS: '.js-mobileOverlay',
   CLOSE_CLASS: '.js-closeMenu'
 };
+
+const BreadcrumbEnum = {
+  ITEM: `breadcrumbs__item`,
+  BLUE: `breadcrumbs__item_blue`,
+  ORANGE: `breadcrumbs__item_orange`,
+  PURPLE: `breadcrumbs__item_purple`,
+};

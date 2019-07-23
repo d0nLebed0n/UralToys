@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+		<title>{{title}}</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f26522">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/template/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="/template/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/template/css/swiper.css">
+    <link rel="preload" href="/template/fonts/SourceSansPro-400.woff2" as="font" crossorigin="">
+
+	</head>
+	<body>
+    {{> header}}
+    <main class="main">
+      {{> breadcrumbs hasChild='detail'}}
+      {{> body}}
+    </main>
+    {{> footer}}
+    {{> scripts}}
+	</body>
+</html>

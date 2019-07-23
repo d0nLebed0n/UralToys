@@ -1,0 +1,71 @@
+.catalog-list {
+  margin-bottom: 50px;
+  @include adaptive(875) {
+    margin-bottom: 30px;
+  }
+  @include adaptive(735) {
+    display: none;
+  }
+  &__wrap {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    width: calc(100% / 4);
+    margin-bottom: 20px;
+    padding-right: 10px;
+    @include adaptive(1000) {
+      margin-bottom: 10px;
+    }
+    &:hover {
+
+      font-weight: 700;
+    }
+    & svg {
+      width: 31px;
+      height: 25px;
+      flex-shrink: 0;
+      margin-right: 21px;
+      @include adaptive(1000) {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+    font-weight: inherit;
+    display: flex;
+    align-items: center;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  &__plus {
+    color: $green;
+    margin-left: 1px;
+    flex-shrink: 0;
+  }
+  &__name {
+    display: block;
+    font-size: 16px;
+    line-height: 140%;
+    padding-right: 10px;
+    @include adaptive(1440) {
+      white-space: nowrap;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      flex-shrink: 1;
+      overflow: hidden;
+    }
+    @include adaptive(1000) {
+      font-size: 14px;
+
+    }
+  }
+}

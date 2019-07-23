@@ -129,3 +129,15 @@
     innerNavigation.addEventListener();
   });
 })();
+
+(function () {
+  $('.js-isSelectric').selectric({
+    inheritOriginalWidth: true,
+    arrowButtonMarkup: `<div class="text-input__arrow">
+                            <svg viewBox="0 0 8 8" class="text-input__icon">
+                                <path xmlns="http://www.w3.org/2000/svg" d="M2.6 0.544L3.528 3.36L4.28 5.52L4.344 5.52L5.096 3.36L6.024 0.544L7.96 0.544L5.128 7.904L3.496 7.904L0.664 0.543999L2.6 0.544Z"></path>
+                            </svg>
+                        </div>`,
+    responsive: true
+  })
+})();
