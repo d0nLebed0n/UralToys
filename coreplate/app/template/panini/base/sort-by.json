@@ -1,0 +1,22 @@
+{
+	"items": [
+		{
+      "title": "По цене",
+      "active": "horizontal-tabs__list-item_status_active"
+		},
+    {
+      "title": "По наименованию"
+    },
+    {
+      "title": "По новизне"
+    },
+    {
+      "title": "По популярности",
+      "active": "horizontal-tabs__list-item_status_active horizontal-tabs__list-item_position_up"
+    }
+  ]
+}
+
+
+
+

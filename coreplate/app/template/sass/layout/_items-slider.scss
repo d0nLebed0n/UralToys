@@ -1,4 +1,19 @@
 .items-slider {
+  &_background {
+    &_blue {
+      background: #F1F6FC;
+
+    }
+    &_white {
+      background: white;
+    }
+  }
+  &_modified {
+    padding: 64px 0;
+    & .template-top {
+      margin-top: 0;
+    }
+  }
   &__wrap {
     & .swiper-wrapper {
       align-items: stretch;

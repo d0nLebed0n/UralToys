@@ -53,6 +53,12 @@
     background: transparent;
     opacity: 0.5;
     padding: 5.5px 2px;
+    &_color {
+      &_light-blue {
+        background: #F1F6FC;
+        color: #000;
+      }
+    }
     @include adaptive(1100) {
       width: 85px;
     }

@@ -2,8 +2,67 @@
   height: auto !important;
   background: white;
   padding: 9px 24px 24px;
+  $parent: &;
   @include adaptive(875) {
     padding: 6px 12px 20px;
+  }
+  &__add-to-fav {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 5;
+    &:hover {
+      & svg {
+        fill: $blue;
+      }
+    }
+    & svg {
+      width: 17px;
+      height: 15px;
+      fill: $purple;
+    }
+  }
+  &__info {
+    display: flex;
+    position: absolute;
+    left: 12px;
+    top: 1px;
+    z-index: 5;
+    &-item {
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+      margin: 0px 1px;
+    }
+  }
+  &_modified {
+    border: 1px solid white;
+    position: relative;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    &:hover {
+      border-color:#E0E7F0;
+      & .swiper-pagination {
+        max-height: 1000px;
+        opacity: 1;
+        overflow: auto;
+        visibility: visible;
+        z-index: 10;
+        pointer-events: all;
+      }
+    }
+    & #{$parent}__image-wrap {
+      margin: 0px auto;
+    }
   }
   &__name {
     line-height: 140%;
@@ -14,6 +73,43 @@
 
     display: block;
     object-fit: contain;
+    &-item {
+      object-fit: contain;
+    }
+    &-slider {
+      padding-bottom: 4px !important;
+      & .swiper-pagination {
+        max-height: 0;
+        display: flex;
+        align-items: center;
+        bottom: 0!important;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        overflow: hidden;
+        margin: 0px -1.5px;
+      }
+      & .swiper-pagination-bullet {
+        width: calc(100% / 3);
+        height: 4px;
+        background:#E0E7F0;
+        opacity: 1;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        margin: 0px 1.5px!important;
+        &-active {
+          background: $blue;
+        }
+      }
+    }
+    &-subwrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     &-wrap {
       width: 144px;
       height: 144px;

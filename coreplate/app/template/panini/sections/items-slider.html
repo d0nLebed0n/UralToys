@@ -1,13 +1,14 @@
-<section class="items-slider">
+<section class="items-slider {{this.background}} {{this.modified}}">
   {{> template-top className='items-slider' name='Новинки' allText='Все товары' type='column'}}
   <div class="container">
-    <div class="items-slider__wrap swiper-container">
+    <div class="items-slider__wrap {{this.type}} swiper-container">
       <div class="swiper-wrapper">
         {{#repeat 25}}
-          {{> card swiper='swiper-slide' name='Машина 694B-P на д/у, в пакете' url='/template/img/card1.png'}}
-          {{> card swiper='swiper-slide' name='Беговел. Hot wheels. 12" надув. колеса в кор.1 шт' url='/template/img/card2.png'}}
+          {{> card type='in-slider' swiper='swiper-slide' name='Машина 694B-P на д/у, в пакете' url='/template/img/card1.png'}}
+          {{> card type='in-slider' swiper='swiper-slide' name='Беговел. Hot wheels. 12" надув. колеса в кор.1 шт' url='/template/img/card2.png'}}
         {{/repeat}}
       </div>
+
     </div>
   </div>
 </section>

@@ -34,8 +34,39 @@
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  &_min {
+    line-height: 140%;
+    padding: 8px;
+  }
   &:hover {
     background: $orange;
+  }
+  &:active {
+    background: $orange2;
+  }
+}
+
+.common-grey-button {
+  line-height: 22px;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #E0E7F0;
+  padding: 13.5px 40px 14.5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  &_min {
+    line-height: 140%;
+    padding: 8px;
+  }
+  &:hover {
+    background: $orange;
+    color: white;
   }
   &:active {
     background: $orange2;
@@ -116,5 +147,14 @@
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+  }
+  &_active {
+    &::after {
+      -webkit-transform: translate(-50%,-50%) rotate(90deg);
+      -moz-transform: translate(-50%,-50%) rotate(90deg);
+      -ms-transform: translate(-50%,-50%) rotate(90deg);
+      -o-transform: translate(-50%,-50%) rotate(90deg);
+      transform: translate(-50%,-50%) rotate(90deg);
+    }
   }
 }

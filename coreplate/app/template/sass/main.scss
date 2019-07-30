@@ -18,6 +18,10 @@
 @import "sections/header-items";
 @import "sections/header-mobile";
 @import "sections/card";
+@import "sections/filter";
+@import "sections/section";
+@import "sections/catalog-desktop";
+@import "sections/horizontal-tabs";
 
 
 @import "layout/header";
@@ -32,4 +36,5 @@
 @import "layout/banner-block";
 @import "layout/about";
 @import "layout/contacts";
+@import "layout/catalog";
 @import "layout/catalog-list";

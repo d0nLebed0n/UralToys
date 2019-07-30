@@ -1,0 +1,28 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__wrap">
+      <div class="catalog__aside js-appendWrap">
+        {{> filter}}
+        {{> catalog-desktop}}
+      </div>
+      <div class="catalog__main">
+        <div class="catalog__items">
+          {{#repeat 24}}
+          {{> card type='in-section' catalog='catalog__card card_modified' name='Машина 694B-P на д/у, в пакете' url='/template/img/card1.png'}}
+          {{> card type='in-section' catalog='catalog__card card_modified' name='Беговел. Hot wheels. 12" надув. колеса в кор.1 шт' url='/template/img/card2.png'}}
+          {{/repeat}}
+        </div>
+        <div class="catalog__bottom">
+          {{> pagination}}
+          <button class="catalog__load-more">
+            Загрузить еще
+            <span class="catalog__toggle toggle toggle_active">
+
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

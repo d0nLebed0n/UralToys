@@ -1,110 +1,57 @@
 {
 	"items": [
 		{
-			"svg": "tricycle",
-      "title": "Транспорт",
+			"image": "cataloglist8.png",
+      "title": "Песочные наборы",
+      "number": "261",
       "additional": "+ 3"
 		},
     {
-      "svg": "airplane",
-      "title": "Летний ассортимент"
+      "image": "cataloglist9.png",
+      "title": "Мыльные пузыри",
+      "number": "76"
     },
     {
-      "svg": "tricycle",
-      "title": "Велосипеды"
+      "image": "cataloglist2.png",
+      "title": "Качели",
+      "number": "26"
     },
     {
-      "svg": "airplane",
-      "title": "Спорт и отдых"
+      "image": "cataloglist3.png",
+      "title": "Надувная продукция, Intex, Bestway ",
+      "number": "68"
     },
     {
-      "svg": "airplane",
-      "title": "Детский транспорт",
+      "image": "cataloglist4.png",
+      "title": "Горки, дома, песочницы, столы д/водных игр",
+      "number": "28",
       "additional": "+ 57"
     },
     {
-      "svg": "tricycle",
-      "title": "Игрушки для малышей"
+      "image": "cataloglist5.png",
+      "title": "Зонты",
+      "number": "45"
     },
     {
-      "svg": "airplane",
-      "title": "Товары для праздника"
+      "image": "cataloglist7.png",
+      "title": "Игры на улице ",
+      "number": "73"
     },
     {
-      "svg": "tricycle",
-      "title": "Деревянные игрушки",
+      "image": "cataloglist1.png",
+      "title": "Водное оружие",
+      "number": "10",
       "additional": "+ 57"
     },
     {
-      "svg": "tricycle",
-      "title": "Игрушки на радиоуправлении"
+      "image": "cataloglist9.png",
+      "title": "Товары для отдыха ",
+      "number": "1"
     },
     {
-      "svg": "airplane",
-      "title": "Книги"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Развивающие, обучающие игры"
-    },
-    {
-      "svg": "airplane",
-      "title": "Сюжетно-ролевые игры"
-    },
-    {
-      "svg": "airplane",
-      "title": "Мягкая игрушка"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Канцтовары, школьные принадлежности"
-    },
-    {
-      "svg": "airplane",
-      "title": "Куклы и аксессуары",
-      "additional": "+ 57"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Конструкторы"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Новый Год"
-    },
-    {
-      "svg": "airplane",
-      "title": "Детское оружие",
-      "additional": "+ 57"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Элементы питания, фонарики, флэшки"
-    },
-    {
-      "svg": "airplane",
-      "title": "Музыкальные инструменты"
-    },
-    {
-      "svg": "airplane",
-      "title": "Наборы животных, персонажей",
-      "additional": "+ 57"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Зимний ассортимент"
-    },
-    {
-      "svg": "airplane",
-      "title": "Настольные игры, пазлы"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Игры для развлечений"
-    },
-    {
-      "svg": "tricycle",
-      "title": "Детские товары, мебель"
+      "image": "cataloglist10.png",
+      "title": "Тачки, тележки ",
+      "number": "13"
     }
   ]
 }

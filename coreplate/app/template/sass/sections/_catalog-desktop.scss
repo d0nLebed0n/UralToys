@@ -1,0 +1,98 @@
+.catalog-desktop {
+  border: 1px solid #E0E7F0;
+  padding: 24px 0;
+  $parent: &;
+  &__list,
+  &__sublist{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__sublink {
+    &:hover {
+      color: $blue;
+    }
+  }
+  &__sublist {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+    padding-left: 12px;
+    &.js-isOpened {
+      max-height: 1000px;
+      opacity: 1;
+      overflow: auto;
+      visibility: visible;
+      z-index: 10;
+      pointer-events: all;
+      padding-bottom: 22px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 0px 49px 0px;
+  }
+  &__count {
+    font-size: 12px;
+    line-height: 220%;
+    color: $grey;
+    margin: 0px 4.5px 0px 9px;
+  }
+  &__plus {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 138.27%;
+    color: $green;
+    margin-left: 4.5px;
+  }
+  &__position {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    cursor: pointer;
+    &.js-isOpened {
+      font-weight: 700;
+    }
+    &:hover {
+      color: $blue;
+      & #{$parent}__name {
+        &::before {
+          height: 32px;
+        }
+      }
+      & svg {
+        fill: $blue
+      }
+    }
+  }
+  &__button {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    & svg {
+      width: 7px;
+      height: 7px;
+      fill:  #ABACAC;
+    }
+  }
+  &__name {
+    &::before {
+      content: '';
+      width: 3px;
+      height: 0;
+      background: $blue;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      position: absolute;
+      top: 0;
+      left: 1px;
+    }
+  }
+}

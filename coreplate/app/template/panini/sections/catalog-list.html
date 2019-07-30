@@ -1,15 +1,16 @@
-<section class="catalog-list">
+<section class="catalog-list section">
   <div class="container">
     <ul class="catalog-list__wrap">
       {{#each catalog-list.items}}
       <li class="catalog-list__item">
         <a href="#" class="catalog-list__link">
-          {{#create-svg}}{{this.svg}}{{/create-svg}}
+          <img src="./template/img/{{this.image}}" alt="" class="catalog-list__image">
           <span class="catalog-list__name">
             {{this.title}}
-          </span>
-          <span class="catalog-list__plus">
-           {{this.additional}}
+            <span class="catalog-list__count">{{this.number}}</span>
+            <span class="catalog-list__plus">
+             {{this.additional}}
+            </span>
           </span>
         </a>
       </li>

@@ -1,0 +1,94 @@
+.horizontal-tabs {
+  margin: 24px 0;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #E0E7F0;
+    border-bottom: 1px solid #E0E7F0;
+    padding: 24px 0;
+  }
+  &__item {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  &__subitem {
+    display: flex;
+    align-items: center;
+  }
+  &__subname {
+    color: $grey;
+    font-weight: 400;
+    margin: 0 24px 0px 0px;
+    &_hide {
+      @include adaptive(1680) {
+        display: none;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    &-link {
+      font-size: 16px;
+      line-height: 140%;
+      color: inherit;
+      display: flex;
+      align-items: center;
+    }
+    &-item {
+      margin-right: 20px;
+      & svg {
+        width: 9px;
+        height: 9px;
+        display: none;
+      }
+      &:hover {
+        color: $purple;
+        & svg {
+          fill: $purple;
+        }
+      }
+      &_status {
+        &_active {
+          color: $blue;
+          font-weight: 700;
+
+          & svg {
+            fill: $blue;
+            display: block;
+            margin-left: 7px;
+          }
+        }
+      }
+      &_position {
+        &_up {
+          & svg {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  &__display-by {
+    margin-left: 58px;
+  }
+  &__button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 24px;
+    cursor: pointer;
+    & svg {
+      width: 19px;
+      height: 18px;
+      pointer-events: none;
+    }
+  }
+}

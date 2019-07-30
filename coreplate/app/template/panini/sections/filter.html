@@ -1,0 +1,324 @@
+<aside class="catalog__filter filter">
+  <button type="button" class="filter__close">
+    {{#create-svg}}cross2{{/create-svg}}
+  </button>
+  <div class="filter__search search">
+    <form action="">
+      <label class="search__label">
+        <input type="search" class="search__input" placeholder="Поиск">
+      </label>
+      <span class="search__wrapper js-mobileSearch">
+          <button type="submit" class="search__submit">
+             {{#create-svg}}search{{/create-svg}}
+          </button>
+      </span>
+    </form>
+  </div>
+  <div class="filter__items">
+    <form action="/">
+      <div class="filter__wrapper">
+        <div class="filter__item">
+          <div class="filter__name js-openPosition">
+            <h2 class="filter__title">
+              Цена
+            </h2>
+            <button class="filter__button">
+              {{#create-svg}}spot{{/create-svg}}
+            </button>
+          </div>
+          <div class="filter__item-body">
+            <div class="filter__range">
+              <div class="filter__range-row">
+                <div class="filter__cell">
+                  <input type="text" id="input-min" class="filter__input white-input white-input_color_light-blue">
+                  <span class="jsMinPrice visually-hidden">0</span>
+                </div>
+                <div class="filter__range-round"></div>
+                <div class="filter__cell">
+                  <input type="text" id="input-max" class="filter__input white-input white-input_color_light-blue">
+                  <span class="jsMaxPrice visually-hidden">50000</span>
+                </div>
+              </div>
+              <div class="filter__range-item" id="form-range">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter__item">
+          <div class="filter__name js-openPosition">
+            <h2 class="filter__title">
+              Спецпредложение
+            </h2>
+            <button class="filter__button">
+              {{#create-svg}}spot{{/create-svg}}
+            </button>
+          </div>
+          <div class="filter__item-body js-list filter__item-body_with-margin">
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Акции
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Новинки
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Хиты продаж
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Под заказ
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                От коробки
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="filter__item">
+          <div class="filter__name js-openPosition">
+            <h2 class="filter__title">
+              Поступление:
+            </h2>
+            <button class="filter__button">
+              {{#create-svg}}spot{{/create-svg}}
+            </button>
+          </div>
+          <div class="filter__item-body js-list filter__item-body_with-margin">
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                За сутки
+                <span class="filter__item-count">
+                  65
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                За неделю
+                <span class="filter__item-count">
+                  65
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                За две недели
+                <span class="filter__item-count">
+                  189
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="filter__item">
+          <div class="filter__name js-openPosition">
+            <h2 class="filter__title">
+              Бренды
+            </h2>
+            <button class="filter__button">
+              {{#create-svg}}spot{{/create-svg}}
+            </button>
+          </div>
+          <div class="filter__item-body js-list js-filterCount filter__item-body_with-margin">
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                1Toy
+                <span class="filter__item-count">
+                  65
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                AmiCo
+                <span class="filter__item-count">
+                  20
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Bestway
+                <span class="filter__item-count">
+                  189
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Bondibon
+                <span class="filter__item-count">
+                  189
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Doloni
+                <span class="filter__item-count">
+                  144
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Doloni2
+                <span class="filter__item-count">
+                  122
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Doloni3
+                <span class="filter__item-count">
+                  190
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Doloni4
+                <span class="filter__item-count">
+                  150
+                </span>
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <button type="button" class="filter__load-more">
+              Показать еще <span class="filter__load-count js-count">31</span>
+            </button>
+          </div>
+        </div>
+        <div class="filter__item">
+          <div class="filter__name js-openPosition">
+            <h2 class="filter__title">
+              Страна производства
+            </h2>
+            <button class="filter__button">
+              {{#create-svg}}spot{{/create-svg}}
+            </button>
+          </div>
+          <div class="filter__item-body js-list filter__item-body_with-margin">
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+               Беларусь
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Китай
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Россия
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+            <label class="filter__item-label">
+              <input type="checkbox" class="visually-hidden">
+              <span class="filter__item-visible">
+                Украина
+                <span class="filter__item-cross">
+                  {{#create-svg}}cross2{{/create-svg}}
+                </span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="filter__buttons">
+        <button class="filter__buttons-item common-red-button common-red-button_min">
+          Применить
+        </button>
+        <button type="reset" class="filter__buttons-item common-grey-button common-grey-button_min">
+          Сбросить
+        </button>
+      </div>
+    </form>
+  </div>
+
+</aside>

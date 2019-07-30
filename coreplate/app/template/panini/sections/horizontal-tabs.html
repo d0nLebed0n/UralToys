@@ -1,0 +1,51 @@
+<section class="horizontal-tabs">
+  <div class="container">
+    <div class="horizontal-tabs__wrap">
+      <div class="horizontal-tabs__item">
+        <h2 class="horizontal-tabs__name visually-hidden">
+          По убыванию цены
+        </h2>
+        <div class="horizontal-tabs__subitem">
+          <h3 class="horizontal-tabs__subname horizontal-tabs__subname_hiden">
+            Сортировать:
+          </h3>
+          <ul class="horizontal-tabs__list">
+            {{#each sort-by.items}}
+            <li class="horizontal-tabs__list-item {{this.active}}">
+              <a href="#" class="horizontal-tabs__list-link">
+                {{this.title}}
+                {{#create-svg}}arrow-down{{/create-svg}}
+              </a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="horizontal-tabs__subitem">
+          <h3 class="horizontal-tabs__subname">
+            Показывать по:
+          </h3>
+          <ul class="horizontal-tabs__list">
+            {{#each show-by.items}}
+            <li class="horizontal-tabs__list-item {{this.active}}">
+              <a href="#" class="horizontal-tabs__list-link">
+                {{this.title}}
+              </a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="horizontal-tabs__display-by">
+        <button class="horizontal-tabs__button js-changeView" toggle-to="reset">
+          {{#create-svg}}small-cards{{/create-svg}}
+        </button>
+        <button class="horizontal-tabs__button js-changeView" toggle-to="big-cards">
+          {{#create-svg}}big-cards{{/create-svg}}
+        </button>
+        <button class="horizontal-tabs__button js-changeView" toggle-to="horizontal-cards">
+          {{#create-svg}}horizontal-cards{{/create-svg}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,39 @@
-<div class="card {{this.swiper}}">
+<div class="card {{this.swiper}} {{this.catalog}}">
+  {{#ifequal type 'in-section'}}
+  <div class="card__info">
+    <span class="card__info-item card__info-item_new">
+      {{#create-svg}}new-card{{/create-svg}}
+    </span>
+    <span class="card__info-item card__info-item_hit">
+      {{#create-svg}}hit-card{{/create-svg}}
+    </span>
+    <span class="card__info-item card__info-item_fav">
+      {{#create-svg}}fav-card{{/create-svg}}
+    </span>
+  </div>
+  {{/ifequal}}
+  {{#ifequal type 'in-section'}}
+  <button type="button" class="card__add-to-fav">
+    {{#create-svg}}heart{{/create-svg}}
+  </button>
+  {{/ifequal}}
+  {{#ifequal type 'in-slider'}}
   <div class="card__image-wrap">
     <img src="{{this.url}}" alt="">
   </div>
+  {{/ifequal}}
+  {{#ifequal type 'in-section'}}
+  <div class="card__image-wrap card__image-slider swiper-container">
+    <div class="swiper-wrapper">
+      {{#repeat 3}}
+      <div class="swiper-slide card__image-subwrap">
+        <img src="{{this.url}}" class=" card__image-item" alt="">
+      </div>
+      {{/repeat}}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  {{/ifequal}}
   <a href="#" class="card__name">
     {{this.name}}
   </a>
