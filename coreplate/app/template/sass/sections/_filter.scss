@@ -3,6 +3,12 @@
   border: 1px solid #E0E7F0;
   padding: 0px 48px;
   margin-bottom: 24px;
+  @include adaptive(1680) {
+    padding: 0px 24px;
+  }
+  @include adaptive(1144) {
+    padding: 0px 13px;
+  }
   $parent: &;
   &__close {
     display: none;
@@ -88,6 +94,12 @@
   }
   &__input {
     width: 157px;
+    @include adaptive(1680) {
+      width: 111px;
+    }
+    @include adaptive(1144) {
+      width: 95px;
+    }
   }
   &__buttons {
     display: flex;

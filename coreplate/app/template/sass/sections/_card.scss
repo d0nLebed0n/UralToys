@@ -3,6 +3,11 @@
   background: white;
   padding: 9px 24px 24px;
   $parent: &;
+  @include adaptive(1440) {
+    &_modified {
+      padding: 9px 20px 20px;
+    }
+  }
   @include adaptive(875) {
     padding: 6px 12px 20px;
   }
@@ -49,6 +54,7 @@
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+
     &:hover {
       border-color:#E0E7F0;
       & .swiper-pagination {

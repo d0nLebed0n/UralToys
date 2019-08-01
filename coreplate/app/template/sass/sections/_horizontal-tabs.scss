@@ -20,8 +20,8 @@
     color: $grey;
     font-weight: 400;
     margin: 0 24px 0px 0px;
-    &_hide {
-      @include adaptive(1680) {
+    &_hiden {
+      @include adaptive(1244) {
         display: none;
       }
     }
@@ -78,6 +78,9 @@
   }
   &__display-by {
     margin-left: 58px;
+    @include adaptive(1100) {
+      margin-left: 34px;
+    }
   }
   &__button {
     background: transparent;

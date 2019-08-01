@@ -358,7 +358,7 @@
     }
   }
   &__top {
-    background: #C9C9C9;
+    background: $theme-grey;
     @include phone {
       background: white;
     }
