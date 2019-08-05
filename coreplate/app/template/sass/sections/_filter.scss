@@ -9,15 +9,91 @@
   @include adaptive(1144) {
     padding: 0px 13px;
   }
+  @include adaptive(735) {
+    width: 100%;
+    background: white;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 15;
+    &.js-isOpened {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      z-index: 10;
+      pointer-events: all;
+    }
+  }
+  @include phone {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $purple;
+      border-radius: 20px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $grey;
+      border-radius: 20px;
+    }
+  }
   $parent: &;
   &__close {
     display: none;
+    @include adaptive(735) {
+      display: block;
+      background: transparent;
+      border: none;
+
+      cursor: pointer;
+      margin: 0 0 0 auto;
+      padding: 13px 0 0;
+      &:hover {
+        & svg {
+          fill: $purple;
+        }
+      }
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
   &__search {
     display: none;
+    @include adaptive(735) {
+      display: block;
+      margin: 24px 0px 9px;
+    }
   }
   &__button {
     display: none;
+    @include phone {
+      width: 40px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      &:hover {
+        fill: $blue;
+      }
+      & svg {
+        width: 8px;
+        height: 8px;
+        pointer-events: none;
+      }
+    }
   }
   &__name {
     cursor: pointer;
@@ -26,6 +102,11 @@
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    @include phone {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     &:hover {
       color: $blue;
     }
@@ -33,6 +114,27 @@
   &__item {
     padding: 24px 0;
     border-bottom: 1px solid $theme-grey;
+    &-body {
+      @include phone {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        overflow: hidden;
+        &.js-isOpened {
+          max-height: 1200px;
+          opacity: 1;
+          visibility: visible;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          z-index: 10;
+          pointer-events: inherit;
+          padding: 24px 0px 6px;
+        }
+      }
+    }
   }
   &__range {
     &-item {
@@ -68,6 +170,9 @@
   &__title {
     font-size: 16px;
     margin: 0px 0px 24px;
+    @include phone {
+      margin-bottom: 0;
+    }
   }
   &__load-count {
     margin-left: 3px;

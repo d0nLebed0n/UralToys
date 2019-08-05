@@ -4,11 +4,7 @@
   window.utils = {
     getIE: function () {
       const currentAgent = navigator.userAgent;
-      if (currentAgent.match(/rv:11.0/i)) {
-        return false;
-      } else {
-        return true;
-      }
+      return currentAgent.match(/rv:11.0/i);
     },
   };
 })();
@@ -64,12 +60,10 @@
     }
 
     _togglePopup(object) {
-
       object.burgerItem.classList.toggle(this._activeClass);
       object.overlayItem.classList.toggle(this._activeClass);
       object.wrapperItem.classList.toggle(this._activeClass);
       document.body.classList.toggle(this._overflowed);
-
     }
 
     _setEventListeners(props) {

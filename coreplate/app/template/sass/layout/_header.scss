@@ -307,7 +307,7 @@
       padding: 9px 0;
     }
     @include phone {
-      max-width: calc(50% + 61px);
+      max-width: calc(50% + 41px);
       flex-grow: 1;
     }
     & .container {

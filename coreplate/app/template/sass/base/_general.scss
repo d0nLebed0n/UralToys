@@ -22,6 +22,9 @@ body {
 	font-size: 14px;
 	color: black;
 	overflow-x: hidden;
+  &.js-isOpenedByCatalogTabs {
+    overflow: hidden;
+  }
   @include adaptive(1144) {
     font-size: 13px;
   }

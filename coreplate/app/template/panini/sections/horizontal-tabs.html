@@ -1,10 +1,24 @@
 <section class="horizontal-tabs">
   <div class="container">
     <div class="horizontal-tabs__wrap">
-      <div class="horizontal-tabs__item">
-        <h2 class="horizontal-tabs__name visually-hidden">
+      <div class="horizontal-tabs__item horizontal-tabs__item_display_mobile">
+        <button type="button" class="horizontal-tabs__open js-toggleSort">
           По убыванию цены
-        </h2>
+        </button>
+        <button type="button" class="horizontal-tabs__open js-toggleFilter">
+          Фильтр
+        </button>
+        <section class="horizontal-tabs__additional js-appendFilter">
+          <ul class="horizontal-tabs__additional-list js-openSort">
+            <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По возрастанию цены</a></li>
+            <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По наименованию (А-Я)</a></li>
+            <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По наименованию (Я-А)</a></li>
+            <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По новизне</a></li>
+            <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По популярности</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="horizontal-tabs__item horizontal-tabs__item_display_desktop">
         <div class="horizontal-tabs__subitem">
           <h3 class="horizontal-tabs__subname horizontal-tabs__subname_hiden">
             Сортировать:

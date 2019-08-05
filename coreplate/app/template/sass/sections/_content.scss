@@ -2,9 +2,13 @@
   font-size: 20px;
   line-height: 140%;
   text-transform: uppercase;
-  margin: 18px 0px 52px;
+  margin: 0;
+  padding: 18px 0px 52px;
   @include adaptive(1000) {
     font-size: 16px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+  @include phone {
+    background: #F1F6FC;
   }
 }

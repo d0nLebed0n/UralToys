@@ -3,6 +3,10 @@
     overflow: hidden;
 
 	$parent: &;
+  @include phone {
+    background: #F1F6FC;
+    padding-top: 14px;
+  }
 	&__list {
 		display: -ms-flex;
 		display: flex;

@@ -8,6 +8,11 @@
       padding: 9px 20px 20px;
     }
   }
+  @include adaptive(1440) {
+    &_modified {
+      margin-bottom: 20px;
+    }
+  }
   @include adaptive(875) {
     padding: 6px 12px 20px;
   }
@@ -84,6 +89,9 @@
     }
     &-slider {
       padding-bottom: 4px !important;
+      @include phone {
+        padding-top: 10px !important;
+      }
       & .swiper-pagination {
         max-height: 0;
         display: flex;
@@ -124,6 +132,14 @@
       justify-content: center;
       @include adaptive(775) {
         margin: 0px auto;
+      }
+      @include phone {
+        width: 121px;
+        height: 121px;
+      }
+      @include adaptive(320) {
+        width: auto;
+        max-width: 90px;
       }
     }
   }

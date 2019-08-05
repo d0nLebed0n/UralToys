@@ -1,16 +1,63 @@
 .horizontal-tabs {
+  position: relative;
   margin: 24px 0;
+  @include adaptive(735) {
+    background: #F1F6FC;
+  }
+  @include phone {
+    margin-top: 0;
+
+  }
   &__wrap {
     display: flex;
     align-items: center;
     border-top: 1px solid #E0E7F0;
     border-bottom: 1px solid #E0E7F0;
     padding: 24px 0;
+    @include adaptive(735) {
+      border: none;
+    }
+    @include phone {
+      padding-top: 0;
+    }
+  }
+  &__open {
+    color: $blue;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    background: #E0E7F0;
+    border-radius: 1px;
+    padding: 9.5px 12px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: $blue;
+      color: white;
+    }
   }
   &__item {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
+    &_display {
+      &_mobile {
+        display: none;
+        @include adaptive(735) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      &_desktop {
+        @include adaptive(735) {
+          display: none;
+        }
+      }
+    }
   }
   &__subitem {
     display: flex;
@@ -20,6 +67,9 @@
     color: $grey;
     font-weight: 400;
     margin: 0 24px 0px 0px;
+    @include adaptive(1000) {
+      margin: 0 12px 0 0;
+    }
     &_hiden {
       @include adaptive(1244) {
         display: none;
@@ -37,9 +87,15 @@
       color: inherit;
       display: flex;
       align-items: center;
+      @include adaptive(1000) {
+        font-size: 14px;
+      }
     }
     &-item {
       margin-right: 20px;
+      @include adaptive(1000) {
+        margin-right: 10px;
+      }
       & svg {
         width: 9px;
         height: 9px;
@@ -81,6 +137,88 @@
     @include adaptive(1100) {
       margin-left: 34px;
     }
+    @include adaptive(735) {
+      margin-left: 12px;
+    }
+  }
+  &__additional {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    @include phone {
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000000;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 5;
+      }
+      &.js-isOpened {
+        &::before {
+          opacity: 0.3;
+          visibility: visible;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          z-index: 5;
+          pointer-events: all;
+        }
+      }
+    }
+    &-item {
+      text-align: center;
+    }
+    &-link {
+      display: block;
+      font-size: 14px;
+      line-height: 280%;
+      background: white;
+      margin-bottom: 4px;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      &:hover {
+        background: $blue;
+        color: white;
+      }
+    }
+    &-list {
+      width: 100%;
+      list-style-type: none;
+      background: #F1F6FC;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 15;
+      padding: 24px 20px;
+      margin: 0;
+      &.js-isOpened {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        z-index: 15;
+        pointer-events: all;
+      }
+    }
   }
   &__button {
     background: transparent;
@@ -88,6 +226,26 @@
     padding: 0;
     margin: 0 0 0 24px;
     cursor: pointer;
+    @include adaptive(1000) {
+      display: none;
+      &:first-child {
+        display: flex;
+      }
+    }
+    @include adaptive(735) {
+      align-items: center;
+      justify-content: center;
+      background: $blue;
+      -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      border-radius: 1px;
+      padding: 7px 8px;
+      margin: 0;
+      & svg {
+        height: 19px;
+        fill: white;
+      }
+    }
     & svg {
       width: 19px;
       height: 18px;

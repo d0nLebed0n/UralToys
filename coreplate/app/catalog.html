@@ -929,10 +929,29 @@
     <section class="horizontal-tabs">
       <div class="container">
         <div class="horizontal-tabs__wrap">
-          <div class="horizontal-tabs__item">
-            <h2 class="horizontal-tabs__name visually-hidden">
-                По убыванию цены
-              </h2>
+          <div class="horizontal-tabs__item horizontal-tabs__item_display_mobile">
+            <button type="button" class="horizontal-tabs__open js-toggleSort">
+              По убыванию цены
+            </button>
+            <button type="button" class="horizontal-tabs__open js-toggleFilter">
+              Фильтр
+            </button>
+            <section class="horizontal-tabs__additional js-appendFilter">
+              <ul class="horizontal-tabs__additional-list js-openSort">
+                <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По возрастанию цены</a>
+                </li>
+                <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По наименованию (А-Я)</a>
+                </li>
+                <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По наименованию (Я-А)</a>
+                </li>
+                <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По новизне</a>
+                </li>
+                <li class="horizontal-tabs__additional-item"><a href="#" class="horizontal-tabs__additional-link">По популярности</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="horizontal-tabs__item horizontal-tabs__item_display_desktop">
             <div class="horizontal-tabs__subitem">
               <h3 class="horizontal-tabs__subname horizontal-tabs__subname_hiden">
                   Сортировать:
@@ -1019,7 +1038,7 @@
       <div class="container">
         <div class="catalog__wrap">
           <div class="catalog__aside js-appendWrap">
-            <aside class="catalog__filter filter">
+            <aside class="catalog__filter filter js-filter">
               <button type="button" class="filter__close">
                 <svg>
                   <use xlink:href="/template/img/icons.svg#cross2"></use>
@@ -1029,6 +1048,11 @@
                 <form action="">
                   <label class="search__label">
                     <input type="search" class="search__input" placeholder="Поиск">
+                    <button type="button" class="search__voice">
+                      <svg>
+                        <use xlink:href="/template/img/icons.svg#voice"></use>
+                      </svg>
+                    </button>
                   </label>
                   <span class="search__wrapper js-mobileSearch">
                         <button type="submit" class="search__submit">
@@ -1047,7 +1071,7 @@
                         <h2 class="filter__title">
                             Цена
                           </h2>
-                        <button class="filter__button">
+                        <button type="button" class="filter__button">
                           <svg>
                             <use xlink:href="/template/img/icons.svg#spot"></use>
                           </svg>
@@ -1077,7 +1101,7 @@
                         <h2 class="filter__title">
                             Спецпредложение
                           </h2>
-                        <button class="filter__button">
+                        <button type="button" class="filter__button">
                           <svg>
                             <use xlink:href="/template/img/icons.svg#spot"></use>
                           </svg>
@@ -1146,7 +1170,7 @@
                         <h2 class="filter__title">
                             Поступление:
                           </h2>
-                        <button class="filter__button">
+                        <button type="button" class="filter__button">
                           <svg>
                             <use xlink:href="/template/img/icons.svg#spot"></use>
                           </svg>
@@ -1202,7 +1226,7 @@
                         <h2 class="filter__title">
                             Бренды
                           </h2>
-                        <button class="filter__button">
+                        <button type="button" class="filter__button">
                           <svg>
                             <use xlink:href="/template/img/icons.svg#spot"></use>
                           </svg>
@@ -1331,7 +1355,7 @@
                         <h2 class="filter__title">
                             Страна производства
                           </h2>
-                        <button class="filter__button">
+                        <button type="button" class="filter__button">
                           <svg>
                             <use xlink:href="/template/img/icons.svg#spot"></use>
                           </svg>
@@ -9838,6 +9862,7 @@
   <script defer="defer" src="./template/js/catalog.js"></script>
   <script defer="defer" src="./template/js/catalog-desktop.js"></script>
   <script defer="defer" src="/template/js/items-slider.js"></script>
+  <script defer="defer" src="/template/js/horizontal-tabs.js"></script>
 </body>
 
 </html>
