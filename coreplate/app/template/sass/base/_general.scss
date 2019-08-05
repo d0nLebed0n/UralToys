@@ -12,8 +12,6 @@ html, body {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
 	min-width: 320px;
 	font-family: "SourceSansPro", "Arial", sans-serif;
   background: #EDF1F3;
@@ -21,10 +19,6 @@ body {
 	font-style: normal;
 	font-size: 14px;
 	color: black;
-	overflow-x: hidden;
-  &.js-isOpenedByCatalogTabs {
-    overflow: hidden;
-  }
   @include adaptive(1144) {
     font-size: 13px;
   }
@@ -39,10 +33,23 @@ body {
 		background: $grey;
 		border-radius: 20px;
 	}
-
+  &.js-overFlowed {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
-body.js-overFlowed {
-	overflow: hidden;
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  &.js-isOpenedByCatalogTabs {
+    overflow: hidden;
+    height: 100vh;
+  }
+  &.js-overFlowed {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 header {

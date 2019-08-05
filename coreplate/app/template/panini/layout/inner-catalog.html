@@ -21,12 +21,14 @@
     {{/ifpage}}
 	</head>
 	<body class="section">
-    {{> header}}
-    <main class="main">
-      {{> breadcrumbs hasChild='detail'}}
-      {{> body}}
-    </main>
-    {{> footer}}
-    {{> scripts}}
+    <div class="section__page page">
+      {{> header}}
+      <main class="main">
+        {{> breadcrumbs hasChild='detail'}}
+        {{> body}}
+      </main>
+      {{> footer}}
+      {{> scripts}}
+    </div>
 	</body>
 </html>

@@ -63,7 +63,8 @@
       object.burgerItem.classList.toggle(this._activeClass);
       object.overlayItem.classList.toggle(this._activeClass);
       object.wrapperItem.classList.toggle(this._activeClass);
-      document.body.classList.toggle(this._overflowed);
+      document.querySelector(`.page`).classList.toggle(this._overflowed);
+      document.querySelector(`body`).classList.toggle(this._overflowed);
     }
 
     _setEventListeners(props) {

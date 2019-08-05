@@ -10,8 +10,8 @@
       this._closeFilter = document.querySelector(`.filter__close`);
       this._openFilterTab = document.querySelectorAll(`.filter__button`);
 
-      this._breakPoint = window.matchMedia('(max-width: 735px');
-      this._filterBreakPoint = window.matchMedia('(max-width: 479px');
+      this._breakPoint = window.matchMedia("(max-width:735px)");
+      this._filterBreakPoint = window.matchMedia("(max-width:479px)");
     }
 
     setFilter() {
@@ -55,17 +55,17 @@
       this._sortButton.addEventListener(`click`, () => {
         this._sortList.classList.toggle(`js-isOpened`);
         this._mobileWrapper.classList.toggle(`js-isOpened`);
-        document.body.classList.toggle(`js-isOpenedByCatalogTabs`);
+        document.querySelector(`.page`).classList.toggle(`js-isOpenedByCatalogTabs`);
       });
       this._filterButton.addEventListener(`click`, () => {
         this._filterItem.classList.toggle(`js-isOpened`);
         this._mobileWrapper.classList.toggle(`js-isOpened`);
-        document.body.classList.toggle(`js-isOpenedByCatalogTabs`);
+        document.querySelector(`.page`).classList.toggle(`js-isOpenedByCatalogTabs`);
       });
       this._closeFilter.addEventListener(`click`, () => {
         this._filterItem.classList.toggle(`js-isOpened`);
         this._mobileWrapper.classList.toggle(`js-isOpened`);
-        document.body.classList.toggle(`js-isOpenedByCatalogTabs`);
+        document.querySelector(`.page`).classList.toggle(`js-isOpenedByCatalogTabs`);
       });
       this._openFilterTab.forEach((item) => {
         item.addEventListener(`click`, () => {

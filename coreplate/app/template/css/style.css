@@ -33,11 +33,6 @@ html, body {
 }
 
 body {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
   min-width: 320px;
   font-family: "SourceSansPro", "Arial", sans-serif;
   background: #EDF1F3;
@@ -45,11 +40,6 @@ body {
   font-style: normal;
   font-size: 14px;
   color: black;
-  overflow-x: hidden;
-}
-
-body.js-isOpenedByCatalogTabs {
-  overflow: hidden;
 }
 
 @media screen and (max-width: 1144px) {
@@ -74,6 +64,26 @@ body::-webkit-scrollbar-track {
 
 body.js-overFlowed {
   overflow: hidden;
+  height: 100vh;
+}
+
+.page {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-shrink: 0;
+}
+
+.page.js-isOpenedByCatalogTabs {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.page.js-overFlowed {
+  overflow: hidden;
+  height: 100vh;
 }
 
 header {
