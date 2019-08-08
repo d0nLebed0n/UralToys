@@ -148,9 +148,10 @@
       this._elementToTop = this._items.MAIN_WRAPPER.offsetHeight;
     }
     _checkScroll() {
+      const getNewHeight = this._items.MAIN_WRAPPER.offsetHeight;
       const scrollY = window.scrollY;
 
-      return scrollY > this._elementToTop;
+      return scrollY > getNewHeight;
     }
     _toggleSearch() {
       this._items.SEARCH_FIXED_BUTTON.classList.toggle(`js-isActive`);
@@ -158,13 +159,14 @@
     }
     _toggleClasses() {
       if (this._checkScroll() === true) {
+        const getNewHeight = this._items.MAIN_WRAPPER.offsetHeight;
         /* TODO:
         * Лол
         * */
         for (let key in this._items) {
           this._items[key].classList.add(`js-isFixed`);
         }
-        this._mainWrapper.style.paddingTop = `${this._elementToTop}px`;
+        this._mainWrapper.style.paddingTop = `${getNewHeight}px`;
 
       } else {
 
