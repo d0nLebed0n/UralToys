@@ -19,7 +19,7 @@
   <link rel="preload" href="/template/fonts/SourceSansPro-400.woff2" as="font" crossorigin="">
   <link rel="stylesheet" type="text/css" href="/template/css/nouislider.css">
   <script defer="defer" src="https://api-maps.yandex.ru/2.1/?apikey=3ba22bac-b430-4579-9da6-70a75b6d376f&amp;lang=ru_RU"></script>
-  <script defer="defer" src="/template/js/map.js"></script>
+  <script defer="defer" src="/template/js/blocks/map.js"></script>
 
 </head>
 
@@ -130,8 +130,13 @@
               <div class="header__middle-top">
                 <div class="header__search search">
                   <form action="">
-                    <label class="search__label">
+                    <label class="search__label js-fixedLabel">
                       <input type="search" class="search__input" placeholder="Поиск">
+                      <button type="button" class="header__search-close">
+                        <svg>
+                          <use xlink:href="/template/img/icons.svg#cross2"></use>
+                        </svg>
+                      </button>
                     </label>
                     <span class="search__wrapper js-mobileSearch">
                           <button type="submit" class="search__submit">
@@ -3220,25 +3225,29 @@
               <div class="about__features-wrap">
                 <div class="about__features-item">
                   <h3 class="about__features-title about__features-title_purple">
-                      41
+                      <span class="js-counter">
+                        41
+                      </span>
                     </h3>
                   <span class="about__features-text">Город доставки</span>
                 </div>
                 <div class="about__features-item">
                   <h3 class="about__features-title about__features-title_orange">
-                      250
+                      <span class="js-counter">
+                        250
+                      </span>
                     </h3>
                   <span class="about__features-text">Брендов</span>
                 </div>
                 <div class="about__features-item">
                   <h3 class="about__features-title about__features-title_red">
-                      38 <span class="about__features-small">тыс +</span>
+                      <span class="js-counter">38</span> <span class="about__features-small">тыс +</span>
                     </h3>
                   <span class="about__features-text">Город доставки</span>
                 </div>
                 <div class="about__features-item">
                   <h3 class="about__features-title about__features-title_blue">
-                      97 <span class="about__features-small">%</span>
+                      <span class="js-counter">97</span> <span class="about__features-small">%</span>
                     </h3>
                   <span class="about__features-text">Брендов</span>
                 </div>
@@ -3467,11 +3476,13 @@
     <script defer="defer" src="/template/js/enums.js"></script>
 
     <script src="/template/libs/nouislider.min.js"></script>
+    <script type="module" defer="defer" src="/template/libs/countUp.min.js"></script>
     <script defer="defer" src="./template/libs/swiper.min.js"></script>
-    <script defer="defer" src="/template/js/main-form.js"></script>
-    <script defer="defer" src="./template/js/index.js"></script>
-    <script defer="defer" src="/template/js/catalog-grid.js"></script>
-    <script defer="defer" src="/template/js/items-slider.js"></script>
+    <script defer="defer" src="/template/js/blocks/main-form.js"></script>
+    <script defer="defer" src="/template/js/blocks/catalog-grid.js"></script>
+    <script defer="defer" src="/template/js/blocks/items-slider.js"></script>
+    <script type="module" defer="defer" src="/template/js/blocks/about.js"></script>
+    <script defer="defer" src="./template/js/pages/index.js"></script>
 
   </div>
 </body>

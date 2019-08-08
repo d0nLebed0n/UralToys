@@ -1,3 +1,7 @@
+/* @TODO:
+* инициализацию в catalog.js
+* Разгрести IIFE помойку
+* */
 (function () {
   class HorizontalTabs {
     constructor(props) {

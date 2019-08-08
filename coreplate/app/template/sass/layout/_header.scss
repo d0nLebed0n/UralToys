@@ -1,8 +1,41 @@
 .header {
   $parent: &;
+  $fixed: js-isFixed;
+  $active: js-isActive;
   background: white;
   border-bottom: 1px solid #E0E7F0;
   margin: 0 0 24px;
+  &.#{$fixed} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    @include adaptive(875) {
+      display: flex;
+      justify-content: space-between;
+      & #{$parent}__top {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        & .container {
+
+          padding-right: 0;
+        }
+      }
+    }
+    & .navigation__hidden-list {
+      top: 47px;
+    }
+    & .navigation__additional {
+      @include adaptive(1366) {
+        top: calc(100% + 19px);
+      }
+    }
+    & #{$parent}__item-hidden {
+      top: calc(100% + 20px);
+    }
+  }
   @include adaptive(635) {
     margin: 0;
   }
@@ -19,6 +52,89 @@
   }
   &__search {
     flex-grow: 0.773;
+    &-close {
+      display: none;
+    }
+    &.#{$fixed} {
+      position: relative;
+      margin-right: 36px;
+      @include adaptive(1244) {
+        margin-right: 20px;
+      }
+      @include adaptive(875) {
+        margin-right: 5px;
+      }
+      @include phone {
+        display: none;
+      }
+      & #{$parent}__search-close {
+        width: 25px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        cursor: pointer;
+        padding: 0;
+        &:hover {
+          & svg {
+            fill: $blue;
+          }
+        }
+        & svg {
+          fill: #ABACAC;
+          width: 10px;
+          height: 10px;
+        }
+
+      }
+      & .search__label {
+        opacity: 0;
+        min-width: 1200px;
+        height: 100%;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        pointer-events: none;
+        z-index: 5;
+        @include adaptive(1680) {
+          min-width: 893px;
+        }
+        @include adaptive(1100) {
+          width: 50vw;
+          min-width: auto;
+        }
+        &.#{$active} {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+      & .search__wrapper {
+        cursor: pointer;
+        &.#{$active} {
+         & .search__submit {
+           pointer-events: all;
+         }
+        }
+      }
+      & .search__submit {
+        pointer-events: none;
+      }
+    }
     @include adaptive(1366) {
       flex-grow: 0.86;
       margin-right: 50px;
@@ -104,6 +220,9 @@
       pointer-events: none;
       overflow: hidden;
       padding: 24px 32px;
+      @include adaptive(735) {
+        top: calc(100% + 37px);
+      }
       @include adaptive(635) {
         top: calc(100% + 37px);
       }
@@ -307,12 +426,23 @@
       padding: 9px 0;
     }
     @include phone {
-      max-width: calc(50% + 41px);
+      max-width: calc(50% + 27px);
       flex-grow: 1;
+    }
+    @include adaptive(375) {
+      max-width: calc(50% + 34px);
     }
     & .container {
       @include phone {
         padding: 0px 20px 0px 0;
+      }
+    }
+    &-logo {
+      &.#{$fixed} {
+        display: none;
+        @include phone {
+          display: block;
+        }
       }
     }
     &-right {
@@ -320,6 +450,70 @@
       flex-direction: column;
       justify-content: center;
       flex-grow: 1;
+      &.#{$fixed} {
+        flex-direction: row-reverse;
+        & #{$parent}__middle-top {
+          align-items: center;
+          margin-bottom: 0;
+        }
+        & #{$parent}__item {
+          &:last-of-type {
+            & #{$parent}__item-visible {
+              border-right: none;
+            }
+          }
+          &_cart {
+            @include adaptive(1366) {
+              & #{$parent}__item-icon {
+                margin-right: 0;
+              }
+            }
+          }
+          &_manager {
+            @include adaptive(1366) {
+              & #{$parent}__item-visible {
+                border-right: none;
+              }
+            }
+            & #{$parent}__item-icon {
+              @include adaptive(1366) {
+                margin-right: 20px;
+              }
+              @include adaptive(1144) {
+                margin-right: 0;
+              }
+              @include phone {
+                padding-right: 15px;
+              }
+            }
+          }
+          & #{$parent}__item-visible {
+            @include adaptive(1144) {
+              padding: 0px 15px;
+            }
+            @include phone {
+              padding: 0;
+            }
+          }
+        }
+        & #{$parent}__item-visible {
+          padding-left: 20px;
+          border-right: 1px solid $theme-grey;
+        }
+        & #{$parent}__item-right {
+          display: none;
+        }
+        & #{$parent}__middle-bottom {
+          flex-grow: 1;
+        }
+        & #{$parent}__navigation {
+          flex-grow: 1;
+          padding-right: 84px;
+          @include adaptive(1244) {
+            padding-right: 30px;
+          }
+        }
+      }
       @include phone {
         flex-grow: 0;
       }
@@ -454,6 +648,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      &.#{$fixed} {
+        display: none;
+        @include adaptive(875) {
+          display: block;
+          & #{$parent}__top {
+            &-city {
+              display: none;
+            }
+            &-manager {
+              display: none;
+            }
+            &-subwrap {
+              display: none;
+            }
+          }
+        }
+      }
     }
     &-manager {
       display: flex;

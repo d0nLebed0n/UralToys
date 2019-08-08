@@ -1,5 +1,8 @@
 'use strict';
 
+/* @TODO:
+* переписать
+* */
 
 (function () {
   const slider = document.getElementById('form-range');

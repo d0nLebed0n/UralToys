@@ -5,19 +5,21 @@
 
 {{#ifpage 'index'}}
 <script src="/template/libs/nouislider.min.js"></script>
+<script type="module" defer="defer" src="/template/libs/countUp.min.js"></script>
 <script defer="defer" src="./template/libs/swiper.min.js"></script>
-<script defer="defer" src="/template/js/main-form.js"></script>
-<script defer="defer" src="./template/js/index.js"></script>
-<script defer="defer" src="/template/js/catalog-grid.js"></script>
-<script defer="defer" src="/template/js/items-slider.js"></script>
+<script defer="defer" src="/template/js/blocks/main-form.js"></script>
+<script defer="defer" src="/template/js/blocks/catalog-grid.js"></script>
+<script defer="defer" src="/template/js/blocks/items-slider.js"></script>
+<script type="module" defer="defer" src="/template/js/blocks/about.js"></script>
+<script defer="defer" src="./template/js/pages/index.js"></script>
 {{/ifpage}}
 
 {{#ifpage 'catalog'}}
 <script src="/template/libs/nouislider.min.js"></script>
 <script defer="defer" src="./template/libs/swiper.min.js"></script>
-<script defer="defer" src="./template/js/breadcrumbs.js"></script>
-<script defer="defer" src="./template/js/catalog.js"></script>
-<script defer="defer" src="./template/js/catalog-desktop.js"></script>
-<script defer="defer" src="/template/js/items-slider.js"></script>
-<script defer="defer" src="/template/js/horizontal-tabs.js"></script>
+<script defer="defer" src="./template/js/blocks/breadcrumbs.js"></script>
+<script defer="defer" src="./template/js/blocks/catalog-desktop.js"></script>
+<script defer="defer" src="/template/js/blocks/items-slider.js"></script>
+<script defer="defer" src="/template/js/blocks/horizontal-tabs.js"></script>
+<script defer="defer" src="./template/js/pages/catalog.js"></script>
 {{/ifpage}}

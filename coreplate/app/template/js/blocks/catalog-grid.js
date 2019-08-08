@@ -1,4 +1,8 @@
 'use strict';
+/* @TODO:
+* Возможно в утил
+* Разгрести иифе помойку
+* */
 (function () {
   const parseGridRow = (parseItem, templateString) => {
     const getAllItems = document.querySelectorAll(parseItem);

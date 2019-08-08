@@ -1,3 +1,7 @@
+/* @TODO:
+* пойдет, ебать
+* */
+
 'use strict';
 (function () {
   if (!document.querySelector(`.items-slider__wrap`).classList.contains(`items-slider__wrap_type_one-row`)) {

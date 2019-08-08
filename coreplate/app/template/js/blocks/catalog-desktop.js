@@ -1,3 +1,6 @@
+/* @TODO:
+* Обернуть
+* */
 const toggleCatalogList = () => {
   const getAllItems = document.querySelectorAll(`.js-isParent`);
   getAllItems.forEach((item) => {

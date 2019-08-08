@@ -127,8 +127,13 @@
               <div class="header__middle-top">
                 <div class="header__search search">
                   <form action="">
-                    <label class="search__label">
+                    <label class="search__label js-fixedLabel">
                       <input type="search" class="search__input" placeholder="Поиск">
+                      <button type="button" class="header__search-close">
+                        <svg>
+                          <use xlink:href="/template/img/icons.svg#cross2"></use>
+                        </svg>
+                      </button>
                     </label>
                     <span class="search__wrapper js-mobileSearch">
                           <button type="submit" class="search__submit">
@@ -9859,11 +9864,11 @@
 
     <script src="/template/libs/nouislider.min.js"></script>
     <script defer="defer" src="./template/libs/swiper.min.js"></script>
-    <script defer="defer" src="./template/js/breadcrumbs.js"></script>
-    <script defer="defer" src="./template/js/catalog.js"></script>
-    <script defer="defer" src="./template/js/catalog-desktop.js"></script>
-    <script defer="defer" src="/template/js/items-slider.js"></script>
-    <script defer="defer" src="/template/js/horizontal-tabs.js"></script>
+    <script defer="defer" src="./template/js/blocks/breadcrumbs.js"></script>
+    <script defer="defer" src="./template/js/blocks/catalog-desktop.js"></script>
+    <script defer="defer" src="/template/js/blocks/items-slider.js"></script>
+    <script defer="defer" src="/template/js/blocks/horizontal-tabs.js"></script>
+    <script defer="defer" src="./template/js/pages/catalog.js"></script>
   </div>
 </body>
 

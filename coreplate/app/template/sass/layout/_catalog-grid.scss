@@ -59,11 +59,12 @@
       grid-template-rows: auto;
     }
     @include adaptive(635) {
-      grid-template-columns: repeat(2, 50%);
+      grid-template-columns: repeat(2, calc(50% - 10px));
     }
     @include adaptive(320) {
       grid-row-gap: 10px;
       grid-column-gap: 10px;
+      grid-template-columns: repeat(2, calc(50% - 5px));
     }
   }
   &__item {

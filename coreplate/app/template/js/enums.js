@@ -43,3 +43,18 @@ const BreadcrumbEnum = {
   ORANGE: `breadcrumbs__item_orange`,
   PURPLE: `breadcrumbs__item_purple`,
 };
+
+const HeaderToFixedEnum = {
+  startPoint: false,
+  fixedItemsEnum: {
+    MAIN_WRAPPER: document.querySelector(`.header`),
+    TOP_WRAPPER: document.querySelector(`.header__top-wrap`),
+    LOGO_WRAPPER: document.querySelector(`.header__middle-logo`),
+    MENU_WRAPPER: document.querySelector(`.header__middle-right`),
+    SEARCH_WRAPPER: document.querySelector(`.header__search`),
+    SEARCH_FIXED_CLOSE: document.querySelector(`.header__search-close`),
+    SEARCH_FIXED_BUTTON: document.querySelector(`.js-mobileSearch`),
+    SEARCH_FIXED_LABEL: document.querySelector(`.js-fixedLabel`)
+  },
+  beforeItem: false,
+};

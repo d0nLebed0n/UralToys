@@ -1,3 +1,6 @@
+/* @TODO:
+* Обернуть
+* */
 const setBreadCrumbsClasses = (breadCrumbClass) => {
   const getAllCrumbs = document.querySelectorAll(`.${breadCrumbClass}`);
   getAllCrumbs.forEach((crumb, i) => {

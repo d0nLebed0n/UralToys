@@ -1,15 +1,37 @@
 'use strict';
-
+/* TODO:
+* Разобрать IIFE помойку
+* */
 (function () {
   window.utils = {
     getIE: function () {
       const currentAgent = navigator.userAgent;
       return currentAgent.match(/rv:11.0/i);
     },
+    checkVisibility: (target) => {
+      const targetPosition = {
+          top: window.pageYOffset + target.getBoundingClientRect().top,
+          left: window.pageXOffset + target.getBoundingClientRect().left,
+          right: window.pageXOffset + target.getBoundingClientRect().right,
+          bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+        windowPosition = {
+          top: window.pageYOffset,
+          left: window.pageXOffset,
+          right: window.pageXOffset + document.documentElement.clientWidth,
+          bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+      return targetPosition.bottom > windowPosition.top &&
+        targetPosition.top < windowPosition.bottom &&
+        targetPosition.right <= windowPosition.right;
+    }
   };
 })();
 
 (function () {
+  /* TODO:
+  * @ Ускорить работу на планшетах и мобильниках, некорректно обсчитываются другие скрипты.
+  * */
   class MobileMenu {
     constructor(props) {
       this._topMenuItem = props.TOP_MENU_NAVIGATION;
@@ -48,7 +70,9 @@
         this._menuSubWrapper.appendChild(this._search);
       }
     }
-
+    /* TODO:
+    * @ Почистить от шлака в почках
+    * */
     _hideUnusedElements(props) {
 
       // props.forEach(function (item) {
@@ -115,13 +139,68 @@
 
   }
 
+  class FixedItems {
+    constructor(props) {
+      this._startPoint = props.startPoint || false;
+      this._items = props.fixedItemsEnum;
+      this._beforeItem = props.beforeItem || false;
+      this._mainWrapper = document.querySelector(`.main`);
+      this._elementToTop = this._items.MAIN_WRAPPER.offsetHeight;
+    }
+    _checkScroll() {
+      const scrollY = window.scrollY;
+
+      return scrollY > this._elementToTop;
+    }
+    _toggleSearch() {
+      this._items.SEARCH_FIXED_BUTTON.classList.toggle(`js-isActive`);
+      this._items.SEARCH_FIXED_LABEL.classList.toggle(`js-isActive`);
+    }
+    _toggleClasses() {
+      if (this._checkScroll() === true) {
+        /* TODO:
+        * Лол
+        * */
+        for (let key in this._items) {
+          this._items[key].classList.add(`js-isFixed`);
+        }
+        this._mainWrapper.style.paddingTop = `${this._elementToTop}px`;
+
+      } else {
+
+        for (let key in this._items) {
+          this._items[key].classList.remove(`js-isFixed`);
+        }
+
+        this._mainWrapper.style.paddingTop = `0px`;
+
+      }
+    }
+    setEventListeners() {
+      document.addEventListener(`scroll`, () => {
+        this._toggleClasses();
+      });
+      this._items.SEARCH_FIXED_BUTTON.addEventListener(`click`, () => {
+        this._toggleSearch();
+      });
+      this._items.SEARCH_FIXED_CLOSE.addEventListener(`click`, () => {
+        this._toggleSearch();
+      })
+    }
+  }
+
+  /* TODO:
+  * Всю инициализацию описывать в script.js каждой страницы
+  * */
   document.addEventListener('DOMContentLoaded', function () {
     const newMenu = new MobileMenu(MobileEnum);
     const mainNavigation = new MobileNavigation(NavigationEnum.MAIN_CATALOG);
     const innerNavigation = new MobileNavigation(NavigationEnum.INNER_CATALOG);
+    const fixedHeader = new FixedItems(HeaderToFixedEnum);
     newMenu.getCaseOfCurrentPoint();
     mainNavigation.addEventListener();
     innerNavigation.addEventListener();
+    fixedHeader.setEventListeners();
   });
 })();
 
