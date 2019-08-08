@@ -72,7 +72,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest('build/template/css/'))
 });
 gulp.task('js', function () {
-  return gulp.src('app/template/js/*.js')
+  return gulp.src('app/template/js/**')
     .pipe(gulp.dest('build/template/js/'))
 });
 gulp.task('pages', function () {
