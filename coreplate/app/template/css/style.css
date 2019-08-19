@@ -5078,8 +5078,16 @@ a {
 
 .catalog-grid__item {
   background: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+}
+
+.catalog-grid__item:hover {
+  -webkit-transform: perspective(5px) scale(1.02);
+  transform: perspective(5px) scale(1.02);
 }
 
 @media screen and (max-width: 775px) {
